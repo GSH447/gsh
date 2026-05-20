@@ -1,0 +1,112 @@
+"use client";
+import Link from "next/link";
+import Image from "next/image";
+
+export default function Cta1() {
+  return (
+    <div className="relative w-full min-h-screen bg-[#6F92E7] overflow-hidden">
+
+      {/* Top Border */}
+      <div className="flex">
+        <div className="border-[10px] border-[#5CB338] w-full"></div>
+        <div className="border-[10px] border-[#6F92E7] w-full"></div>
+        <div className="border-[10px] border-[#4a912d] w-full"></div>
+      </div>
+
+      {/* Content Layer */}
+      <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-10 items-center py-12 px-5 lg:px-20">
+
+        {/* LEFT COLUMN - ABOUT US */}
+        <div className="text-black space-y-6">
+
+          <p className="uppercase tracking-widest text-sm text-white font-semibold">
+            About Gracespring Hospitals
+          </p>
+
+          <h2 className="text-3xl lg:text-5xl font-bold leading-tight">
+            Excellence in Care,
+            <br />
+            Our Shared Path
+          </h2>
+
+          <p className="leading-8 text-lg text-black">
+            Health is wealth, and access to proper, affordable and timely
+            healthcare is a fundamental aspiration of every society.
+            Gracespring Hospitals Limited is a multispecialty healthcare
+            facility located in Sangotedo, Lekki, Lagos, providing modern,
+            advanced and evidence-based medical care.
+          </p>
+
+          <p className="leading-8 text-black">
+            Professionally designed and equipped to contemporary healthcare
+            standards, Gracespring Hospitals delivers compassionate,
+            patient-centred care across a wide range of specialties for
+            both adults and paediatric populations.
+          </p>
+
+          {/* Three Wings */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 pt-4">
+
+            <div className="bg-white/10 backdrop-blur-md p-4 rounded-xl border border-white/20">
+              <h3 className="font-semibold text-lg mb-2">
+                Pistis
+              </h3>
+              <p className="text-sm text-black">
+                Faith in care through trust, precision and clinical
+                excellence.
+              </p>
+            </div>
+
+            <div className="bg-white/10 backdrop-blur-md p-4 rounded-xl border border-white/20">
+              <h3 className="font-semibold text-lg mb-2">
+                Elpis
+              </h3>
+              <p className="text-sm text-black">
+                Hope in healing through innovation and recovery.
+              </p>
+            </div>
+
+            <div className="bg-white/10 backdrop-blur-md p-4 rounded-xl border border-white/20">
+              <h3 className="font-semibold text-lg mb-2">
+                Agape
+              </h3>
+              <p className="text-sm text-black">
+                Love in service through compassion and dignity.
+              </p>
+            </div>
+
+          </div>
+
+          <Link
+            href="/who-we-are/about-us"
+            className="inline-block mt-4 bg-[#5CB338] hover:bg-[#4a912d] text-black px-6 py-3 rounded-lg transition"
+          >
+            Learn More
+          </Link>
+
+        </div>
+
+        {/* RIGHT COLUMN - IMAGE */}
+        <div className="relative w-full h-[500px] rounded-3xl overflow-hidden shadow-2xl">
+
+          <Image
+            src="/assets/images/about/surgeon.jpg"
+            alt="Gracespring Hospitals"
+            fill
+            className="object-cover"
+          />
+
+        </div>
+
+      </div>
+
+      {/* Bottom Border */}
+      <div className="flex">
+        <div className="border-[10px] border-[#5CB338] w-full"></div>
+        <div className="border-[10px] border-[#6F92E7] w-full"></div>
+        <div className="border-[10px] border-[#4a912d] w-full"></div>
+      </div>
+
+    </div>
+  );
+}

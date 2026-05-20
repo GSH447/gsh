@@ -33,6 +33,14 @@ export default function ServicesShortCutPage() {
         </div>
 
       </div>
+
+      {/* Bottom Border */}
+      <div className="flex">
+        <div className="border-[10px] border-[#5CB338] w-full"></div>
+        <div className="border-[10px] border-[#6F92E7] w-full"></div>
+        <div className="border-[10px] border-[#4a912d] w-full"></div>
+      </div>
+
     </div>
   );
 }

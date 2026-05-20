@@ -24,16 +24,16 @@ export default function Product_ServicesPage() {
           {/* 1. Emergency Banner (Top of page) */}
           <Link
             href="tel:07056482776"
-            className="flex items-center gap-3 bg-red-600 font-bold tracking-wide uppercase py-3 px-6 rounded-xl shadow-lg hover:bg-red-700 active:scale-98 w-full h-10 justify-center"
+            className=" flex items-center gap-3 bg-red-600 font-bold tracking-wide uppercase py-3 px-6 rounded-xl shadow-lg hover:bg-red-700 active:scale-98 w-full h-10 justify-center"
           >
-            <div className="relative w-[80px] lg:w-[100px] h-[80px]">
+            <div className=" relative w-[80px] lg:w-[100px] h-[80px]">
               <Image 
                 src="/assets/images/emergency/emergencies.gif" 
                 alt="Emergency Alert"
                 fill
               />
             </div>
-            <span className="text-white text-lg erd-cta">For Emergencies, Call 0705 648 2776</span>
+            <span className=" text-white text-[10px] lg:text-lg">For Emergencies, Call 0705 648 2776</span>
           </Link>
 
           {/* 2. Product Services Grid Component (Center) */}
@@ -48,14 +48,14 @@ export default function Product_ServicesPage() {
             href="https://wa.me/2347056482776" 
             className="flex items-center gap-3 bg-[#25D366] font-bold tracking-wide uppercase py-3 px-6 rounded-xl shadow-lg hover:bg-[#20ba59] active:scale-98 w-full h-10 justify-center"
           >
-            <div className="relative w-[80px] lg:w-[100px] h-[80px]">
+            <div className="relative w-[50px] lg:w-[100px] h-[80px]">
               <Image 
                 src="/assets/images/emergency/Whatsap-Icon-Animation.gif" 
                 alt="WhatsApp Chat"
                 fill
               />
             </div>
-            <span className="text-white text-lg erd-cta">WhatsApp - Chat With Us - 0705 648 2776</span>
+            <span className="text-white text-[10px] lg:text-lg">WhatsApp - Chat With Us - 0705 648 2776</span>
           </Link>
 
           {/* <Link
@@ -78,6 +78,15 @@ export default function Product_ServicesPage() {
         </div>
 
       </div>
+
+      {/* Bottom Border */}
+      <div className="flex">
+        <div className="border-[10px] border-[#5CB338] w-full"></div>
+        <div className="border-[10px] border-[#6F92E7] w-full"></div>
+        <div className="border-[10px] border-[#4a912d] w-full"></div>
+      </div>
+
+
     </div>
   );
 }

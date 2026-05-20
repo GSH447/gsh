@@ -56,7 +56,7 @@ const AccessibilityComp = () => {
       {/* Modal Popup */}
       {accessibilityOptions && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
-          <div className="bg-white rounded-lg shadow-lg p-6 w-[90%] max-w-md relative">
+          <div className="bg-white rounded-lg shadow-lg w-[90%] h-[95%] max-w-md relative">
 
             {/* Close Button */}
             <button

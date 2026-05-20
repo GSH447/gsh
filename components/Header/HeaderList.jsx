@@ -45,15 +45,20 @@ export default function Navbar() {
   }
 
   return (
-    <header
 
+    <header
       className={cn(
-        "fixed top-0 z-50 w-full transition-all px-3 flex duration-300",
-        isScrolled
-          ? "bg-[#2A157c] shadow-md px-5"
-          : "bg-transparent"
+        "fixed top-0 z-50 w-full transition-all duration-300 flex",
+        pathname === "/"
+          ? (
+              isScrolled
+                ? "bg-[#2A157c] shadow-md px-5"
+                : "bg-transparent px-3"
+            )
+          : "bg-[#2A157c] shadow-md px-5"
       )}
     >
+
 
 
       <div className="w-fit">

@@ -26,7 +26,7 @@ export default function MobileNav() {
   return (
     <>
       {/* MOBILE HAMBURGER TRIGGER - Fixed right for accessibility */}
-      <div className="flex lg:hidden">
+      <div className="-mr-10 flex lg:hidden">
         <button
           onClick={() => setMenuOpen(true)}
           className="p-2 text-white hover:opacity-80 transition-opacity"

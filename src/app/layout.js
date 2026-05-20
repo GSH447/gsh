@@ -2,7 +2,6 @@
 import "./globals.css";
 import Header from "../../components/Header"; //Header components
 import Footer from "../../components/Footer";
-import FooterCurves from "../../components/Curves/footer-curves";
 import ScrollToTop from "../../components/ScrollToTop";
 import AccessibilityComp from "../../components/Accessibility/Accessibility";
 import CookieConsent from "../../components/Cookies/CookieConsent";
