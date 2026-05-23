@@ -15,8 +15,24 @@ export default function ServicesShortCutPage() {
 
           <div className="flex flex-col items-center w-full gap-8 mb-12"  >
             <h1 className="text-3xl lg:text-6xl font-bold text-center">
-              Specialist Care
+              Specialist Medical Care
             </h1>
+
+            <div>
+
+              <div>
+                <p>ADULTS >></p>
+              </div>
+              
+              <div>
+                <p>CHILDREN >></p>
+              </div>
+              
+              <div>
+                <p>FAMILY >></p>
+              </div>
+
+            </div>
 
             <p className="text-sm lg:text-lg text-center font-medium mt-4 max-w-3xl">
               Our specialist care services are designed to provide expert medical attention and personalized treatment plans for patients with complex health conditions. Our team of highly skilled specialists is dedicated to delivering comprehensive care, utilizing the latest medical advancements and technologies to ensure the best possible outcomes for our patients.

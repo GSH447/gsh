@@ -17,13 +17,13 @@ import "swiper/css/pagination";
 import "swiper/css/effect-fade";
 
 const slides = [
-  {
-    title: "Excellence in Care, Our Shared Path",
-    description: "Our identity is reflected through our three wings—each inspired by timeless virtues that define our approach to healing and service: Pistis (Faith), Elpis (Hope), and Agape (Love).",
-    buttonText: "Read more",
-    buttonUrl: "/who-we-are/about-us",
-    bgImage: "/assets/images/hero/gsh.jpg", // Replace with your image paths
-  },
+  // {
+  //   title: "Excellence in Care, Our Shared Path",
+  //   description: "Our identity is reflected through our three wings—each inspired by timeless virtues that define our approach to healing and service: Pistis (Faith), Elpis (Hope), and Agape (Love).",
+  //   buttonText: "Read more",
+  //   buttonUrl: "/who-we-are/about-us",
+  //   bgImage: "/assets/images/hero/gsh.jpg", // Replace with your image paths
+  // },
   {
     title: "Multispecialty healthcare facility",
     description: "Health is wealth, and access to proper, affordable, and timely healthcare is a fundamental aspiration of every society.",

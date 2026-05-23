@@ -28,7 +28,7 @@ const Footer = () => {
             />
             </Link>
             <p className="text-white/70 text-sm leading-relaxed">
-              Locating children born with heart conditions and providing free surgical care through local and international partnerships.
+              Where every second counts. And every life matters.
             </p>
             {/* Social Icons */}
             <div className="flex gap-4">

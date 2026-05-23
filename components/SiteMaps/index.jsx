@@ -165,7 +165,7 @@ export const FooterLinks = {
 
   contact: [
     {
-      name: `Gracespring Hospitals, Block 3, Plot 32, Ajayi Apata estate, Sangotedo, Lekki, Lagos, Nigeria.`,
+      name: `Gracespring Hospitals, Block 3, Plot 32, Ajayi Apata estate, Sangotedo, Eti-Osa, Lekki - Lagos.`,
       url: "https://maps.google.com",
       iconPath: "/assets/icons/location.svg",
     },
@@ -174,10 +174,23 @@ export const FooterLinks = {
       url: "mailto:care@gracespringhospitals.com",
       iconPath: "/assets/icons/email.svg",
     },
+    
+    {
+      name: "admin@gracespringhospitals.com",
+      url: "mailto:admin@gracespringhospitals.com",
+      iconPath: "/assets/icons/email.svg",
+    },
+
     {
       name: "+234 705-648-2776",
       url: "tel:+2347056482776",
       iconPath: "/assets/icons/phone.svg",
+    },
+    
+    {
+      name: "www.gracespringhospitals.com",
+      url: "https://www.gracespringhospitals.com",
+      iconPath: "",
     },
   ],
 

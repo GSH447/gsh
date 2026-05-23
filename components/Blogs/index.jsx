@@ -14,11 +14,11 @@ export default function BlogStories() {
   const blogs = [
     {
       id:1,
-      image:"/assets/images/blog/blog1.jpg",
+      image:"/assets/images/blog/medical-outreach-3.jpg",
       category:"Medical Insights",
       title:"Understanding Preventive Healthcare",
       summary:"Learn how early detection and routine medical checkups improve long-term health outcomes.",
-      author:"Dr. Augustine Olugbemi",
+      author:"Gracespring Admin",
       date:"May 18, 2026",
       time:"5 min read"
     },
@@ -28,7 +28,7 @@ export default function BlogStories() {
       category:"Patient Story",
       title:"A Journey of Recovery & Hope",
       summary:"Compassionate care and clinical excellence supporting a patient’s healing journey.",
-      author:"Gracespring Editorial",
+      author:"Gracespring Admin",
       date:"May 16, 2026",
       time:"4 min read"
     },

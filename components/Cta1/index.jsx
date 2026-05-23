@@ -1,10 +1,11 @@
 "use client";
 import Link from "next/link";
 import Image from "next/image";
+// import HeroVideo from "../Video/index"
 
 export default function Cta1() {
   return (
-    <div className="relative w-full min-h-screen bg-[#6F92E7] overflow-hidden">
+    <div className="relative w-full min-h-screen overflow-hidden">
 
       {/* Top Border */}
       <div className="flex">
@@ -20,7 +21,7 @@ export default function Cta1() {
         <div className="text-black space-y-6">
 
           <p className="uppercase tracking-widest text-sm text-white font-semibold">
-            About Gracespring Hospitals
+            24/7 GLOBAL STANDARD OF PRIVATE HEALTHCARE
           </p>
 
           <h2 className="text-3xl lg:text-5xl font-bold leading-tight">
@@ -29,23 +30,19 @@ export default function Cta1() {
             Our Shared Path
           </h2>
 
-          <p className="leading-8 text-lg text-black">
-            Health is wealth, and access to proper, affordable and timely
-            healthcare is a fundamental aspiration of every society.
-            Gracespring Hospitals Limited is a multispecialty healthcare
-            facility located in Sangotedo, Lekki, Lagos, providing modern,
-            advanced and evidence-based medical care.
+          <p className="leading-8 text-sm text-black">
+            ABOUT THE HOSPITAL
           </p>
 
           <p className="leading-8 text-black">
-            Professionally designed and equipped to contemporary healthcare
-            standards, Gracespring Hospitals delivers compassionate,
-            patient-centred care across a wide range of specialties for
-            both adults and paediatric populations.
+            A <b>private hospital on the Lekki-Epe corridor, Sangotedo </b>.
+            delivering consultant-led patient-centred care aligned with global best clinical standards.
+            Maternity, ICU, Surgery, Dialysis and advanced Imaging all under one roof, also also easily 
+            <b>accessed via the new Lagos Calabar Costal Road.</b>
           </p>
 
           {/* Three Wings */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 pt-4">
+          {/* <div className="grid grid-cols-1 md:grid-cols-3 gap-4 pt-4">
 
             <div className="bg-white/10 backdrop-blur-md p-4 rounded-xl border border-white/20">
               <h3 className="font-semibold text-lg mb-2">
@@ -75,7 +72,7 @@ export default function Cta1() {
               </p>
             </div>
 
-          </div>
+          </div> */}
 
           <Link
             href="/who-we-are/about-us"
@@ -89,6 +86,7 @@ export default function Cta1() {
         {/* RIGHT COLUMN - IMAGE */}
         <div className="relative w-full h-[500px] rounded-3xl overflow-hidden shadow-2xl">
 
+          {/* <HeroVideo/> */}
           <Image
             src="/assets/images/about/surgeon.jpg"
             alt="Gracespring Hospitals"
