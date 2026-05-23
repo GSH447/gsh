@@ -30,8 +30,10 @@ export default function ScrollToTop() {
         <div
           onClick={scrollToTop}
           aria-label="scroll to top"
-          className="fixed bottom-[3rem] right-0 z-50 flex h-10 w-10 cursor-pointer items-center justify-center rounded-full bg-primary text-white shadow-md transition duration-300 hover:bg-opacity-80"
+          className="fixed bottom-[1rem] right-0 z-50 flex cursor-pointer items-center justify-center bg-primary text-white shadow-md transition duration-300 hover:bg-opacity-80 p-2 text-sm"
         >
+
+          Back to the top
           <svg
             xmlns="http://www.w3.org/2000/svg"
             className="h-5 w-5"

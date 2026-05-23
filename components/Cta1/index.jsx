@@ -1,7 +1,8 @@
 "use client";
 import Link from "next/link";
 import Image from "next/image";
-// import HeroVideo from "../Video/index"
+import { motion, AnimatePresence } from "framer-motion";
+import HeroVideo from "../Videos/index"
 
 export default function Cta1() {
   return (
@@ -36,8 +37,8 @@ export default function Cta1() {
 
           <p className="leading-8 text-[#2A157c]">
             A <b>private hospital on the Lekki-Epe corridor, Sangotedo </b>.
-            delivering consultant-led patient-centred care aligned with global best clinical standards.
-            Maternity, ICU, Surgery, Dialysis and advanced Imaging all under one roof, also also easily 
+            delivering consultant-led patient-centred care aligned with global best clinical standards. 
+             <Link href="/services/women-children" className=" ml-2 underline">Maternity</Link>, <Link href="/services/icu-emergency" className="ml-2 underline decoration-red-500 decoration-2">ICU</Link>, <Link href="/services/surgery">Surgery</Link>, <Link href="/services/dialysis">Dialysis and advanced Imaging</Link> all <Link href="https://www.gracespringhospitals.com">under one roof</Link>, also also easily 
             <b> accessed via the new Lagos Calabar Costal Road.</b>
           </p>
 
@@ -74,19 +75,27 @@ export default function Cta1() {
 
           </div> */}
 
+
+        {/* Button Container */}
+        <motion.button
+          whileHover={{ y: -4, boxShadow: "0px 6px 0px #000" }}
+          whileTap={{ y: 2, boxShadow: "0px 1px 0px #000" }}
+          className="mt-4 px-8 py-3 bg-primary text-white font- uppercase tracking-wider rounded-xl border-2 border-white relative transition-all duration-150 shadow-[0px_4px_0px_#000]"
+        >
           <Link
             href="/who-we-are/about-us"
-            className="inline-block mt-4 bg-[#5CB338] hover:bg-[#4a912d] text-black px-6 py-3 rounded-lg transition"
           >
             Learn More
           </Link>
+        </motion.button>
+      
 
         </div>
 
         {/* RIGHT COLUMN - IMAGE */}
-        <div className="relative w-full h-[500px] rounded-3xl overflow-hidden shadow-2xl">
+        <div className="relative w-full h-[500px] overflow-hidden">
 
-          {/* <HeroVideo/> */}
+          <HeroVideo/>
           <Image
             src="/assets/images/about/surgeon.jpg"
             alt="Gracespring Hospitals"

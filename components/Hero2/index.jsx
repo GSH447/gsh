@@ -52,7 +52,7 @@ const HeroStatistics = () => {
   return (
     <div
       ref={ref}
-      className="absolute bottom-6 left-4 right-4 lg:bottom-10 lg:right-[3.1rem] lg:left-auto flex flex-row lg:items-center bg-black/50 lg:p-6 rounded-md backdrop-blur-sm border border-white/10 z-30 "
+      className="absolute bottom-6 right-4 lg:bottom-10 lg:right-[3.1rem] lg:left-auto lg:flex flex-row lg:items-center bg-black/50 lg:p-6 rounded-md backdrop-blur-sm border border-white/10 z-30 w-fit"
     >
       {statsData.map((stat, index) => (
         <React.Fragment key={index}>
@@ -129,15 +129,15 @@ const Hero2 = () => {
                 <div
                   className=" h-[32vh] flex items-center"
                 >
-                  <p className=" text-white text-4xl lg:text-6xl font-bold leading-tight grid gap-y-4" style={{ fontFamily: "AvenirBold" }}>
+                  <p className=" text-white text-3xl lg:text-6xl font-bold leading-tight grid gap-y-4" style={{ fontFamily: "AvenirBold" }}>
                     {slide.title}
                   </p>
                 </div>
                 
                 <div
-                  className=""
+                  className="-mt-2"
                 >
-                  <p className="text-white/80 text-md lg:text-xl border-l-4 border-[#2A157c] pl-6">
+                  <p className="text-white/80 text-sm lg:text-xl border-l-4 border-[#2A157c] lg:pl-6">
                     {slide.description}
                   </p>
                 </div>

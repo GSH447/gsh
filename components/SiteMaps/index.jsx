@@ -190,7 +190,7 @@ export const FooterLinks = {
     {
       name: "www.gracespringhospitals.com",
       url: "https://www.gracespringhospitals.com",
-      iconPath: "",
+      iconPath: "/#",
     },
   ],
 

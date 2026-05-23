@@ -82,7 +82,7 @@ const Footer = () => {
 
         {/* Bottom Bar */}
         <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-white/50">
-          <p>© {currentYear} Gracespring Hospitals. All Rights Reserved.</p>
+          <p className="mx-auto py-10 lg:py-0">© {currentYear} Gracespring Hospitals. All Rights Reserved.</p>
           {/* <div className="flex gap-6">
             <Link href="/terms" className="hover:text-[#5CB338]">Terms & Conditions</Link>
             <Link href="/privacy" className="hover:text-[#5CB338]">Privacy Policy</Link>

@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { motion, AnimatePresence } from "framer-motion";
 import {
   CalendarDays,
   Clock3,
@@ -50,18 +51,19 @@ export default function BlogStories() {
       {/* Header */}
       <div className="max-w-3xl mx-auto text-center mb-12">
 
-        <span className="text-[#407CE2] uppercase tracking-wider font-medium">
-          Blogs & Stories
-        </span>
-
-        <h2 className="text-3xl lg:text-5xl font-bold mt-3 text-gray-900">
-          Health Stories & Insights
-        </h2>
-
-        <p className="mt-4 text-lg text-gray-600 leading-8">
+        <span className="text-[#407CE2] font-bold uppercase tracking-wider font-medium">
           Stay informed with medical insights, wellness guidance,
           patient stories and healthcare updates from Gracespring Hospitals.
-        </p>
+        </span>
+
+        {/* <h2 className="text-3xl lg:text-5xl font-bold mt-3 text-gray-900">
+          Health Stories & Blogs
+        </h2> */}
+
+        {/* <p className="mt-4 text-lg text-gray-600 leading-8">
+          Stay informed with medical insights, wellness guidance,
+          patient stories and healthcare updates from Gracespring Hospitals.
+        </p> */}
 
       </div>
 
@@ -71,7 +73,7 @@ export default function BlogStories() {
         {blogs.map((blog) => (
           <div
             key={blog.id}
-            className="bg-white rounded-3xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-xl transition duration-300"
+            className="bg-white overflow-hidden border border-gray-100 shadow-sm hover:shadow-xl transition duration-300"
           >
 
             {/* Image */}
@@ -134,14 +136,17 @@ export default function BlogStories() {
       </div>
 
       {/* CTA */}
-      <div className="text-center mt-12">
-        <Link
-          href="/blog"
-          className="inline-block bg-[#407CE2] text-white px-7 py-3 rounded-xl hover:opacity-90 transition"
+        <motion.button
+          whileHover={{ y: -4, boxShadow: "0px 6px 0px #000" }}
+          whileTap={{ y: 2, boxShadow: "0px 1px 0px #000" }}
+          className="mt-4 px-8 py-3 bg-primary text-white font- uppercase tracking-wider rounded-xl border-2 border-white relative transition-all duration-150 shadow-[0px_4px_0px_#000]"
         >
-          View All Stories
-        </Link>
-      </div>
+          <Link
+            href="/blog"
+          >
+            All Medical Insights
+          </Link>
+        </motion.button>
 
     </section>
   );
