@@ -15,33 +15,33 @@ export default function BlogStories() {
     {
       id:1,
       image:"/assets/images/blog/medical-outreach-3.jpg",
-      category:"Medical Insights",
-      title:"Understanding Preventive Healthcare",
+      category:"Medical Outreach",
+      title:"Preventive Healthcare Outreach Monastery Road",
       summary:"Learn how early detection and routine medical checkups improve long-term health outcomes.",
-      author:"Gracespring Admin",
-      date:"May 18, 2026",
+      author:"Admin",
+      date:"May 16, 2026",
       time:"5 min read"
     },
-    {
-      id:2,
-      image:"/assets/images/blog/blog2.jpg",
-      category:"Patient Story",
-      title:"A Journey of Recovery & Hope",
-      summary:"Compassionate care and clinical excellence supporting a patient’s healing journey.",
-      author:"Gracespring Admin",
-      date:"May 16, 2026",
-      time:"4 min read"
-    },
-    {
-      id:3,
-      image:"/assets/images/blog/blog3.jpg",
-      category:"Wellness Tips",
-      title:"Healthy Living Habits That Work",
-      summary:"Simple lifestyle habits that support healthier living and overall wellbeing.",
-      author:"Health Education Team",
-      date:"May 12, 2026",
-      time:"6 min read"
-    }
+    // {
+    //   id:2,
+    //   image:"/assets/images/blog/blog2.jpg",
+    //   category:"Patient Story",
+    //   title:"A Journey of Recovery & Hope",
+    //   summary:"Compassionate care and clinical excellence supporting a patient’s healing journey.",
+    //   author:"Gracespring Admin",
+    //   date:"May 16, 2026",
+    //   time:"4 min read"
+    // },
+    // {
+    //   id:3,
+    //   image:"/assets/images/blog/blog3.jpg",
+    //   category:"Wellness Tips",
+    //   title:"Healthy Living Habits That Work",
+    //   summary:"Simple lifestyle habits that support healthier living and overall wellbeing.",
+    //   author:"Health Education Team",
+    //   date:"May 12, 2026",
+    //   time:"6 min read"
+    // }
   ];
 
   return (

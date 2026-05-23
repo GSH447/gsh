@@ -20,7 +20,7 @@ export default function Cta1() {
         {/* LEFT COLUMN - ABOUT US */}
         <div className="text-black space-y-6">
 
-          <p className="uppercase tracking-widest text-sm text-white font-semibold">
+          <p className="uppercase tracking-widest text-sm text-[#2A157c] font-semibold">
             24/7 GLOBAL STANDARD OF PRIVATE HEALTHCARE
           </p>
 
@@ -30,15 +30,15 @@ export default function Cta1() {
             Our Shared Path
           </h2>
 
-          <p className="leading-8 text-sm text-black">
-            ABOUT THE HOSPITAL
+          <p className="leading-8 text-sm text-[#2A157c]">
+            ABOUT GRACESPRING HOSPITALS
           </p>
 
-          <p className="leading-8 text-black">
+          <p className="leading-8 text-[#2A157c]">
             A <b>private hospital on the Lekki-Epe corridor, Sangotedo </b>.
             delivering consultant-led patient-centred care aligned with global best clinical standards.
             Maternity, ICU, Surgery, Dialysis and advanced Imaging all under one roof, also also easily 
-            <b>accessed via the new Lagos Calabar Costal Road.</b>
+            <b> accessed via the new Lagos Calabar Costal Road.</b>
           </p>
 
           {/* Three Wings */}
