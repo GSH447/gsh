@@ -21,15 +21,15 @@ export default function ServicesShortCutPage() {
             <div>
 
               <div>
-                <p>ADULTS >></p>
+                <p>ADULTS </p>
               </div>
               
               <div>
-                <p>CHILDREN >></p>
+                <p>CHILDREN </p>
               </div>
               
               <div>
-                <p>FAMILY >></p>
+                <p>FAMILY </p>
               </div>
 
             </div>
