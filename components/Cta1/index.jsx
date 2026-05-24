@@ -96,12 +96,12 @@ export default function Cta1() {
         <div className="relative w-full h-[500px] overflow-hidden">
 
           <HeroVideo/>
-          <Image
+          {/* <Image
             src="/assets/images/about/surgeon.jpg"
             alt="Gracespring Hospitals"
             fill
             className="object-cover"
-          />
+          /> */}
 
         </div>
 

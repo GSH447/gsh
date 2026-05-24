@@ -41,16 +41,16 @@ const HeroVideo = () => {
   }, []);
 
   return (
-    <div className="relative w-full h-full overflow-hidden rounded-3xl">
+    <div className="relative w-full h-full overflow-hidden">
       <video
         ref={videoRef}
-        className="w-full h-full object-cover"
+        className="w-full h-full object-contain"
         muted
         playsInline
         preload="metadata"
         loop
       >
-        <source src="/glesyde.mp4" type="video/mp4" />
+        <source src="/assets/videos/gsh.mp4" type="video/mp4" />
 
         Your browser does not support the video tag.
       </video>
