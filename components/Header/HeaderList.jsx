@@ -209,7 +209,7 @@ export default function Navbar() {
             whileTap={{ scale: 0.95 }}
             className=" w-full bg-[#5CB338] hover:bg-[#4a912d] text-white font-bold py-2.5 px-6 rounded-full shadow-lg hidden lg:flex items-center justify-center gap-2 transition-colors"
           >
-            <Link href="/book" className="text-[15px] md:text-[16px]">
+            <Link href="/book-an-appointment" className="text-[15px] md:text-[16px]">
               <span className="block lg:hidden">B</span><span className="hidden lg:flex whitespace-nowrap">Book an Appointment</span>
             </Link>
           </motion.button>
@@ -220,7 +220,7 @@ export default function Navbar() {
             whileTap={{ scale: 0.95 }}
             className="lg:w-full md:w-auto bg-[#6F92E7] hover:bg-[#5a7bc9] text-white font-bold py-2.5 px-6 rounded-full shadow-lg hidden lg:flex items-center justify-center gap-2 transition-colors"
           >
-            <Link href="/portal" className="text-[15px] md:text-[16px]">
+            <Link href="/patient-portal" className="text-[15px] md:text-[16px]">
               <span className="block lg:hidden">P</span><span className="hidden lg:block whitespace-nowrap">Patient Portal</span>
             </Link>
           </motion.button>

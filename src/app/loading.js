@@ -16,11 +16,12 @@ const Loading = () => {
           transition={{ duration: 0.5, ease: "easeInOut", repeat: Infinity, repeatType: "reverse" }}
           className="flex items-center justify-center h-screen"
         >
-          <img
-            src="/logo.svg"
-            alt="logo"
-            className="w-20 h-20"
-          />
+        <div className="loading-animation-container">
+          <div className="loading-content">
+            <div className="spinner-ring"></div>
+            <div className="logo-g">G</div>
+          </div>
+        </div>
         </motion.div>
 
       </div>

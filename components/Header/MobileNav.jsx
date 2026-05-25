@@ -137,21 +137,21 @@ export default function MobileNav() {
           {/* ACTION BUTTONS - Desktop Style */}
           <div className="pt-8 flex flex-col gap-4 pb-12">
             <Link
-              href="/book"
+              href="/book-an-appointment"
               className="w-full bg-[#5CB338] text-white font-bold py-4 rounded-xl flex items-center justify-center shadow-md active:scale-95 transition-transform"
               onClick={() => setMenuOpen(false)}
             >
               Book an Appointment
             </Link>
             <Link
-              href="/portal"
+              href="/patient-portal" 
               className="w-full bg-[#6F92E7] text-white font-bold py-4 rounded-xl flex items-center justify-center shadow-md active:scale-95 transition-transform"
               onClick={() => setMenuOpen(false)}
             >
               Patient Portal
             </Link>
             <Link
-              href="/foundation"
+              href="https://www.foundation.gracespringhospitals.com"
               className="w-full bg-white border-2 border-[#2A157C] text-[#2A157C] font-bold py-4 rounded-xl flex items-center justify-center active:scale-95 transition-transform"
               onClick={() => setMenuOpen(false)}
             >

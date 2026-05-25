@@ -11,7 +11,7 @@ const HeroVideo = () => {
     if (!video) return;
 
     // Required for autoplay to work
-    video.muted = true;
+    // video.muted = true;
     video.playsInline = true;
 
     const observer = new IntersectionObserver(

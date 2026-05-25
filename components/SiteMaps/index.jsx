@@ -10,13 +10,13 @@ export const links = [
         header: "About us",
         href: "/who-we-are/about-us",
         subMenu: [{ label: "Find out more about who we are", href: "/who-we-are/about-us" }],
-        navImage: [{ src: "/assets/images/menus/about.jpg" }] 
+        // navImage: [{ src: "/assets/images/menus/about.jpg" }] 
       },
       {
         header: "Our people",
         href: "/who-we-are/our-people",
         subMenu: [{ label: "Meet our Patrons and Leadership", href: "/who-we-are/our-people" }],
-        navImage: [{ src: "/assets/images/menus/people.png" }] 
+        // navImage: [{ src: "/assets/images/menus/people.png" }] 
       }
     ],
   },
@@ -90,7 +90,7 @@ export const links = [
         header: "Testimonials",
         href: "/#",
         subMenu: [{ label: "Hear from our patients", href: "/testimonials" }],
-        navImage: [{ src: "/assets/images/menus/doctor.png" }] 
+        // navImage: [{ src: "/assets/images/menus/doctor.png" }] 
       },
       // {
       //   header: "Blogs & Newsletter",
@@ -102,7 +102,7 @@ export const links = [
         header: "News/ Press Release",
         href: "/#",
         subMenu: [{ label: "Latest News and Press Releases", href: "/news-and-media" }],
-        navImage: [{ src: "/assets/images/menus/newspaper.png" }] 
+        // navImage: [{ src: "/assets/images/menus/newspaper.png" }] 
       },
     ],
   },
@@ -116,19 +116,19 @@ export const links = [
         header: "Contact Us",
         href: "/#",
         subMenu: [{ label: "Contact Information", href: "/patient-support/contact-us" }],
-        navImage: [{ src: "/assets/images/menus/customer-support.png" }] 
+        // navImage: [{ src: "/assets/images/menus/customer-support.png" }] 
       },
       {
         header: "Patient Feedback",
         href: "/#",
         subMenu: [{ label: "Share your experience with us", href: "/patient-support/feedback" }],
-        navImage: [{ src: "/assets/images/menus/doctor.png" }] 
+        // navImage: [{ src: "/assets/images/menus/doctor.png" }] 
       },
       {
         header: "Frequently Asked Questions",
         href: "/#",
         subMenu: [{ label: "View our FAQ", href: "/patient-support/faq" }],
-        navImage: [{ src: "/assets/images/menus/peer.png" }] 
+        // navImage: [{ src: "/assets/images/menus/peer.png" }] 
       },
     ],
   },

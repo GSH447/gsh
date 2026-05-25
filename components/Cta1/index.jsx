@@ -1,8 +1,52 @@
 "use client";
 import Link from "next/link";
-import Image from "next/image";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import HeroVideo from "../Videos/index"
+const letterVariants = {
+  hidden: {
+    opacity: 0,
+    y: 50,
+    filter: 'blur(8px)',
+  },
+  visible: (i) => ({
+    opacity: 1,
+    y: 0,
+    filter: 'blur(0px)',
+    transition: {
+      delay: i * 0.04,
+      duration: 0.5,
+      ease: 'easeOut',
+    },
+  }),
+};
+
+const AnimatedText = ({
+  text,
+  className = '',
+}) => {
+  return (
+    <motion.div
+      className={`flex flex-wrap ${className}`}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{
+        once: false,
+        amount: 0.3,
+      }}
+    >
+      {text.split('').map((char, index) => (
+        <motion.span
+          key={index}
+          custom={index}
+          variants={letterVariants}
+          className="inline-block"
+        >
+          {char === ' ' ? '\u00A0' : char}
+        </motion.span>
+      ))}
+    </motion.div>
+  );
+};
 
 export default function Cta1() {
   return (
@@ -25,11 +69,18 @@ export default function Cta1() {
             ABOUT GRACESPRING HOSPITALS
           </p>
 
-          <h2 className="text-3xl lg:text-5xl font-bold leading-tight">
-            Excellence in Care,
-            <br />
-            Our Shared Path
-          </h2>
+          {/* SECOND HEADING */}
+          <div className="text-3xl lg:text-5xl font-bold leading-tight">
+
+            <AnimatedText
+              text="Excellence in Care,"
+            />
+
+            <AnimatedText
+              text="Our Shared Path"
+            />
+
+          </div>
 
           <p className="-mt-5 uppercase tracking-widest text-sm text-[#2A157c] font-semibold">
            <i>24/7 GLOBAL STANDARD OF PRIVATE HEALTHCARE</i>
