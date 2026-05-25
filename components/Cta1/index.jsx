@@ -22,7 +22,7 @@ export default function Cta1() {
         <div className="text-black space-y-6">
 
           <p className="uppercase tracking-widest text-sm text-[#2A157c] font-semibold">
-            24/7 GLOBAL STANDARD OF PRIVATE HEALTHCARE
+            ABOUT GRACESPRING HOSPITALS
           </p>
 
           <h2 className="text-3xl lg:text-5xl font-bold leading-tight">
@@ -31,8 +31,8 @@ export default function Cta1() {
             Our Shared Path
           </h2>
 
-          <p className="leading-8 text-sm text-[#2A157c]">
-            ABOUT GRACESPRING HOSPITALS
+          <p className="-mt-5 uppercase tracking-widest text-sm text-[#2A157c] font-semibold">
+           <i>24/7 GLOBAL STANDARD OF PRIVATE HEALTHCARE</i>
           </p>
 
           <p className="leading-8 text-[#2A157c]">
@@ -93,7 +93,7 @@ export default function Cta1() {
         </div>
 
         {/* RIGHT COLUMN - IMAGE */}
-        <div className="relative w-full h-[500px] overflow-hidden">
+        <div className="relative w-full lg:h-[500px] overflow-hidden">
 
           <HeroVideo/>
           {/* <Image
