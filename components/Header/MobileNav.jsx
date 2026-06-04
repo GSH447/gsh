@@ -151,7 +151,7 @@ export default function MobileNav() {
               Patient Portal
             </Link>
             <Link
-              href="https://www.foundation.gracespringhospitals.com"
+              href="https://foundation.gracespringhospitals.com/"
               className="w-full bg-white border-2 border-[#2A157C] text-[#2A157C] font-bold py-4 rounded-xl flex items-center justify-center active:scale-95 transition-transform"
               onClick={() => setMenuOpen(false)}
             >
