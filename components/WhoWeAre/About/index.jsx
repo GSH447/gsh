@@ -1,25 +1,25 @@
 "use client";
-import About from "./About";
-import AboutFoundation from "./AboutFoundation";
-import Aboutus from "./Aboutus";
-import AboutImage from "./AboutImage";
-import Aboutdifference from "./Aboutdifference";
+
+import React from "react";
+import CorporateHero from "./CorporateHero";
+import OurStory from "./OurStory";
+import ThreeWings from "./ThreeWings";
+import VisionMissionGrid from "./VisionMissionGrid";
+import SpecializationGrid from "./SpecializationGrid";
+import CultureSection from "./CultureSection";
 import SubscribeCTA from "../../Banner/CTA/subscribe";
-import Vmo from "./vmo";
 
 export default function AboutPage() {
   return (
-
-    <>
-    
-      <Aboutus/>
-      <AboutFoundation/>
-      <About/>
-      <AboutImage/>
-      <Aboutdifference/>
-      <Vmo/>
-    
-      <SubscribeCTA/>
-    </>
+    <div className="bg-slate-50 text-slate-800 antialiased overflow-x-hidden">
+      <CorporateHero />
+      <OurStory />
+      <ThreeWings />
+      <VisionMissionGrid />
+      <SpecializationGrid />
+      <CultureSection />
+      {/* <SubscribeCTA /> */}
+    </div>
   );
 }
+

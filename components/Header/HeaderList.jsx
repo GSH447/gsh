@@ -232,7 +232,7 @@ export default function Navbar() {
             className="lg:w-full md:w-auto bg-white hover:bg-[#4a912d]  text-[#5CB338] font-extrabold py-2.5 px-6 rounded-full shadow-lg hidden lg:flex items-center justify-center gap-2 transition-colors"
           >
             <Link href="https://foundation.gracespringhospitals.com/" className="text-[15px] md:text-[16px]">
-              <span className="block lg:hidden">F</span><span className="hidden lg:block whitespace-nowrap">Our Foundation</span>
+              <span className="block lg:hidden">F</span><span className="hidden lg:block whitespace-nowrap">Gracespring Health Foundation</span>
             </Link>
           </motion.button>
 

@@ -21,6 +21,17 @@ module.exports = {
         lg: '1024px',
         xl: '1280px',
       },
+
+      animation: {
+        fadeIn: 'fadeIn 0.4s ease-out forwards',
+      },
+      keyframes: {
+        fadeIn: {
+          '0%': { opacity: '0', transform: 'translateY(10px)' },
+          '100%': { opacity: '1', transform: 'translateY(0)' },
+        },
+      },
+      
     },
   },
 

@@ -358,11 +358,11 @@ export const team = {
   management: [
     { 
       id: 1,
-      image: "/assets/images/team/augustine+olugbemi-nobg.jpeg",
+      image: "/assets/images/team/augustineO.jpg",
       title: " Dr. Augustine J. Olugbemi",
-      description: "Founder/ Cardiacthoracic and Vascular Surgeon",
+      description: "Consultant Cardiothoracic & Vascular Surgeon/ Chief Executive Officer & Medical Director",
       url: "#",
-      alt: "Founder/ Cardiacthoracic and Vascular Surgeon",
+      alt: "Consultant Cardiothoracic & Vascular Surgeon/ Chief Executive Officer & Medical Director",
       about: `Dr Augustine Jeremai Olugbemi is a seasoned Nigerian and South African trained Cardiothoracic and Vascular surgeon, with a wealth of experience from Lagos University Teaching Hospital (LUTH), the Inkosi Albert Luthuli Central Hospital (IALCH), Durban, South Africa; a leading South African Quartenary hospital; National Cardiothoracic Centre, Korle-Bu Teaching hospital, Accra, Ghana and Duke University (Division of Thoracic Surgery), Durham, North Carolina, USA.
       He is proficient in Cardiac, Thoracic and Vascular procedures, including Video Assisted Thoracoscopic Surgery (VATS) and one of the very few Cardiac surgeons in Nigeria, proficient in both adult and paediatric cardiac cases (Both congenital and acquired).
       He has been involved in many medical missions by Family Care Association, an American based medical hospitality group, with leading roles in the surgical division and worked as Consultant Cardiothoracic and Vascular Surgeon at the Lagos University Teaching Hospital, (LUTH), Babcock University Teaching Hospital (BUTH). He set up the Cardiothoracic and vascular surgery programme at the Nigerian Navy Reference Hospital (NNRH) Ojo, Lagos, Nigeria in 2017. He also pioneered open heart surgery programme in Reddington hospital Lagos, Nigeria in 2021, Evercare hospital Lekki (with another surgeon), Lagos, Nigeria in 2022, and Federal Medical Centre, (FMC) Abeokuta, Ogun State, Nigeria in 2024 where he also serves as the head of the Cardiac team and programme. 
@@ -529,7 +529,7 @@ export const team = {
       id: 2,
       image: "/assets/images/team/jola+olugbemi.svg",
       title: "Dr (Mrs) Mojolaoluwa Olugbemi",
-      description: "General Surgeon (Robotics and Laparoscopic)",
+      description: "Consultant Colorectal & General Surgeon​/Director, Strategic Prog. & Governance​",
       url: "#",
       alt: "Dr Jola Olugbemi - ChM (Gen Surg), FRCS (Eng), FWACS, FMCS, Pg Cert (Med Edu) - Consultant Colorectal and General Surgeon",
       about: `Dr Jola Olugbemi - ChM (Gen Surg), FRCS (Eng), FWACS, FMCS, Pg Cert (Med Edu) - Consultant Colorectal and General Surgeon is a top colorectal and general surgeon with dual specialist registration from both Nigeria and the United Kingdom. Her advanced training and extensive experience in open and minimal access surgeries (laparoscopic, TAMIS and robotic) as well as endoscopic procedures make her a prememinent surgeon delivering global best standards of care to our patients.`,
@@ -557,7 +557,37 @@ export const team = {
       "Endoscopy (Upper GI endoscopy, Colonoscopy, Flexible sigmoidoscopy)"
     ]
 
+    },
+
+    { 
+      id: 3,
+      image: "/assets/images/team/Hafeez_Akinade.jpeg",
+      title: "Hafeez Akinade Azeez (SPHRi, MBA, HRPL, ACIPM, MCSE)",
+      description: "Chief Operating Officer & Head of Human Resources",
+      url: "#",
+      alt: "Hafeez Akinade Azeez - Chief Operating Officer & Head of Human Resources",
+      about: `Hafeez Akinade Azeez is a transformational people and operations leader with over 12 years of multi-industry experience across healthcare, manufacturing, and service sectors. Specializing in cross-border execution and organizational design, he aligns people strategy directly with global business objectives. Hafeez has a proven track record of building performance-driven cultures, managing distributed teams, and spearheading large-scale digital transformations and enterprise system deployments (ERP/HRIS) that significantly optimize operational efficiency and compliance.`,
+      clinical_Interests: [
+        "Regional & Multinational HR Strategy",
+        "Cross-Functional Operations Leadership",
+        "HR Transformation & Process Automation",
+        "Workforce Planning & Talent Optimization",
+        "Regulatory Compliance & Risk Mitigation (Local & International)",
+        {
+          title: "Enterprise Systems & Tech Deployment including",
+          items: [
+            "ERP Architecture Integration (Odoo)",
+            "HRIS Platforms (SeamlessHR, FACTS, SMARTS)",
+            "Cloud Infrastructure & Collaboration (Microsoft 365, Google Workspace)",
+            "Data Security & Change Communication Strategy"
+          ]
+        },
+        "Compensation & Benefits Architecture",
+        "Organizational Design & C-Suite Strategic Advisory",
+        "Culture Integration & Hybrid/Distributed Team Management"
+      ]
     }
+
   ],
 
   // operations: [

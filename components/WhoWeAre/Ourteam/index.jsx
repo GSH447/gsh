@@ -1,5 +1,6 @@
 "use client";
 import People from "./People";
+import TeamImageGrid from "./TeamImageGrid";
 import PeopleCard from "./Team";
 import SubscribeCTA from "../../Banner/CTA/subscribe";
 import SaveALife from "../../SaveALife";
@@ -9,13 +10,14 @@ export default function PeoplePage() {
   return (
 
     <>
-    
-      <People/>
-      <PeopleCard/>
-      <SaveALife
+      {/* <People /> */}
+      <TeamImageGrid />    
+      {/* <People/>
+      <PeopleCard/> */}
+      {/* <SaveALife
         save_a_life={save_a_life}
       />
-      <SubscribeCTA/>
+      <SubscribeCTA/> */}
 
     </>
   );
