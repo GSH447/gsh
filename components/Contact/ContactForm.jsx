@@ -4,22 +4,20 @@ import Link from "next/link";
 import axiosInstance from "../../lib/axios";
 
 export default function ContactForm() {
-  const [countries, setCountries] = useState([]); //countries variables
-  const [text, setText] = useState(""); //text variables
-  const [search, setSearch] = useState(""); //search variables
-  const [showDropdown, setShowDropdown] = useState(false); //tel dropdown variables
+  const [countries, setCountries] = useState([]);
+  const [search, setSearch] = useState("");
+  const [showDropdown, setShowDropdown] = useState(false);
+  const [errors, setErrors] = useState({});
   const [errorMessage, setErrorMessage] = useState("");
   const [successMessage, setSuccessMessage] = useState("");
-  const maxWords = 50; // Max words allowed
-  const maxChars = 200; // Max characters allowed
-  const [isChecked, setIsChecked] = useState(false); // State to track checkbox
-  const [loading, setLoading] = useState(false); //set loading
-  const [isModalOpen, setIsModalOpen] = useState(false); // State for modal
+  const [isChecked, setIsChecked] = useState(false);
+  const [loading, setLoading] = useState(false);
+  
   const [selectedCountry, setSelectedCountry] = useState({
     code: "+234",
     flag: "",
     name: "Nigeria",
-  }); //selectedCountry variables
+  });
 
   const [formData, setFormData] = useState({
     firstName: "",
@@ -27,8 +25,7 @@ export default function ContactForm() {
     email: "",
     phone: "",
     message: ""
-  }); //form variables
-
+  });
 
   /* ---------------- FETCH COUNTRIES ---------------- */
   useEffect(() => {
@@ -47,64 +44,40 @@ export default function ContactForm() {
         const nigeria = countryData.find((c) => c.code === "+234");
         if (nigeria) setSelectedCountry(nigeria);
       })
-      .catch((err) =>
-        console.error("Country fetch error:", err.message)
-      );
+      .catch((err) => console.error("Country fetch error:", err.message));
   }, []);
 
-  /* ---------------- HANDLERS ---------------- */
   const handleCountryChange = (country) => {
     setSelectedCountry(country);
     setShowDropdown(false);
   };
 
-
-
-
   /* ---------------- VALIDATION ---------------- */
-  const validate = () => {
+  const validateForm = () => {
     const e = {};
-
-    if (!data.title) e.title = "Title is required";
-    if (!data.firstName.trim()) e.firstName = "First name required";
-    if (!data.lastName.trim()) e.lastName = "Last name required";
-
-    if (!/^\S+@\S+\.\S+$/.test(data.email))
-      e.email = "Invalid email address";
-
-    if (!data.phone || data.phone.length < 7)
-      e.phone = "Valid phone number required";
+    if (!formData.firstName.trim()) e.firstName = "First name is required";
+    if (!formData.lastName.trim()) e.lastName = "Last name is required";
+    if (!/^\S+@\S+\.\S+$/.test(formData.email)) e.email = "Invalid email address";
+    if (!formData.phone || formData.phone.length < 7) e.phone = "Valid phone number required";
+    if (!formData.message.trim()) e.message = "Message content cannot be blank";
 
     setErrors(e);
     return Object.keys(e).length === 0;
   };
 
-
-  // textarea function 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
-  };
-
-  const handleTextChange = (e) => {
-    let inputText = e.target.value;
-    let words = inputText.trim().split(/\s+/).filter((word) => word !== "");
-    let charCount = inputText.length;
-
-    if (charCount <= maxChars && words.length <= maxWords) {
-      setText(inputText);
-      setFormData({ ...formData, message: inputText });
-    }
-  };
-
-  const handleCheckboxChange = (e) => {
-    setIsChecked(e.target.checked); // Update the checkbox state
+    setFormData((prev) => ({ ...prev, [name]: value }));
+    if (errors[name]) setErrors((prev) => ({ ...prev, [name]: "" }));
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setErrorMessage("");
     setSuccessMessage("");
+    
+    if (!validateForm()) return;
+
     setLoading(true);
     const payload = {
       ...formData,
@@ -112,229 +85,173 @@ export default function ContactForm() {
     };
 
     try {
-        const response = await axiosInstance.post('/contact',  payload );
-        const result = response.data;
-    
-        if (result.status === 'success') {
-          setSuccessMessage(`Submitted successfully!`);
-        } 
-        else {
-          setErrorMessage(result.message || "Submission failed, email admin@gracespringhospitals.com");
-        }
-    } 
-  
-    
-    catch (err) {
-      const error = err;
-    
-      if (error.response && error.response.data) {
-        setErrorMessage(error.response.data.message || "Something went wrong.");
-      } else if (error.message) {
-        setErrorMessage(error.message || "Network error, please try again.");
+      const response = await axiosInstance.post('/contact', payload);
+      if (response.data?.status === 'success') {
+        setSuccessMessage(`Thank you! Your message has been sent successfully.`);
+        setFormData({ firstName: "", lastName: "", email: "", phone: "", message: "" });
       } else {
-        setErrorMessage("An unexpected error occurred.");
+        setErrorMessage(response.data?.message || "Submission failed, please mail contact@gracespringhospitals.com");
       }
+    } catch (err) {
+      if (err.response?.data) {
+        setErrorMessage(err.response.data.message || "Something went wrong.");
+      } else {
+        setErrorMessage(err.message || "Network error, please check your connectivity.");
+      }
+    } finally {
+      setLoading(false);
     }
-    
-    finally {
-        setLoading(false);
-    }
-
   };
-  // Modal Toggle
-  const toggleModal = () => {
-    setIsModalOpen(!isModalOpen);
-  };
-  
 
   return (
+    <div id="contact-form" className="w-full max-w-2xl mx-auto p-4 md:p-8 bg-white shadow-xl rounded-2xl border border-gray-100">
+      <div className="mb-8 text-center sm:text-left">
+        <h2 className="text-2xl md:text-3xl font-extrabold text-[#1a1a1a] tracking-tight">
+          Send us a message
+        </h2>
+        <p className="text-gray-500 mt-2 text-sm md:text-base">
+          Fill out the form below and our medical administration team will reach out to you shortly.
+        </p>
+      </div>
 
-    <div
-      id="contact-form"
-      className="lg:bg-primary lg:p-10 w-fit mx-auto rounded-lg shadow-md"
-    >
-
-      
-        <div className="lg:w-fit m-auto p-10 bg-white shadow-xl rounded-lg">
-
-          <div className=" w-fit mb-5">
-
-            <h1 className="text-[x-large] lg:text-[45px] leading-[2cm] font-bold tracking-wide" style={{fontFamily:"AvenirBold"}}>Send us a message</h1>
-
-            <p className="text-[small] lg:text-[15px]">Fill out the form below and the relevant person will get back to you.</p>
-
+      <form className="space-y-5" onSubmit={handleSubmit}>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div>
+            <label className="block text-sm font-medium text-gray-700 mb-1">First name</label>
+            <input
+              type="text"
+              name="firstName"
+              placeholder="Elizabeth"
+              value={formData.firstName}
+              className={`w-full p-3 border rounded-lg focus:ring-2 focus:ring-primary focus:outline-none transition-all ${errors.firstName ? 'border-red-500' : 'border-gray-300'}`}
+              onChange={handleChange}
+              required
+            />
+            {errors.firstName && <p className="text-xs text-red-500 mt-1">{errors.firstName}</p>}
           </div>
 
-          <form className=" flex flex-col space-y-1 w-full max-w-lg " onSubmit={handleSubmit}>
-
-              <div className="flex gap-2">
-
-                <div>
-                  <label className="text-[small] lg:text-[15px]">First name</label>
-                  <input
-                    type="text"
-                    placeholder="Elizabeth"
-                    className="flex-1 p-2 border rounded-md focus:ring focus:outline-none w-full lg:text-[15px]"
-                    name="firstName"
-                    onChange={handleChange}
-                    required
-                  /> 
-                </div>
-
-                <div>
-                  <label className="text-[small] lg:text-[15px]">Last name</label>
-                  <input
-                    type="text"
-                    placeholder="Last name"
-                    className="flex-1 p-2 border rounded-md focus:ring focus:outline-none w-full lg:text-[15px]"
-                    name="lastName"
-                    onChange={handleChange}
-                    required
-                  />
-                </div>
-
-              </div>
-
-              <div>
-                <label className="text-[small] lg:text-[15px]">Email</label>
-                <input
-                  type="email"
-                  placeholder="you@company.com"
-                  className="w-full p-2 border rounded-md focus:ring focus:outline-none lg:text-[15px]"
-                  name="email"
-                  onChange={handleChange}
-                  required
-                />
-              </div>
-              
-              <div>
-                <label className="text-[small] lg:text-[15px]">Phone Number</label>
-                <div className="flex items-center border rounded-md p-2 space-x-2">
-                  <div className="relative">
-                    <button
-                      type="button"
-                      className="flex items-center space-x-2 p-2 focus:outline-none"
-                      // onClick={() => {
-                      //   /* Optional: Add a modal/dropdown to select the country */
-                      // }}
-
-                    onClick={() => setShowDropdown(!showDropdown)}
-                    >
-                      <img
-                        src={selectedCountry.flag || '/logo.svg'}
-                        alt="Flag"
-                        className="w-6 h-4 rounded-md"
-                      />
-                      
-                      <span className="text-[small] lg:text-[15px]">{selectedCountry.code}</span>
-                    </button>
-
-                    {showDropdown && (
-                    <div className="absolute top-12 left-0 bg-white border shadow-md max-h-60 overflow-y-auto w-44 z-10">
-                      <input
-                        type="text"
-                        placeholder="Search country..."
-                        className="w-full p-2 border-b lg:text-[15px]"
-                        value={search}
-                        onChange={(e) => setSearch(e.target.value)}
-                      />
-                  {countries
-                        .filter((c) =>
-                          c.name.toLowerCase().includes(search.toLowerCase())
-                        )
-                        .map((country) => (
-                          <div
-                            key={`${country.code}-${country.name}`}
-                            className="flex items-center p-2 hover:bg-gray-200 cursor-pointer"
-                            onClick={() => handleCountryChange(country)}
-                          >
-                            <img
-                              src={country.flag}
-                              alt={country.name}
-                              className="w-6 h-4 mr-2"
-                            />
-                            <span>{country.name} ({country.code})</span>
-                          </div>
-                        ))}
-                    </div>
-                  )}
-                    </div>
-
-                    <input
-                      type="tel"
-                      placeholder="8143516481"
-                      className="flex-1 p-2 focus:ring focus:outline-none lg:text-[15px]"
-                      name="phone"
-                      onChange={handleChange}
-                      required
-                    />
-                </div>
-              </div>
-                
-              <div>
-
-                <label className="text-[small] lg:text-[15px]">Message</label>
-                
-                <textarea
-                  placeholder="Type your text here..."
-                  className="w-full p-2 border rounded-md focus:ring focus:outline-none h-24 resize-none lg:text-[15px]"
-                  value={text}
-                  name="message"
-                  onChange={handleTextChange}
-                  required
-                />
-                {/* <p className="text-sm text-gray-500 mt-1">
-                  {text.length} / {maxChars} characters | {text.split(/\s+/).filter(word => word !== "").length} / {maxWords} words
-                </p> */}
-                
-              </div>
-
-              <div className="flex items-center space-x-2">
-
-              <input
-                type="checkbox"
-                id="privacy"
-                className="rounded lg:text-[15px]"
-                checked={isChecked}
-                onChange={() => setIsChecked(!isChecked)}
-              />
-              <label
-                htmlFor="privacy"
-                className="text-[small] lg:text-[15px]"
-              >
-                Accept and <Link className="hover:text-primary font-bold cursor-pointer text-[small]  lg:text-[15px]" target="_blank" href={"/privacy-policy"}>read privacy policy.</Link>
-              </label>
-
-                We will use the information you have provided to respond to your enquiry.
-
-              </div>
-
-              {errorMessage && <p className="text-red-500">{errorMessage}</p>}
-              {successMessage && <p className="text-green-500">{successMessage}</p>}
-              
-              <button
-                type="submit"
-                className="w-full bg-primary text-white p-2 rounded-md hover:bg-black"
-                disabled={!isChecked} // Disable button when checkbox is unchecked
-              >
-                
-                {loading ? "Sending message..." : "Send message"}
-              </button>
-
-          </form>
-              
-
-
-
+          <div>
+            <label className="block text-sm font-medium text-gray-700 mb-1">Last name</label>
+            <input
+              type="text"
+              name="lastName"
+              placeholder="Okon"
+              value={formData.lastName}
+              className={`w-full p-3 border rounded-lg focus:ring-2 focus:ring-primary focus:outline-none transition-all ${errors.lastName ? 'border-red-500' : 'border-gray-300'}`}
+              onChange={handleChange}
+              required
+            />
+            {errors.lastName && <p className="text-xs text-red-500 mt-1">{errors.lastName}</p>}
+          </div>
         </div>
 
+        <div>
+          <label className="block text-sm font-medium text-gray-700 mb-1">Email Address</label>
+          <input
+            type="email"
+            name="email"
+            placeholder="you@example.com"
+            value={formData.email}
+            className={`w-full p-3 border rounded-lg focus:ring-2 focus:ring-primary focus:outline-none transition-all ${errors.email ? 'border-red-500' : 'border-gray-300'}`}
+            onChange={handleChange}
+            required
+          />
+          {errors.email && <p className="text-xs text-red-500 mt-1">{errors.email}</p>}
+        </div>
 
+        <div>
+          <label className="block text-sm font-medium text-gray-700 mb-1">Phone Number</label>
+          <div className={`flex items-center border rounded-lg p-1 bg-white focus-within:ring-2 focus-within:ring-primary transition-all ${errors.phone ? 'border-red-500' : 'border-gray-300'}`}>
+            <div className="relative">
+              <button
+                type="button"
+                className="flex items-center space-x-1 p-2 hover:bg-gray-50 rounded-md transition"
+                onClick={() => setShowDropdown(!showDropdown)}
+              >
+                {selectedCountry.flag && (
+                  <img src={selectedCountry.flag} alt="Flag" className="w-5 h-3.5 object-cover rounded-sm" />
+                )}
+                <span className="text-sm font-semibold text-gray-700">{selectedCountry.code}</span>
+              </button>
+
+              {showDropdown && (
+                <div className="absolute top-12 left-0 bg-white border border-gray-200 shadow-xl max-h-60 overflow-y-auto w-56 rounded-lg z-30 p-1">
+                  <input
+                    type="text"
+                    placeholder="Search country..."
+                    className="w-full p-2 text-sm border-b border-gray-100 focus:outline-none mb-1 sticky top-0 bg-white"
+                    value={search}
+                    onChange={(e) => setSearch(e.target.value)}
+                  />
+                  {countries
+                    .filter((c) => c.name.toLowerCase().includes(search.toLowerCase()))
+                    .map((country) => (
+                      <div
+                        key={`${country.code}-${country.name}`}
+                        className="flex items-center p-2 text-sm hover:bg-gray-100 rounded-md cursor-pointer transition"
+                        onClick={() => handleCountryChange(country)}
+                      >
+                        <img src={country.flag} alt={country.name} className="w-5 h-3.5 object-cover mr-2 rounded-sm" />
+                        <span className="truncate text-gray-700">{country.name} ({country.code})</span>
+                      </div>
+                    ))}
+                </div>
+              )}
+            </div>
+
+            <input
+              type="tel"
+              name="phone"
+              placeholder="8082550192"
+              value={formData.phone}
+              className="flex-1 p-2 text-sm text-gray-800 focus:outline-none bg-transparent"
+              onChange={handleChange}
+              required
+            />
+          </div>
+          {errors.phone && <p className="text-xs text-red-500 mt-1">{errors.phone}</p>}
+        </div>
+
+        <div>
+          <label className="block text-sm font-medium text-gray-700 mb-1">Message</label>
+          <textarea
+            name="message"
+            placeholder="Please write your inquiry here..."
+            value={formData.message}
+            className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:outline-none h-32 resize-none transition-all text-sm text-gray-800"
+            onChange={handleChange}
+            required
+          />
+        </div>
+
+        <div className="flex items-start space-x-2 pt-2">
+          <input
+            type="checkbox"
+            id="privacy"
+            className="mt-1 h-4 w-4 rounded border-gray-300 text-primary focus:ring-primary"
+            checked={isChecked}
+            onChange={() => setIsChecked(!isChecked)}
+          />
+          <label htmlFor="privacy" className="text-xs md:text-sm text-gray-600 leading-tight">
+            I accept and agree to the{" "}
+            <Link className="text-primary hover:underline font-bold" target="_blank" href="/privacy-policy">
+              Privacy Policy
+            </Link>
+            . We will use the information you provide to safely process and manage your healthcare request.
+          </label>
+        </div>
+
+        {errorMessage && <div className="p-3 bg-red-50 text-red-600 text-sm rounded-lg font-medium">{errorMessage}</div>}
+        {successMessage && <div className="p-3 bg-green-50 text-green-600 text-sm rounded-lg font-medium">{successMessage}</div>}
+
+        <button
+          type="submit"
+          className="w-full h-[48px] bg-primary text-white font-bold rounded-lg shadow-md hover:bg-black active:scale-[0.98] disabled:opacity-50 disabled:pointer-events-none transition-all duration-200"
+          disabled={!isChecked || loading}
+        >
+          {loading ? "Sending message..." : "Send message"}
+        </button>
+      </form>
     </div>
-
-
   );
 }
-
-
-
-

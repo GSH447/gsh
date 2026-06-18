@@ -1,18 +1,19 @@
-// import React from "react";
-// import PhilanthropicFoundations from "../../../../components/MakeADonation/Grants&Foundations/PhilanthropicFoundations";
-// export const metadata = {
-//     title: `Philanthropic Foundations - The Garcespring Health Foundation`,
-//     description: `We’re The Gracespring Health Foundation, a non-profit organization dedicated to providing free surgical care for children born with heart conditions in Nigeria. Our mission is to locate these children and work in partnership with local, regional, national, and international organizations to ensure they receive the medical attention they need. Join us in making a difference in the lives of these children and their families.`,
-//   };
-// export default function PhilFoundations() {
-//   return (
-    
-//     <>
+import React from 'react';
+import ServicePageLayout from "../../../../../components/ServicePageLayout/index";
 
-//       <PhilanthropicFoundations/>
+const pageData = {
+  title: "Diagnostic Services",
+  category: "Specialty Units",
+  tagline: "High-Precision Laboratory Pathology and Advanced Medical Imaging",
+  overview: "Our fully automated diagnostic labs and imaging systems deliver swift, dependable reports, enabling our clinical departments to implement accurate, evidence-based treatments.",
+  features: [
+    "Fully Automated Haematology, Clinical Biochemistry, and Endocrinology Panels",
+    "Digital X-Ray Systems, Routine Ultrasonography, and Vascular Doppler Studies",
+    "Microbiological Culturing, Antimicrobial Sensitivity Profiles, and PCR Workups",
+    "Rapid Emergency Turnaround Times for Inpatient Critical Lab Profiles"
+  ]
+};
 
-//     </>
-
-
-//   );
-// }
+export default function DiagnosticsPage() {
+  return <ServicePageLayout data={pageData} />;
+}

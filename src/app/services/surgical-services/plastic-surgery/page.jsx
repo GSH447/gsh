@@ -1,18 +1,19 @@
-// import React from "react";
-// import CorporateSponsorships from "../../../../components/MakeADonation/CorporateSupport/CorporateSponsorships";
-// export const metadata = {
-//     title: `Corporate Sponsorships - The Garcespring Health Foundation`,
-//     description: `We’re The Gracespring Health Foundation, a non-profit organization dedicated to providing free surgical care for children born with heart conditions in Nigeria. Our mission is to locate these children and work in partnership with local, regional, national, and international organizations to ensure they receive the medical attention they need. Join us in making a difference in the lives of these children and their families.`,
-//   };
-// export default function CorporateSponsorship() {
-//   return (
-    
-//     <>
+import React from 'react';
+import ServicePageLayout from "../../../../../components/ServicePageLayout/index";
 
-//       <CorporateSponsorships/>
+const pageData = {
+  title: "Plastic Surgery",
+  category: "Surgical Services",
+  tagline: "Expert Reconstructive and Aesthetic Operative Interventions",
+  overview: "Our Plastic and Reconstructive Surgery team provides highly specialized treatment designed to reconstruct defects caused by burns, trauma, tumors, or congenital abnormalities, alongside elective aesthetic enhancement options.",
+  features: [
+    "Microvascular Reconstructive Surgery & Soft Tissue Flap Transfers",
+    "Comprehensive Burn Reconstruction and Contracture Releases",
+    "Cleft Lip and Cleft Palate Corrections & Congenital Craniofacial Care",
+    "Scar Revision, Post-Traumatic Reconstruction, and Aesthetic Surgeries"
+  ]
+};
 
-//     </>
-
-
-//   );
-// }
+export default function PlasticSurgeryPage() {
+  return <ServicePageLayout data={pageData} />;
+}

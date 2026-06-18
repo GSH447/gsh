@@ -1,18 +1,19 @@
-// import React from "react";
-// import PhilanthropicFoundations from "../../../../components/MakeADonation/Grants&Foundations/PhilanthropicFoundations";
-// export const metadata = {
-//     title: `Philanthropic Foundations - The Garcespring Health Foundation`,
-//     description: `We’re The Gracespring Health Foundation, a non-profit organization dedicated to providing free surgical care for children born with heart conditions in Nigeria. Our mission is to locate these children and work in partnership with local, regional, national, and international organizations to ensure they receive the medical attention they need. Join us in making a difference in the lives of these children and their families.`,
-//   };
-// export default function PhilFoundations() {
-//   return (
-    
-//     <>
+import React from 'react';
+import ServicePageLayout from "../../../../../components/ServicePageLayout/index";
 
-//       <PhilanthropicFoundations/>
+const pageData = {
+  title: "Haematology Specialist Care",
+  category: "Internal Medicine",
+  tagline: "Specialized Management for Malignant and Non-Malignant Blood Conditions",
+  overview: "Our Haematology Service offers expert diagnosis and therapeutics for anomalies across white cells, red cells, platelets, and coagulation factor systems.",
+  features: [
+    "Comprehensive Sickle Cell Disease Crisis Management & Chronic Maintenance",
+    "Diagnostic Evaluation of Severe Anemias, Leucopenias, and Thrombocytopenias",
+    "Management of Thromboembolic Disorders and Bleeding Diatheses",
+    "Therapeutic Phlebotomy and Blood Product Transfusion Supervision"
+  ]
+};
 
-//     </>
-
-
-//   );
-// }
+export default function HaematologyPage() {
+  return <ServicePageLayout data={pageData} />;
+}

@@ -1,18 +1,19 @@
-// import React from "react";
-// import MonthlyGiving from "../../../../components/MakeADonation/IndividualGiving/MonthlyGiving";
-// export const metadata = {
-//     title: `Monthly Giving - The Garcespring Health Foundation`,
-//     description: `We’re The Gracespring Health Foundation, a non-profit organization dedicated to providing free surgical care for children born with heart conditions in Nigeria. Our mission is to locate these children and work in partnership with local, regional, national, and international organizations to ensure they receive the medical attention they need. Join us in making a difference in the lives of these children and their families.`,
-//   };
-// export default function Monthly() {
-//   return (
-    
-//     <>
+import React from 'react';
+import ServicePageLayout from "../../../../../components/ServicePageLayout/index";
 
-//       <MonthlyGiving/>
+const pageData = {
+  title: "General Paediatrics",
+  category: "Women & Child Health",
+  tagline: "Nurturing Healthy Development from Infancy through Adolescence",
+  overview: "Our General Paediatrics division provides comprehensive outpatient and inpatient clinical coverage for children, ensuring timely acute treatment and consistent developmental monitoring.",
+  features: [
+    "Routine Well-Baby Checks, Growth Charting & Developmental Milestones",
+    "Comprehensive Childhood Immunization & National/International Vaccine Scheduling",
+    "Management of Acute Childhood Infections (Malaria, Pneumonias, Enteritis)",
+    "Asthma Control, Allergy Testing, and Nutritional Counseling Services"
+  ]
+};
 
-//     </>
-
-
-//   );
-// }
+export default function PaediatricsPage() {
+  return <ServicePageLayout data={pageData} />;
+}

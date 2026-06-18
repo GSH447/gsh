@@ -1,18 +1,19 @@
-// import React from "react";
-// import FundraiseforUs from "../../../../components/MakeADonation/Fundraising&Events/FundraiseForUs";
-// export const metadata = {
-//     title: `Fundraise for Us - The Garcespring Health Foundation`,
-//     description: `We’re The Gracespring Health Foundation, a non-profit organization dedicated to providing free surgical care for children born with heart conditions in Nigeria. Our mission is to locate these children and work in partnership with local, regional, national, and international organizations to ensure they receive the medical attention they need. Join us in making a difference in the lives of these children and their families.`,
-//   };
-// export default function FundraiseForUs() {
-//   return (
-    
-//     <>
+import React from 'react';
+import ServicePageLayout from "../../../../../components/ServicePageLayout/index";
 
-//       <FundraiseforUs/>
+const pageData = {
+  title: "Neurosurgery",
+  category: "Surgical Services",
+  tagline: "Advanced Cranial, Spinal, and Peripheral Nerve Interventions",
+  overview: "Our Neurosurgery department deals with the prevention, diagnosis, and surgical management of disorders affecting the central nervous system, including complex brain tumor removals, spinal fusions, and neuro-trauma stabilization.",
+  features: [
+    "Craniotomy for Brain Tumors, Aneurysms, and Intracranial Hematomas",
+    "Spinal Decompression, Discectomy, and Complex Spinal Fixations",
+    "Management of Traumatic Brain Injuries (TBI) & Spinal Cord Trauma",
+    "Hydrocephalus Management including Ventriculoperitoneal (VP) Shunting"
+  ]
+};
 
-//     </>
-
-
-//   );
-// }
+export default function NeurosurgeryPage() {
+  return <ServicePageLayout data={pageData} />;
+}

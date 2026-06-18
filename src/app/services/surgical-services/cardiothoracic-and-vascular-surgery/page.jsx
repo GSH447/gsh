@@ -1,18 +1,22 @@
-// import React from "react";
-// import CommunityEvents from "../../../../components/MakeADonation/Fundraising&Events/CommunityEvents";
-// export const metadata = {
-//     title: `Charity Runs and Walks - The Garcespring Health Foundation`,
-//     description: `We’re The Gracespring Health Foundation, a non-profit organization dedicated to providing free surgical care for children born with heart conditions in Nigeria. Our mission is to locate these children and work in partnership with local, regional, national, and international organizations to ensure they receive the medical attention they need. Join us in making a difference in the lives of these children and their families.`,
-//   };
-// export default function CommunityEvent() {
-//   return (
-    
-//     <>
+import React from 'react';
+// import ServicePageLayout from "../../../../components/ServicePageLayout/index";
 
-//       <CommunityEvents/>
+import ServicePageLayout from "../../../../../components/ServicePageLayout";
 
-//     </>
+const pageData = {
+  title: "Cardiothoracic and Vascular Surgery",
+  category: "Surgical Services",
+  tagline: "World-Class Open Heart, Thoracic, and Endovascular Interventions",
+  overview: "Our Cardiothoracic and Vascular Surgery unit provides comprehensive surgical treatment for diseases affecting the heart, lungs, esophagus, mediastinum, and major blood vessels.",
+  features: [
+    "Adult & Paediatric Open Heart Surgery (Congenital & Acquired)",
+    "Video-Assisted Thoracoscopic Surgery (VATS) - Minimally Invasive",
+    "Aneurysm Repairs (including EVAR & TEVAR techniques)",
+    "Coronary Artery Bypass Grafting (CABG) & Valve Replacements",
+    "Creation of Arterio-Venous (AV) Fistulae for Dialysis Access"
+  ]
+};
 
-
-//   );
-// }
+export default function CardiothoracicPage() {
+  return <ServicePageLayout data={pageData} />;
+}

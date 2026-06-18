@@ -1,18 +1,19 @@
-// import React from "react";
-// import GovernmentGrants from "../../../../components/MakeADonation/Grants&Foundations/GovernmentGrants";
-// export const metadata = {
-//     title: `Government Grants - The Garcespring Health Foundation`,
-//     description: `We’re The Gracespring Health Foundation, a non-profit organization dedicated to providing free surgical care for children born with heart conditions in Nigeria. Our mission is to locate these children and work in partnership with local, regional, national, and international organizations to ensure they receive the medical attention they need. Join us in making a difference in the lives of these children and their families.`,
-//   };
-// export default function GovernmentGrant() {
-//   return (
-    
-//     <>
+import React from 'react';
+import ServicePageLayout from "../../../../../components/ServicePageLayout/index";
 
-//       <GovernmentGrants/>
+const pageData = {
+  title: "Cardiology Specialist Care",
+  category: "Internal Medicine",
+  tagline: "Comprehensive Cardiovascular Health and Preventive Cardiology",
+  overview: "Our Cardiology Unit provides diagnostic screening, treatment, and ongoing management for acute and chronic heart conditions, focusing on hypertension control, coronary artery diseases, and heart failure management.",
+  features: [
+    "Advanced Electrocardiography (ECG) and Echocardiography Studies",
+    "24-Hour Holter and Continuous Ambulatory Blood Pressure Monitoring",
+    "Cardiac Risk Assessment, Hypertension & Dyslipidemia Clinics",
+    "Post-Myocardial Infarction Follow-up and Heart Failure Maintenance"
+  ]
+};
 
-//     </>
-
-
-//   );
-// }
+export default function CardiologyPage() {
+  return <ServicePageLayout data={pageData} />;
+}

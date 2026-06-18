@@ -1,18 +1,19 @@
-// import React from "react";
-// import PayrollGiving from "../../../../components/MakeADonation/CorporateSupport/PayrollGiving";
-// export const metadata = {
-//     title: `Payroll Giving - The Garcespring Health Foundation`,
-//     description: `We’re The Gracespring Health Foundation, a non-profit organization dedicated to providing free surgical care for children born with heart conditions in Nigeria. Our mission is to locate these children and work in partnership with local, regional, national, and international organizations to ensure they receive the medical attention they need. Join us in making a difference in the lives of these children and their families.`,
-//   };
-// export default function PG() {
-//   return (
-    
-//     <>
+import React from 'react';
+import ServicePageLayout from "../../../../../components/ServicePageLayout/index";
 
-//       <PayrollGiving/>
+const pageData = {
+  title: "Neurology Specialist Care",
+  category: "Internal Medicine",
+  tagline: "Comprehensive Diagnostics and Treatment for Neurological Conditions",
+  overview: "Our Neurology department evaluates and addresses standard and complex central and peripheral nervous system anomalies, utilizing personalized neuro-restorative and clinical therapeutic regimens.",
+  features: [
+    "Acute Stroke Management Protocols and Secondary Stroke Prevention",
+    "Comprehensive Diagnosis and Treatment for Epilepsy and Seizure Disorders",
+    "Specialized Management of Parkinson's Disease and Movement Issues",
+    "Clinical Workup for Chronic Migraines, Neuropathies, and Dementias"
+  ]
+};
 
-//     </>
-
-
-//   );
-// }
+export default function NeurologyPage() {
+  return <ServicePageLayout data={pageData} />;
+}

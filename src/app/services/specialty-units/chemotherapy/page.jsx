@@ -1,18 +1,19 @@
-// import React from "react";
-// import GrantEnquiries from "../../../../components/MakeADonation/Grants&Foundations/GrantEnquiries";
-// export const metadata = {
-//     title: `Grant Enquiries - The Garcespring Health Foundation`,
-//     description: `We’re The Gracespring Health Foundation, a non-profit organization dedicated to providing free surgical care for children born with heart conditions in Nigeria. Our mission is to locate these children and work in partnership with local, regional, national, and international organizations to ensure they receive the medical attention they need. Join us in making a difference in the lives of these children and their families.`,
-//   };
-// export default function Grant() {
-//   return (
-    
-//     <>
+import React from 'react';
+import ServicePageLayout from "../../../../../components/ServicePageLayout/index";
 
-//       <GrantEnquiries/>
+const pageData = {
+  title: "Chemotherapy Unit",
+  category: "Specialty Units",
+  tagline: "Dedicated Ambulatory and Inpatient Cytotoxic Infusion Care",
+  overview: "Our Chemotherapy Unit features custom day-care suites structured for safe oncological drug administration, strict bio-safety compliance, and comprehensive post-infusion toxicity management.",
+  features: [
+    "Safe Central or Peripheral Intravenous Cytotoxic Drug Infusions",
+    "Pre-Chemotherapy Lab Safety Verifications & Antiemetic Coverage",
+    "Specialized Management of Port-a-Caths and PICC Access Lines",
+    "Patient Education Frameworks on Dietary Adjustments and Side Effects"
+  ]
+};
 
-//     </>
-
-
-//   );
-// }
+export default function ChemotherapyPage() {
+  return <ServicePageLayout data={pageData} />;
+}

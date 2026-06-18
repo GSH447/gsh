@@ -1,18 +1,19 @@
-// import React from "react";
-// import IndividualGiving from "../../../../components/MakeADonation/IndividualGiving";
-// export const metadata = {
-//     title: `Individual Giving - The Garcespring Health Foundation`,
-//     description: `We’re The Gracespring Health Foundation, a non-profit organization dedicated to providing free surgical care for children born with heart conditions in Nigeria. Our mission is to locate these children and work in partnership with local, regional, national, and international organizations to ensure they receive the medical attention they need. Join us in making a difference in the lives of these children and their families.`,
-//   };
-// export default function MakeDonation() {
-//   return (
-    
-//     <>
+import React from 'react';
+import ServicePageLayout from "../../../../../components/ServicePageLayout/index";
 
-//       <IndividualGiving/>
+const pageData = {
+  title: "Fertility Treatment",
+  category: "Women & Child Health",
+  tagline: "Advanced Reproductive Medicine and Assisted Conception Solutions",
+  overview: "Our Fertility Unit blends clinical excellence with empathetic care to support couples navigating conception difficulties, offering individualized endocrinology workups and reproductive options.",
+  features: [
+    "Comprehensive Male and Female Infertility Diagnostic Evaluations",
+    "Ovulation Induction Protocols and Monitored Conception Cycles",
+    "Intrauterine Insemination (IUI) & Assisted Reproductive Technology Paths",
+    "Advanced Management of Recurrent Pregnancy Losses and PCOS"
+  ]
+};
 
-//     </>
-
-
-//   );
-// }
+export default function FertilityPage() {
+  return <ServicePageLayout data={pageData} />;
+}

@@ -59,13 +59,13 @@ export default function TeamImageGrid() {
   const members = team?.management || [];
 
   return (
-    <section className="lg:py-20 text-white relative overflow-hidden">
+    <section className="py-10 lg:py-20 text-white relative overflow-hidden">
 
     <div className="bg-[#5CB338] mx-auto px-6 lg:px-16 pt-6 pt-20">
         
         {/* Section Heading Context */}
         <div className="max-w-2xl py-16 space-y-3">
-          <AnimatedText text="Expertise Behind Your Care" className="text-[#1e1b4b] font-bold uppercase tracking-widest text-emerald-400" />
+          <AnimatedText text="Expertise Behind Your Care" className="font-bold uppercase tracking-widest" />
           <AnimatedText text="The Management Team" className="text-3xl md:text-5xl font-extrabold tracking-tight text-[#1e1b4b]" />
           {/* <p className="text-slate-400 text-sm md:text-base">
             Our multi-specialty consultants bring together decades of combined experience across complex cardiac, vascular, and internal medical specialties.

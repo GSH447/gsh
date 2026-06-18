@@ -1,18 +1,19 @@
-// import React from "react";
-// import GovernmentGrants from "../../../../components/MakeADonation/Grants&Foundations/GovernmentGrants";
-// export const metadata = {
-//     title: `Government Grants - The Garcespring Health Foundation`,
-//     description: `We’re The Gracespring Health Foundation, a non-profit organization dedicated to providing free surgical care for children born with heart conditions in Nigeria. Our mission is to locate these children and work in partnership with local, regional, national, and international organizations to ensure they receive the medical attention they need. Join us in making a difference in the lives of these children and their families.`,
-//   };
-// export default function GovernmentGrant() {
-//   return (
-    
-//     <>
+import React from 'react';
+import ServicePageLayout from "../../../../../components/ServicePageLayout/index";
 
-//       <GovernmentGrants/>
+const pageData = {
+  title: "Obstetrics & Gynaecological Services",
+  category: "Women & Child Health",
+  tagline: "Comprehensive Care Across Every Stage of Womanhood",
+  overview: "Our OB/GYN department provides premium maternity services, high-risk obstetrics monitoring, routine preventative screenings, and advanced gynaecological interventions to support women's health.",
+  features: [
+    "Comprehensive Antenatal Care, Electronic Fetal Monitoring & Safe Delivery",
+    "High-Risk Pregnancy Management (Preeclampsia, Gestational Diabetes)",
+    "Minimally Invasive Gynaecological Surgeries (Myomectomy & Hysterectomy)",
+    "Cervical Cancer Screening, Pap Smears, and Preventive HPV Vaccinations"
+  ]
+};
 
-//     </>
-
-
-//   );
-// }
+export default function ObGynPage() {
+  return <ServicePageLayout data={pageData} />;
+}

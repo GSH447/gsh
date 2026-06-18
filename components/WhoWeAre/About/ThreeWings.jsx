@@ -99,7 +99,7 @@ export default function ThreeWings() {
 
            
             <AnimatedText
-              className="border-2 border-[red] justify-center"
+              className=" justify-center"
               text="Our Identity Ecosystem"
             />
             
@@ -107,7 +107,7 @@ export default function ThreeWings() {
           <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900 tracking-tight">
             
             <AnimatedText
-              className="border-2 border-[red] justify-center"
+              className=" justify-center"
               text="The Three Wings of Gracespring"
             />
           </h2>

@@ -1,18 +1,19 @@
-// import React from "react";
-// import FindorJoinanEvent from "../../../../components/MakeADonation/Fundraising&Events/FindJoinAnEvent";
-// export const metadata = {
-//     title: `Find or Join an Events - The Garcespring Health Foundation`,
-//     description: `We’re The Gracespring Health Foundation, a non-profit organization dedicated to providing free surgical care for children born with heart conditions in Nigeria. Our mission is to locate these children and work in partnership with local, regional, national, and international organizations to ensure they receive the medical attention they need. Join us in making a difference in the lives of these children and their families.`,
-//   };
-// export default function Events() {
-//   return (
-    
-//     <>
+import React from 'react';
+import ServicePageLayout from "../../../../../components/ServicePageLayout/index";
 
-//       <FindorJoinanEvent/>
+const pageData = {
+  title: "Orthopaedics Surgery",
+  category: "Surgical Services",
+  tagline: "Restoring Mobility through Joint, Bone, and Sports Medicine Excellence",
+  overview: "Our Orthopaedic Surgery team focuses on correcting musculoskeletal deformities, treating acute bone fractures, managing degenerative joint problems, and providing sophisticated joint replacement procedures.",
+  features: [
+    "Total Knee and Total Hip Replacement Arthroplasty",
+    "Complex Fracture Fixation (Internal and External Stabilization)",
+    "Arthroscopic Sports Medicine Interventions (ACL & Meniscal Repairs)",
+    "Correction of Deformities and Bone Realignment Operations"
+  ]
+};
 
-//     </>
-
-
-//   );
-// }
+export default function OrthopaedicsSurgeryPage() {
+  return <ServicePageLayout data={pageData} />;
+}

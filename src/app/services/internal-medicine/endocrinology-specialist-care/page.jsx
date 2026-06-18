@@ -1,18 +1,19 @@
-// import React from "react";
-// import IndividualGiving from "../../../../components/MakeADonation/IndividualGiving";
-// export const metadata = {
-//     title: `Individual Giving - The Garcespring Health Foundation`,
-//     description: `We’re The Gracespring Health Foundation, a non-profit organization dedicated to providing free surgical care for children born with heart conditions in Nigeria. Our mission is to locate these children and work in partnership with local, regional, national, and international organizations to ensure they receive the medical attention they need. Join us in making a difference in the lives of these children and their families.`,
-//   };
-// export default function MakeDonation() {
-//   return (
-    
-//     <>
+import React from 'react';
+import ServicePageLayout from "../../../../../components/ServicePageLayout/index";
 
-//       <IndividualGiving/>
+const pageData = {
+  title: "Endocrinology Specialist Care",
+  category: "Internal Medicine",
+  tagline: "Precision Management of Diabetes, Thyroid, and Metabolic Disorders",
+  overview: "Our Endocrinology clinic delivers comprehensive disease management frameworks for hormonal disturbances, focusing heavily on intensive diabetes care, metabolic syndromic management, and thyroid system normalization.",
+  features: [
+    "Intensive Type 1 and Type 2 Diabetes Management & Insulin Optimization",
+    "Screening and Preventive Care for Diabetic Foot & Microvascular Damage",
+    "Therapeutic Management of Hypothyroidism, Hyperthyroidism, and Nodules",
+    "Evaluation of Adrenal, Pituitary, and Bone Mineral Conditions"
+  ]
+};
 
-//     </>
-
-
-//   );
-// }
+export default function EndocrinologyPage() {
+  return <ServicePageLayout data={pageData} />;
+}

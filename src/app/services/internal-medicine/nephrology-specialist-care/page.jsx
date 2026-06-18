@@ -1,18 +1,19 @@
-// import React from "react";
-// import GrantsFoundations from "../../../../components/MakeADonation/Grants&Foundations";
-// export const metadata = {
-//     title: `Grants Foundations - The Garcespring Health Foundation`,
-//     description: `We’re The Gracespring Health Foundation, a non-profit organization dedicated to providing free surgical care for children born with heart conditions in Nigeria. Our mission is to locate these children and work in partnership with local, regional, national, and international organizations to ensure they receive the medical attention they need. Join us in making a difference in the lives of these children and their families.`,
-//   };
-// export default function MakeDonation() {
-//   return (
-    
-//     <>
+import React from 'react';
+import ServicePageLayout from "../../../../../components/ServicePageLayout/index";
 
-//       <GrantsFoundations/>
+const pageData = {
+  title: "Nephrology Specialist Care",
+  category: "Internal Medicine",
+  tagline: "Comprehensive Kidney Care and Hypertension Management",
+  overview: "Our Nephrology division provides specialized management for patients with acute kidney injuries, chronic kidney diseases, glomerulonephritis, and severe hypertensive nephropathies, backed by our modern dialysis ecosystem.",
+  features: [
+    "Slowing Progression Protocols for Chronic Kidney Disease (CKD)",
+    "Management of Fluid, Electrolyte, and Acid-Base Imbalances",
+    "Pre-Dialysis Care, Vascular Access Coordination & Patient Education",
+    "Clinical Management of Glomerular Diseases and Polycystic Kidneys"
+  ]
+};
 
-//     </>
-
-
-//   );
-// }
+export default function NephrologyPage() {
+  return <ServicePageLayout data={pageData} />;
+}

@@ -1,18 +1,19 @@
-// import React from "react";
-// import CorporatePartnerships from "../../../../components/MakeADonation/CorporateSupport/CorporatePartnerships";
-// export const metadata = {
-//     title: `Corporate Partnerships - The Garcespring Health Foundation`,
-//     description: `We’re The Gracespring Health Foundation, a non-profit organization dedicated to providing free surgical care for children born with heart conditions in Nigeria. Our mission is to locate these children and work in partnership with local, regional, national, and international organizations to ensure they receive the medical attention they need. Join us in making a difference in the lives of these children and their families.`,
-//   };
-// export default function CorporatePartnership() {
-//   return (
-    
-//     <>
+import React from 'react';
+import ServicePageLayout from "../../../../../components/ServicePageLayout/index";
 
-//       <CorporatePartnerships/>
+const pageData = {
+  title: "Urology Surgery",
+  category: "Surgical Services",
+  tagline: "Advanced Endourological and Reconstructive Care",
+  overview: "Our Urology Surgery team specializes in minimally invasive endourology, laser therapies, and complex reconstructions for conditions affecting the kidneys, urinary bladder, prostate gland, and reproductive system.",
+  features: [
+    "Transurethral Resection of the Prostate (TURP) & Laser Prostatectomy",
+    "Advanced Kidney and Bladder Stone Management (ESWL & PCNL)",
+    "Reconstructive Urinary Tract Operations & Stricture Repairs",
+    "Urological Oncology for Prostate, Renal, and Bladder Malignancies"
+  ]
+};
 
-//     </>
-
-
-//   );
-// }
+export default function UrologyPage() {
+  return <ServicePageLayout data={pageData} />;
+}

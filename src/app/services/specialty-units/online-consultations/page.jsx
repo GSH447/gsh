@@ -1,18 +1,19 @@
-// import React from "react";
-// import MonthlyGiving from "../../../../components/MakeADonation/IndividualGiving/MonthlyGiving";
-// export const metadata = {
-//     title: `Monthly Giving - The Garcespring Health Foundation`,
-//     description: `We’re The Gracespring Health Foundation, a non-profit organization dedicated to providing free surgical care for children born with heart conditions in Nigeria. Our mission is to locate these children and work in partnership with local, regional, national, and international organizations to ensure they receive the medical attention they need. Join us in making a difference in the lives of these children and their families.`,
-//   };
-// export default function Monthly() {
-//   return (
-    
-//     <>
+import React from 'react';
+import ServicePageLayout from "../../../../../components/ServicePageLayout/index";
 
-//       <MonthlyGiving/>
+const pageData = {
+  title: "Online Consultations",
+  category: "Specialty Units",
+  tagline: "Seamless Telehealth Access to Gracespring Medical Specialists",
+  overview: "Our Telehealth framework bridges geographical gaps by providing private, video-enabled online clinical consultations, giving you access to medical specialists for follow-ups and second opinions right from home or the office.",
+  features: [
+    "Secure, Encrypted High-Definition Video Tele-consultations with Specialists",
+    "Digital Prescription Transmissions and Diagnostic Lab Ordering Integration",
+    "Remote Review of Lab Results, Imaging Studies, and Electronic Medical Records",
+    "Structured Digital Follow-Up Protocols for Stable Chronic Disease Management"
+  ]
+};
 
-//     </>
-
-
-//   );
-// }
+export default function OnlineConsultPage() {
+  return <ServicePageLayout data={pageData} />;
+}

@@ -1,18 +1,19 @@
-// import React from "react";
-// import GovernmentGrants from "../../../../components/MakeADonation/Grants&Foundations/GovernmentGrants";
-// export const metadata = {
-//     title: `Government Grants - The Garcespring Health Foundation`,
-//     description: `We’re The Gracespring Health Foundation, a non-profit organization dedicated to providing free surgical care for children born with heart conditions in Nigeria. Our mission is to locate these children and work in partnership with local, regional, national, and international organizations to ensure they receive the medical attention they need. Join us in making a difference in the lives of these children and their families.`,
-//   };
-// export default function GovernmentGrant() {
-//   return (
-    
-//     <>
+import React from 'react';
+import ServicePageLayout from "../../../../../components/ServicePageLayout/index";
 
-//       <GovernmentGrants/>
+const pageData = {
+  title: "ICU & Emergency Medicine",
+  category: "Specialty Units",
+  tagline: "24/7 High-Acuity Trauma, Resuscitation, and Critical Care Support",
+  overview: "Our Intensive Care and Emergency Department operates continuously to stabilize critical multi-system trauma, cardiovascular crises, and acute respiratory compromise with advanced life-support technology.",
+  features: [
+    "Continuous Multi-Parameter Hemodynamic Monitoring and Invasive Support",
+    "Mechanical Ventilation Setup, Airway Management, and Blood Gas Control",
+    "Rapid Response Trauma Resuscitation, Triaging, and Cardiac Interventions",
+    "Dedicated High-Dependency Care Units for Post-Operative Stabilizations"
+  ]
+};
 
-//     </>
-
-
-//   );
-// }
+export default function IcuEmergencyPage() {
+  return <ServicePageLayout data={pageData} />;
+}

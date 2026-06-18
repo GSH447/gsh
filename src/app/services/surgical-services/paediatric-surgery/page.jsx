@@ -1,18 +1,19 @@
-// import React from "react";
-// import FundraisingEvents from "../../../../components/MakeADonation/Fundraising&Events";
-// export const metadata = {
-//     title: `Fundraising Events - The Garcespring Health Foundation`,
-//     description: `We’re The Gracespring Health Foundation, a non-profit organization dedicated to providing free surgical care for children born with heart conditions in Nigeria. Our mission is to locate these children and work in partnership with local, regional, national, and international organizations to ensure they receive the medical attention they need. Join us in making a difference in the lives of these children and their families.`,
-//   };
-// export default function MakeDonation() {
-//   return (
-    
-//     <>
+import React from 'react';
+import ServicePageLayout from "../../../../../components/ServicePageLayout/index";
 
-//       <FundraisingEvents/>
+const pageData = {
+  title: "Paediatric Surgery",
+  category: "Surgical Services",
+  tagline: "Compassionate, Precision Surgical Care for Infants and Children",
+  overview: "Our Paediatric Surgery unit offers dedicated surgical management for neonates, infants, children, and adolescents, specializing in congenital anomaly corrections and common childhood surgical diseases.",
+  features: [
+    "Neonatal Emergency Surgery for Congenital Malformations",
+    "Paediatric Hernia, Hydrocele, and Orchidopexy (Undescended Testes)",
+    "Surgical Correction of Anorectal Malformations & Hirschsprung's Disease",
+    "Minimally Invasive Paediatric Laparoscopy and Cystoscopy"
+  ]
+};
 
-//     </>
-
-
-//   );
-// }
+export default function PaediatricSurgeryPage() {
+  return <ServicePageLayout data={pageData} />;
+}
