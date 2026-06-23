@@ -14,6 +14,11 @@ const pageData = {
   ]
 };
 
+export const metadata = {
+  title: `ICU & Emergency Medicine - Gracespring Hospitals`,
+  description: `24/7 high-dependency critical care unit and trauma emergency medicine infrastructure at Gracespring Hospitals, Block 3, Plot 32, Ajayi Apata estate, Sangotedo, Eti-Osa, Lekki - Lagos.`,
+};
+
 export default function IcuEmergencyPage() {
   return <ServicePageLayout data={pageData} />;
 }

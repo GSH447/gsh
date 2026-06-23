@@ -14,6 +14,11 @@ const pageData = {
   ]
 };
 
+export const metadata = {
+  title: `Pulmonology Specialist Care - Gracespring Hospitals`,
+  description: `Advanced respiratory and lung diagnostics at Gracespring Hospitals, Block 3, Plot 32, Ajayi Apata estate, Sangotedo, Eti-Osa, Lekki - Lagos. Dedicated expert pulmonology internal medicine care.`,
+};
+
 export default function PulmonologyPage() {
   return <ServicePageLayout data={pageData} />;
 }

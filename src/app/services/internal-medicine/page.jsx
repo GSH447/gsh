@@ -1,18 +1,12 @@
-// import React from "react";
-// import SpecialOccasionGiving from "../../../../components/MakeADonation/IndividualGiving/SpecialOccasionGiving";
-// export const metadata = {
-//     title: `Special Occasion Giving - The Garcespring Health Foundation`,
-//     description: `We’re The Gracespring Health Foundation, a non-profit organization dedicated to providing free surgical care for children born with heart conditions in Nigeria. Our mission is to locate these children and work in partnership with local, regional, national, and international organizations to ensure they receive the medical attention they need. Join us in making a difference in the lives of these children and their families.`,
-//   };
-// export default function SOG() {
-//   return (
-    
-//     <>
+import React from "react";
+import ServiceParentPage from "../../../../components/Product&Services/ServiceParentPage";
 
-//       <SpecialOccasionGiving/>
+export const metadata = {
+  title: `Internal Medicine - Gracespring Hospitals`,
+  description: `Comprehensive diagnostic management and expert internal specialist care at Gracespring Hospitals, Block 3, Plot 32, Ajayi Apata estate, Sangotedo, Eti-Osa, Lekki - Lagos. Our clinical portfolios span advanced Cardiology, Pulmonology, Gastroenterology, Nephrology, Endocrinology, Rheumatology, Neurology, Oncology, and Haematology Specialist Care.`,
+};
 
-//     </>
+export default function InternalMedicineParent() {
+  return <ServiceParentPage targetHref="/services/internal-medicine" />;
+}
 
-
-//   );
-// }

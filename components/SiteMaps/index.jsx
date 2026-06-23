@@ -142,9 +142,10 @@ export const FooterLinks = {
   company: [
     { name: "About us", url: "/who-we-are/about-us" },
     { name: "Our People", url: "/who-we-are/our-people" },
-    { name: "Careers", url: "/who-we-are/join-our-team" },
+    // { name: "Careers", url: "/who-we-are/join-our-team" },
     { name: "Privacy Policy", url: "/privacy-policy" },
     { name: "Terms & Conditions", url: "/terms-of-use" },
+    { name: "Sitemap", url:"/sitemap.html"},
   ],
 
   contact: [

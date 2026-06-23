@@ -14,6 +14,11 @@ const pageData = {
   ]
 };
 
+export const metadata = {
+  title: `Plastic Surgery - Gracespring Hospitals`,
+  description: `Reconstructive and aesthetic plastic surgery services at Gracespring Hospitals, Block 3, Plot 32, Ajayi Apata estate, Sangotedo, Eti-Osa, Lekki - Lagos. Advanced surgical solutions.`,
+};
+
 export default function PlasticSurgeryPage() {
   return <ServicePageLayout data={pageData} />;
 }

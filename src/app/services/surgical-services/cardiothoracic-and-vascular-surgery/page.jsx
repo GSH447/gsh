@@ -1,5 +1,4 @@
 import React from 'react';
-// import ServicePageLayout from "../../../../components/ServicePageLayout/index";
 
 import ServicePageLayout from "../../../../../components/ServicePageLayout";
 
@@ -15,6 +14,11 @@ const pageData = {
     "Coronary Artery Bypass Grafting (CABG) & Valve Replacements",
     "Creation of Arterio-Venous (AV) Fistulae for Dialysis Access"
   ]
+};
+
+export const metadata = {
+  title: `Cardiothoracic and Vascular Surgery - Gracespring Hospitals`,
+  description: `Advanced cardiothoracic and vascular operative care at Gracespring Hospitals, Block 3, Plot 32, Ajayi Apata estate, Sangotedo, Eti-Osa, Lekki - Lagos. Dedicated to complex cardiothoracic interventions and management.`,
 };
 
 export default function CardiothoracicPage() {

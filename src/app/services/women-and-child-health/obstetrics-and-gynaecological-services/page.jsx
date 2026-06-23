@@ -14,6 +14,11 @@ const pageData = {
   ]
 };
 
+export const metadata = {
+  title: `Obstetrics & Gynaecological Services - Gracespring Hospitals`,
+  description: `Comprehensive maternal health cycles, prenatal tracking, and gynecological care at Gracespring Hospitals, Block 3, Plot 32, Ajayi Apata estate, Sangotedo, Eti-Osa, Lekki - Lagos.`,
+};
+
 export default function ObGynPage() {
   return <ServicePageLayout data={pageData} />;
 }

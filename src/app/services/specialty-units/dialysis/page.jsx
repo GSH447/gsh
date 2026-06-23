@@ -14,6 +14,12 @@ const pageData = {
   ]
 };
 
+export const metadata = {
+  title: `Dialysis Unit - Gracespring Hospitals`,
+  description: `State-of-the-art renal replacement therapy and secure hemodialysis treatments at Gracespring Hospitals, Block 3, Plot 32, Ajayi Apata estate, Sangotedo, Eti-Osa, Lekki - Lagos.`,
+};
+
+
 export default function DialysisPage() {
   return <ServicePageLayout data={pageData} />;
 }

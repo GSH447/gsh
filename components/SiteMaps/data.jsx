@@ -72,7 +72,7 @@ export const product_services = [
   title: "Book a Teleconsultation",
   description: "Help us raise money to make a difference to people with cardiac diseases and arrest everywhere. Find a way to fundraise that suits you.", 
   btnText: "Ways to fundraise",
-  url: "/book-a-teleconsultation",
+  url: "/book-an-appointment",
   alt: "#GracespringHospitals"
 },
 
@@ -84,7 +84,7 @@ export const product_services = [
   title: "Book Homecare Visit",
   description: "Help us raise money to make a difference to people with cardiac diseases and arrest everywhere. Find a way to fundraise that suits you.", 
   btnText: "Ways to fundraise",
-  url: "/book-homecare-visit",
+  url: "/book-an-appointment",
   alt: "#GracespringHospitals"
 },
 
@@ -96,7 +96,7 @@ export const product_services = [
   title: "Request Second Opinion",
   description: "Help us raise money to make a difference to people with cardiac diseases and arrest everywhere. Find a way to fundraise that suits you.", 
   btnText: "Ways to fundraise",
-  url: "/request-second-opinion",
+  url: "/book-an-appointment",
   alt: "#GracespringHospitals"
 },
 
@@ -116,206 +116,415 @@ export const product_services = [
 
 ];
 
+
 export const services_short_cut = [
+  // --- SURGICAL SERVICES ---
   { 
     id: 1, 
     image: "/assets/images/services/icons/cardiothoracic.png",
     title: "Cardiothoracic and Vascular Surgery",
-    url: "/services/surgery/cardiothoracic",
+    url: "/services/surgical-services/cardiothoracic-and-vascular-surgery",
     alt: "cardiothoracic-and-vascular-surgery"
   },
   { 
     id: 2, 
     image: "/assets/images/services/icons/urology.png",
     title: "Urology Surgery",
-    url: "/services/surgery/urology",
+    url: "/services/surgical-services/urology-surgery",
     alt: "urology-surgery"
   },
   { 
     id: 3, 
     image: "/assets/images/services/icons/surgery-room.png",
     title: "General Surgery",
-    url: "/services/surgery/general",
+    url: "/services/surgical-services/general-surgery",
     alt: "general-surgery"
-  },
-  { 
-    id: 4, 
-    image: "/assets/images/services/icons/cardiology.png",
-    title: "Cardiology Specialist Care",
-    url: "/services/medicine/cardiology",
-    alt: "cardiology-specialist-care"
-  },
-  { 
-    id: 5, 
-    image: "/assets/images/services/icons/obstetrics.png",
-    title: "Obstetrics & Gynaecological Services",
-    url: "/services/obgyn",
-    alt: "obstetrics-gynaecological-services"
-  },
-  { 
-    id: 6, 
-    image: "/assets/images/services/icons/medical-bed.png",
-    title: "ICU & Emergency Medicine",
-    url: "/services/icu-emergency",
-    alt: "icu-emergency-medicine"
   },
   { 
     id: 7, 
     image: "/assets/images/services/icons/pediatric.png",
     title: "Paediatric Surgery",
-    url: "/services/surgery/paediatric",
+    url: "/services/surgical-services/paediatric-surgery",
     alt: "paediatric-surgery"
   },
   { 
     id: 8, 
     image: "/assets/images/services/icons/neurosurgery.png",
     title: "Neurosurgery",
-    url: "/services/surgery/ortho-neuro",
+    url: "/services/surgical-services/neurosurgery",
     alt: "neurosurgery"
   },
   { 
     id: 9, 
     image: "/assets/images/services/icons/orthopaedics.png",
     title: "Orthopaedics Surgery",
-    url: "/services/surgery/ortho-neuro",
+    url: "/services/surgical-services/orthopaedics-surgery",
     alt: "orthopaedics-surgery"
   },
   { 
     id: 10, 
     image: "/assets/images/services/icons/plastic-surgery.png",
     title: "Plastic Surgery",
-    url: "/services/surgery/plastic",
+    url: "/services/surgical-services/plastic-surgery",
     alt: "plastic-surgery"
+  },
+
+  // --- INTERNAL MEDICINE ---
+  { 
+    id: 4, 
+    image: "/assets/images/services/icons/cardiology.png",
+    title: "Cardiology Specialist Care",
+    url: "/services/internal-medicine/cardiology-specialist-care",
+    alt: "cardiology-specialist-care"
   },
   { 
     id: 11, 
     image: "/assets/images/services/icons/pulmonology.png",
     title: "Pulmonology Specialist Care",
-    url: "/services/medicine/pulmonology",
+    url: "/services/internal-medicine/pulmonology-specialist-care",
     alt: "pulmonology-specialist-care"
   },
   { 
     id: 12, 
     image: "/assets/images/services/icons/digestive-system.png",
     title: "Gastroenterology Specialist Care",
-    url: "/services/medicine/gastroenterology",
+    url: "/services/internal-medicine/gastroenterology-specialist-care",
     alt: "gastroenterology-specialist-care"
   },
   { 
     id: 13, 
     image: "/assets/images/services/icons/organ.png",
     title: "Nephrology Specialist Care",
-    url: "/services/medicine/nephrology",
+    url: "/services/internal-medicine/nephrology-specialist-care",
     alt: "nephrology-specialist-care"
   },
   { 
     id: 14, 
     image: "/assets/images/services/icons/endocrine.png",
     title: "Endocrinology Specialist Care",
-    url: "/services/medicine/endocrinology",
+    url: "/services/internal-medicine/endocrinology-specialist-care",
     alt: "endocrinology-specialist-care"
   },
   { 
     id: 15, 
     image: "/assets/images/services/icons/rheumatology.png",
     title: "Rheumatology Specialist Care",
-    url: "/services/medicine/rheumatology",
+    url: "/services/internal-medicine/rheumatology-specialist-care",
     alt: "rheumatology-specialist-care"
   },
   { 
     id: 16, 
     image: "/assets/images/services/icons/neurology.png",
     title: "Neurology Specialist Care",
-    url: "/services/medicine/neurology",
+    url: "/services/internal-medicine/neurology-specialist-care",
     alt: "neurology-specialist-care"
   },
   { 
     id: 17, 
     image: "/assets/images/services/icons/oncology.png",
     title: "Oncology Specialist Care",
-    url: "/services/medicine/oncology",
+    url: "/services/internal-medicine/oncology-specialist-care",
     alt: "oncology-specialist-care"
   },
   { 
     id: 18, 
     image: "/assets/images/services/icons/leukemia.png",
     title: "Haematology Specialist Care",
-    url: "/services/medicine/haematology",
+    url: "/services/internal-medicine/haematology-specialist-care",
     alt: "haematology-specialist-care"
+  },
+
+  // --- WOMEN & CHILD HEALTH ---
+  { 
+    id: 5, 
+    image: "/assets/images/services/icons/obstetrics.png",
+    title: "Obstetrics & Gynaecological Services",
+    url: "/services/women-and-child-health/obstetrics-and-gynaecological-services",
+    alt: "obstetrics-gynaecological-services"
   },
   { 
     id: 19, 
     image: "/assets/images/services/icons/woman.png",
     title: "Fertility Treatment",
-    url: "/services/fertility",
+    url: "/services/women-and-child-health/fertility-treatment",
     alt: "fertility-treatment"
   },
   { 
     id: 20, 
     image: "/assets/images/services/icons/healthcare.png",
     title: "General Paediatrics",
-    url: "/services/paediatrics",
+    url: "/services/women-and-child-health/general-paediatrics",
     alt: "general-paediatrics"
+  },
+
+  // --- SPECIALTY UNITS ---
+  { 
+    id: 6, 
+    image: "/assets/images/services/icons/medical-bed.png",
+    title: "ICU & Emergency Medicine",
+    url: "/services/specialty-units/ICU-and-emergency-medicine",
+    alt: "icu-emergency-medicine"
   },
   { 
     id: 21, 
     image: "/assets/images/services/icons/diaylsis.png",
     title: "Dialysis",
-    url: "/services/dialysis",
+    url: "/services/specialty-units/dialysis",
     alt: "dialysis"
   },
   { 
     id: 22, 
     image: "/assets/images/services/icons/chemotherapy.png",
     title: "Chemotherapy",
-    url: "/services/chemotherapy",
+    url: "/services/specialty-units/chemotherapy",
     alt: "chemotherapy"
   },
   { 
     id: 23, 
     image: "/assets/images/services/icons/diagnostic.png",
     title: "Diagnostic Services",
-    url: "/services/diagnostics",
+    url: "/services/specialty-units/diagnostic-services",
     alt: "diagnostic-services"
   },
   { 
     id: 24, 
     image: "/assets/images/services/icons/dentistry.png",
     title: "Dental Care",
-    url: "/services/dental-care",
+    url: "/services/specialty-units/dental-care",
     alt: "dental-care"
   },
   { 
     id: 25, 
     image: "/assets/images/services/icons/opathmology.png",
     title: "Ophthalmology Care",
-    url: "/services/ophthalmology",
+    url: "/services/specialty-units/ophthalmology-care",
     alt: "ophthalmology-care"
   },
   { 
     id: 26, 
     image: "/assets/images/services/icons/physical-therapy.png",
     title: "Physiotherapy",
-    url: "/services/physio",
+    url: "/services/specialty-units/physiotherapy",
     alt: "physiotherapy"
   },
   { 
     id: 27, 
     image: "/assets/images/services/icons/wellness.png",
     title: "Wellness",
-    url: "/services/wellness",
+    url: "/services/specialty-units/wellness",
     alt: "wellness"
   },
   { 
     id: 28, 
     image: "/assets/images/services/icons/person.png",
     title: "Online Consultations",
-    url: "/services/online-consult",
+    url: "/services/specialty-units/online-consultations",
     alt: "online-consultations"
   }
 ];
 
+// export const services_short_cut = [
+//   { 
+//     id: 1, 
+//     image: "/assets/images/services/icons/cardiothoracic.png",
+//     title: "Cardiothoracic and Vascular Surgery",
+//     url: "/services/surgery/cardiothoracic",
+//     alt: "cardiothoracic-and-vascular-surgery"
+//   },
+//   { 
+//     id: 2, 
+//     image: "/assets/images/services/icons/urology.png",
+//     title: "Urology Surgery",
+//     url: "/services/surgery/urology",
+//     alt: "urology-surgery"
+//   },
+//   { 
+//     id: 3, 
+//     image: "/assets/images/services/icons/surgery-room.png",
+//     title: "General Surgery",
+//     url: "/services/surgery/general",
+//     alt: "general-surgery"
+//   },
+//   { 
+//     id: 4, 
+//     image: "/assets/images/services/icons/cardiology.png",
+//     title: "Cardiology Specialist Care",
+//     url: "/services/medicine/cardiology",
+//     alt: "cardiology-specialist-care"
+//   },
+//   { 
+//     id: 5, 
+//     image: "/assets/images/services/icons/obstetrics.png",
+//     title: "Obstetrics & Gynaecological Services",
+//     url: "/services/obgyn",
+//     alt: "obstetrics-gynaecological-services"
+//   },
+//   { 
+//     id: 6, 
+//     image: "/assets/images/services/icons/medical-bed.png",
+//     title: "ICU & Emergency Medicine",
+//     url: "/services/icu-emergency",
+//     alt: "icu-emergency-medicine"
+//   },
+//   { 
+//     id: 7, 
+//     image: "/assets/images/services/icons/pediatric.png",
+//     title: "Paediatric Surgery",
+//     url: "/services/surgery/paediatric",
+//     alt: "paediatric-surgery"
+//   },
+//   { 
+//     id: 8, 
+//     image: "/assets/images/services/icons/neurosurgery.png",
+//     title: "Neurosurgery",
+//     url: "/services/surgery/ortho-neuro",
+//     alt: "neurosurgery"
+//   },
+//   { 
+//     id: 9, 
+//     image: "/assets/images/services/icons/orthopaedics.png",
+//     title: "Orthopaedics Surgery",
+//     url: "/services/surgery/ortho-neuro",
+//     alt: "orthopaedics-surgery"
+//   },
+//   { 
+//     id: 10, 
+//     image: "/assets/images/services/icons/plastic-surgery.png",
+//     title: "Plastic Surgery",
+//     url: "/services/surgery/plastic",
+//     alt: "plastic-surgery"
+//   },
+//   { 
+//     id: 11, 
+//     image: "/assets/images/services/icons/pulmonology.png",
+//     title: "Pulmonology Specialist Care",
+//     url: "/services/medicine/pulmonology",
+//     alt: "pulmonology-specialist-care"
+//   },
+//   { 
+//     id: 12, 
+//     image: "/assets/images/services/icons/digestive-system.png",
+//     title: "Gastroenterology Specialist Care",
+//     url: "/services/medicine/gastroenterology",
+//     alt: "gastroenterology-specialist-care"
+//   },
+//   { 
+//     id: 13, 
+//     image: "/assets/images/services/icons/organ.png",
+//     title: "Nephrology Specialist Care",
+//     url: "/services/medicine/nephrology",
+//     alt: "nephrology-specialist-care"
+//   },
+//   { 
+//     id: 14, 
+//     image: "/assets/images/services/icons/endocrine.png",
+//     title: "Endocrinology Specialist Care",
+//     url: "/services/medicine/endocrinology",
+//     alt: "endocrinology-specialist-care"
+//   },
+//   { 
+//     id: 15, 
+//     image: "/assets/images/services/icons/rheumatology.png",
+//     title: "Rheumatology Specialist Care",
+//     url: "/services/medicine/rheumatology",
+//     alt: "rheumatology-specialist-care"
+//   },
+//   { 
+//     id: 16, 
+//     image: "/assets/images/services/icons/neurology.png",
+//     title: "Neurology Specialist Care",
+//     url: "/services/medicine/neurology",
+//     alt: "neurology-specialist-care"
+//   },
+//   { 
+//     id: 17, 
+//     image: "/assets/images/services/icons/oncology.png",
+//     title: "Oncology Specialist Care",
+//     url: "/services/medicine/oncology",
+//     alt: "oncology-specialist-care"
+//   },
+//   { 
+//     id: 18, 
+//     image: "/assets/images/services/icons/leukemia.png",
+//     title: "Haematology Specialist Care",
+//     url: "/services/medicine/haematology",
+//     alt: "haematology-specialist-care"
+//   },
+//   { 
+//     id: 19, 
+//     image: "/assets/images/services/icons/woman.png",
+//     title: "Fertility Treatment",
+//     url: "/services/fertility",
+//     alt: "fertility-treatment"
+//   },
+//   { 
+//     id: 20, 
+//     image: "/assets/images/services/icons/healthcare.png",
+//     title: "General Paediatrics",
+//     url: "/services/paediatrics",
+//     alt: "general-paediatrics"
+//   },
+//   { 
+//     id: 21, 
+//     image: "/assets/images/services/icons/diaylsis.png",
+//     title: "Dialysis",
+//     url: "/services/dialysis",
+//     alt: "dialysis"
+//   },
+//   { 
+//     id: 22, 
+//     image: "/assets/images/services/icons/chemotherapy.png",
+//     title: "Chemotherapy",
+//     url: "/services/chemotherapy",
+//     alt: "chemotherapy"
+//   },
+//   { 
+//     id: 23, 
+//     image: "/assets/images/services/icons/diagnostic.png",
+//     title: "Diagnostic Services",
+//     url: "/services/diagnostics",
+//     alt: "diagnostic-services"
+//   },
+//   { 
+//     id: 24, 
+//     image: "/assets/images/services/icons/dentistry.png",
+//     title: "Dental Care",
+//     url: "/services/dental-care",
+//     alt: "dental-care"
+//   },
+//   { 
+//     id: 25, 
+//     image: "/assets/images/services/icons/opathmology.png",
+//     title: "Ophthalmology Care",
+//     url: "/services/ophthalmology",
+//     alt: "ophthalmology-care"
+//   },
+//   { 
+//     id: 26, 
+//     image: "/assets/images/services/icons/physical-therapy.png",
+//     title: "Physiotherapy",
+//     url: "/services/physio",
+//     alt: "physiotherapy"
+//   },
+//   { 
+//     id: 27, 
+//     image: "/assets/images/services/icons/wellness.png",
+//     title: "Wellness",
+//     url: "/services/wellness",
+//     alt: "wellness"
+//   },
+//   { 
+//     id: 28, 
+//     image: "/assets/images/services/icons/person.png",
+//     title: "Online Consultations",
+//     url: "/services/online-consult",
+//     alt: "online-consultations"
+//   }
+// ];
+
 //Product_Services links/sitemaps
+
+
 export const save_a_life = [
 
 { 

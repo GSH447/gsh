@@ -14,6 +14,11 @@ const pageData = {
   ]
 };
 
+export const metadata = {
+  title: `Oncology Specialist Care - Gracespring Hospitals`,
+  description: `Comprehensive cancer therapeutics and tumor screening at Gracespring Hospitals, Block 3, Plot 32, Ajayi Apata estate, Sangotedo, Eti-Osa, Lekki - Lagos. Compassionate medical attention.`,
+};
+
 export default function OncologyPage() {
   return <ServicePageLayout data={pageData} />;
 }

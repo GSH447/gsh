@@ -14,6 +14,11 @@ const pageData = {
   ]
 };
 
+export const metadata = {
+  title: `Dental Care Unit - Gracespring Hospitals`,
+  description: `Comprehensive oral health solutions, surgery, and preventive clinical dental services at Gracespring Hospitals, Block 3, Plot 32, Ajayi Apata estate, Sangotedo, Eti-Osa, Lekki - Lagos.`,
+};
+
 export default function DentalPage() {
   return <ServicePageLayout data={pageData} />;
 }

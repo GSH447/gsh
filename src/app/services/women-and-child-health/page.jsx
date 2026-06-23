@@ -1,18 +1,12 @@
-// import React from "react";
-// import SpecialOccasionGiving from "../../../../components/MakeADonation/IndividualGiving/SpecialOccasionGiving";
-// export const metadata = {
-//     title: `Special Occasion Giving - The Garcespring Health Foundation`,
-//     description: `We’re The Gracespring Health Foundation, a non-profit organization dedicated to providing free surgical care for children born with heart conditions in Nigeria. Our mission is to locate these children and work in partnership with local, regional, national, and international organizations to ensure they receive the medical attention they need. Join us in making a difference in the lives of these children and their families.`,
-//   };
-// export default function SOG() {
-//   return (
-    
-//     <>
+import React from "react";
 
-//       <SpecialOccasionGiving/>
+import ServiceParentPage from "../../../../components/Product&Services/ServiceParentPage";
 
-//     </>
+export const metadata = {
+  title: `Women & Child Health - Gracespring Hospitals`,
+  description: `Dedicated maternal care and pediatric development solutions provided at Gracespring Hospitals, Block 3, Plot 32, Ajayi Apata estate, Sangotedo, Eti-Osa, Lekki - Lagos. Our specialized services are structured to provide reliable medical attention across Obstetrics & Gynaecological Services, Fertility Treatment, and General Paediatrics.`,
+};
 
-
-//   );
-// }
+export default function WomenAndChildHealthParent() {
+  return <ServiceParentPage targetHref="/services/women-and-child-health" />;
+}

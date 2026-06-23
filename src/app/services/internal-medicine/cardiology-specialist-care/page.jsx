@@ -14,6 +14,13 @@ const pageData = {
   ]
 };
 
+
+export const metadata = {
+  title: `Cardiology Specialist Care - Gracespring Hospitals`,
+  description: `Specialist cardiovascular diagnostics and therapy at Gracespring Hospitals, Block 3, Plot 32, Ajayi Apata estate, Sangotedo, Eti-Osa, Lekki - Lagos. Premium diagnostic management for your heart.`,
+};
+
+
 export default function CardiologyPage() {
   return <ServicePageLayout data={pageData} />;
 }

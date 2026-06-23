@@ -14,6 +14,11 @@ const pageData = {
   ]
 };
 
+export const metadata = {
+  title: `Rheumatology Specialist Care - Gracespring Hospitals`,
+  description: `Expert treatment for autoimmune diseases and musculoskeletal conditions at Gracespring Hospitals, Block 3, Plot 32, Ajayi Apata estate, Sangotedo, Eti-Osa, Lekki - Lagos.`,
+};
+
 export default function RheumatologyPage() {
   return <ServicePageLayout data={pageData} />;
 }

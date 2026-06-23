@@ -14,6 +14,11 @@ const pageData = {
   ]
 };
 
+export const metadata = {
+  title: `Ophthalmology Care - Gracespring Hospitals`,
+  description: `Advanced clinical eye screenings, diagnostic checkups, and vision correction treatments at Gracespring Hospitals, Block 3, Plot 32, Ajayi Apata estate, Sangotedo, Eti-Osa, Lekki - Lagos.`,
+};
+
 export default function OphthalmologyPage() {
   return <ServicePageLayout data={pageData} />;
 }

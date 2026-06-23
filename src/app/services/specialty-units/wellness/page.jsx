@@ -14,6 +14,11 @@ const pageData = {
   ]
 };
 
+export const metadata = {
+  title: `Wellness & Preventive Health - Gracespring Hospitals`,
+  description: `Comprehensive executive body screening, preventative tracking programs, and general wellness at Gracespring Hospitals, Block 3, Plot 32, Ajayi Apata estate, Sangotedo, Eti-Osa, Lekki - Lagos.`,
+};
+
 export default function WellnessPage() {
   return <ServicePageLayout data={pageData} />;
 }

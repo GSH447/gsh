@@ -14,6 +14,11 @@ const pageData = {
   ]
 };
 
+export const metadata = {
+  title: `Gastroenterology Specialist Care - Gracespring Hospitals`,
+  description: `Expert digestive health and gastrointestinal diagnostics at Gracespring Hospitals, Block 3, Plot 32, Ajayi Apata estate, Sangotedo, Eti-Osa, Lekki - Lagos. Internal medicine specialist systems.`,
+};
+
 export default function GastroenterologyPage() {
   return <ServicePageLayout data={pageData} />;
 }

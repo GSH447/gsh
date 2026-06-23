@@ -14,6 +14,11 @@ const pageData = {
   ]
 };
 
+export const metadata = {
+  title: `Neurosurgery - Gracespring Hospitals`,
+  description: `Advanced neurosurgical interventions for neurological and spine conditions at Gracespring Hospitals, Block 3, Plot 32, Ajayi Apata estate, Sangotedo, Eti-Osa, Lekki - Lagos. High-precision care.`,
+};
+
 export default function NeurosurgeryPage() {
   return <ServicePageLayout data={pageData} />;
 }

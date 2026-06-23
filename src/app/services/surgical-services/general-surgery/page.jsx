@@ -14,6 +14,11 @@ const pageData = {
   ]
 };
 
+export const metadata = {
+  title: `General Surgery - Gracespring Hospitals`,
+  description: `Comprehensive general surgical operations and elective treatments at Gracespring Hospitals, Block 3, Plot 32, Ajayi Apata estate, Sangotedo, Eti-Osa, Lekki - Lagos. Expert operative care options.`,
+};
+
 export default function GeneralSurgeryPage() {
   return <ServicePageLayout data={pageData} />;
 }

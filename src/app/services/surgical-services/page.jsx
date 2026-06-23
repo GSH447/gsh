@@ -1,18 +1,12 @@
-// import React from "react";
-// import CharityRunsWalks from "../../../../components/MakeADonation/Fundraising&Events/CharityRuns&Walks";
-// export const metadata = {
-//     title: `Charity Runs and Walk - The Garcespring Health Foundation`,
-//     description: `We’re The Gracespring Health Foundation, a non-profit organization dedicated to providing free surgical care for children born with heart conditions in Nigeria. Our mission is to locate these children and work in partnership with local, regional, national, and international organizations to ensure they receive the medical attention they need. Join us in making a difference in the lives of these children and their families.`,
-//   };
-// export default function MakeDonation() {
-//   return (
-    
-//     <>
+import React from "react";
 
-//       <CharityRunsWalks/>
+import ServiceParentPage from "../../../../components/Product&Services/ServiceParentPage";
 
-//     </>
+export const metadata = {
+  title: `Surgical Services - Gracespring Hospitals`,
+  description: `Explore advanced surgical care options at Gracespring Hospitals, located at Block 3, Plot 32, Ajayi Apata estate, Sangotedo, Eti-Osa, Lekki - Lagos. Our state-of-the-art theater suites support procedures including Cardiothoracic, Vascular, Urology, General, Paediatric, Neurosurgery, Orthopaedics, and Plastic Surgery to ensure patients receive the highest standard of medical attention.`,
+};
 
-
-//   );
-// }
+export default function SurgicalServicesParent() {
+  return <ServiceParentPage targetHref="/services/surgical-services" />;
+}

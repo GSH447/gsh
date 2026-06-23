@@ -14,6 +14,11 @@ const pageData = {
   ]
 };
 
+export const metadata = {
+  title: `Diagnostic Services - Gracespring Hospitals`,
+  description: `Advanced laboratory pathology services and radiology imaging systems at Gracespring Hospitals, Block 3, Plot 32, Ajayi Apata estate, Sangotedo, Eti-Osa, Lekki - Lagos.`,
+};
+
 export default function DiagnosticsPage() {
   return <ServicePageLayout data={pageData} />;
 }

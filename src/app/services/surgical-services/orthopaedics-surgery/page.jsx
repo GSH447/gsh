@@ -14,6 +14,11 @@ const pageData = {
   ]
 };
 
+export const metadata = {
+  title: `Orthopaedics Surgery - Gracespring Hospitals`,
+  description: `Expert orthopedic surgical procedures and joint reconstruction at Gracespring Hospitals, Block 3, Plot 32, Ajayi Apata estate, Sangotedo, Eti-Osa, Lekki - Lagos. Comprehensive musculoskeletal care.`,
+};
+
 export default function OrthopaedicsSurgeryPage() {
   return <ServicePageLayout data={pageData} />;
 }

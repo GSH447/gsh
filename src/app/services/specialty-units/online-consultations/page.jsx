@@ -14,6 +14,11 @@ const pageData = {
   ]
 };
 
+export const metadata = {
+  title: `Online Consultations & Telehealth - Gracespring Hospitals`,
+  description: `Secure remote telemedicine care options and virtual clinical reviews managed by Gracespring Hospitals, Block 3, Plot 32, Ajayi Apata estate, Sangotedo, Eti-Osa, Lekki - Lagos.`,
+};
+
 export default function OnlineConsultPage() {
   return <ServicePageLayout data={pageData} />;
 }

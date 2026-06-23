@@ -14,6 +14,11 @@ const pageData = {
   ]
 };
 
+export const metadata = {
+  title: `Endocrinology Specialist Care - Gracespring Hospitals`,
+  description: `Specialist hormonal health and metabolic disorder care at Gracespring Hospitals, Block 3, Plot 32, Ajayi Apata estate, Sangotedo, Eti-Osa, Lekki - Lagos. Advanced clinical diagnostics.`,
+};
+
 export default function EndocrinologyPage() {
   return <ServicePageLayout data={pageData} />;
 }

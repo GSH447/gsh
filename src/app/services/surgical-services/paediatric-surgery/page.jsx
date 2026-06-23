@@ -14,6 +14,12 @@ const pageData = {
   ]
 };
 
+
+export const metadata = {
+  title: `Paediatric Surgery - Gracespring Hospitals`,
+  description: `Specialized neonatal and pediatric surgical care at Gracespring Hospitals, Block 3, Plot 32, Ajayi Apata estate, Sangotedo, Eti-Osa, Lekki - Lagos. Dedicated infant and childhood operative health.`,
+};
+
 export default function PaediatricSurgeryPage() {
   return <ServicePageLayout data={pageData} />;
 }

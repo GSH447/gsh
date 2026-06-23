@@ -14,6 +14,11 @@ const pageData = {
   ]
 };
 
+export const metadata = {
+  title: `Neurology Specialist Care - Gracespring Hospitals`,
+  description: `Specialist care for central and peripheral nervous system disorders at Gracespring Hospitals, Block 3, Plot 32, Ajayi Apata estate, Sangotedo, Eti-Osa, Lekki - Lagos. Diagnostic excellence.`,
+};
+
 export default function NeurologyPage() {
   return <ServicePageLayout data={pageData} />;
 }

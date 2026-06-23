@@ -14,6 +14,13 @@ const pageData = {
   ]
 };
 
+
+export const metadata = {
+  title: `General Paediatrics - Gracespring Hospitals`,
+  description: `Complete children health management and adolescent physiological tracking at Gracespring Hospitals, Block 3, Plot 32, Ajayi Apata estate, Sangotedo, Eti-Osa, Lekki - Lagos.`,
+};
+
+
 export default function PaediatricsPage() {
   return <ServicePageLayout data={pageData} />;
 }

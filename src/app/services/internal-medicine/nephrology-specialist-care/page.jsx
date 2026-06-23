@@ -14,6 +14,13 @@ const pageData = {
   ]
 };
 
+
+export const metadata = {
+  title: `Nephrology Specialist Care - Gracespring Hospitals`,
+  description: `Specialized kidney care and renal disease diagnostics at Gracespring Hospitals, Block 3, Plot 32, Ajayi Apata estate, Sangotedo, Eti-Osa, Lekki - Lagos. Professional internal medicine management.`,
+};
+
+
 export default function NephrologyPage() {
   return <ServicePageLayout data={pageData} />;
 }

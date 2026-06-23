@@ -14,6 +14,11 @@ const pageData = {
   ]
 };
 
+export const metadata = {
+  title: `Chemotherapy Clinic - Gracespring Hospitals`,
+  description: `Dedicated oncological infusion care and specialized chemotherapy suites at Gracespring Hospitals, Block 3, Plot 32, Ajayi Apata estate, Sangotedo, Eti-Osa, Lekki - Lagos.`,
+};
+
 export default function ChemotherapyPage() {
   return <ServicePageLayout data={pageData} />;
 }

@@ -14,6 +14,11 @@ const pageData = {
   ]
 };
 
+export const metadata = {
+  title: `Urology Surgery - Gracespring Hospitals`,
+  description: `Specialized urological surgical procedures at Gracespring Hospitals, Block 3, Plot 32, Ajayi Apata estate, Sangotedo, Eti-Osa, Lekki - Lagos. Expert clinical interventions for renal and urinary tracts.`,
+};
+
 export default function UrologyPage() {
   return <ServicePageLayout data={pageData} />;
 }

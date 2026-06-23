@@ -14,6 +14,11 @@ const pageData = {
   ]
 };
 
+export const metadata = {
+  title: `Fertility Treatment - Gracespring Hospitals`,
+  description: `Advanced reproductive medicine options and fertility treatment protocols at Gracespring Hospitals, Block 3, Plot 32, Ajayi Apata estate, Sangotedo, Eti-Osa, Lekki - Lagos. Expert solutions.`,
+};
+
 export default function FertilityPage() {
   return <ServicePageLayout data={pageData} />;
 }

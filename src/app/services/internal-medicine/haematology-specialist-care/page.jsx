@@ -14,6 +14,11 @@ const pageData = {
   ]
 };
 
+export const metadata = {
+  title: `Haematology Specialist Care - Gracespring Hospitals`,
+  description: `Specialized clinical care for blood disorders and bone marrow pathologies at Gracespring Hospitals, Block 3, Plot 32, Ajayi Apata estate, Sangotedo, Eti-Osa, Lekki - Lagos.`,
+};
+
 export default function HaematologyPage() {
   return <ServicePageLayout data={pageData} />;
 }
