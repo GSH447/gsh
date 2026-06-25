@@ -41,7 +41,7 @@ const Services_short_cut = ({ services_short_cut = [] }) => {
                   y: 2,
                   boxShadow: "0px 2px 0px rgba(0, 0, 0, 0.2)"
                 }}
-                className="border-2 border-primary rounded-xl h-48 flex flex-col items-center justify-between cursor-pointer transition-colors duration-200 erd-cta p-4 bg-white group"
+                className="lg:border-2 lg:border-primary rounded-xl h-48 flex flex-col items-center justify-between cursor-pointer transition-colors duration-200 erd-cta p-4 bg-white group"
               >
                 {/* Top: Icon Interactive Frame */}
                 <div className="px-1 py-1 transition-colors duration-300 w-fit mx-auto mt-1">

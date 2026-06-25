@@ -55,7 +55,7 @@ export default function ServicesShortCutPage() {
     <div className="relative w-full min-h-screen">
       
       {/* Content layer */}
-      <div className="relative z-10 flex flex-col items-center justify-center w-full min-h-screen lg:pb-[20vh] ">
+      <div className="relative z-10 flex flex-col items-center justify-center w-full min-h-screen pb-[10vh] lg:pb-[20vh]">
         
         <div className="flex flex-col items-center w-full">
 

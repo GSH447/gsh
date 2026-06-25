@@ -3,6 +3,7 @@ import ServicePageLayout from "../../../../../components/ServicePageLayout/index
 
 const pageData = {
   title: "Endocrinology Specialist Care",
+  image: "/assets/images/services/endocrinology.jpg",
   category: "Internal Medicine",
   tagline: "Precision Management of Diabetes, Thyroid, and Metabolic Disorders",
   overview: "Our Endocrinology clinic delivers comprehensive disease management frameworks for hormonal disturbances, focusing heavily on intensive diabetes care, metabolic syndromic management, and thyroid system normalization.",
