@@ -4,6 +4,7 @@ import ServicePageLayout from "../../../../../components/ServicePageLayout/index
 const pageData = {
   title: "Obstetrics & Gynaecological Services",
   category: "Women & Child Health",
+  image: "/assets/images/services/oandg.jpg",
   tagline: "Comprehensive Care Across Every Stage of Womanhood",
   overview: "Our OB/GYN department provides premium maternity services, high-risk obstetrics monitoring, routine preventative screenings, and advanced gynaecological interventions to support women's health.",
   features: [

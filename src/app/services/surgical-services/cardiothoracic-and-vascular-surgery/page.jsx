@@ -5,6 +5,7 @@ import ServicePageLayout from "../../../../../components/ServicePageLayout";
 const pageData = {
   title: "Cardiothoracic and Vascular Surgery",
   category: "Surgical Services",
+  image: "/assets/images/services/ctvs.jpg",
   tagline: "World-Class Open Heart, Thoracic, and Endovascular Interventions",
   overview: "Our Cardiothoracic and Vascular Surgery unit provides comprehensive surgical treatment for diseases affecting the heart, lungs, esophagus, mediastinum, and major blood vessels.",
   features: [

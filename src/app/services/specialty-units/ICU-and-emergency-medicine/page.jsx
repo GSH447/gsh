@@ -4,6 +4,7 @@ import ServicePageLayout from "../../../../../components/ServicePageLayout/index
 const pageData = {
   title: "ICU & Emergency Medicine",
   category: "Specialty Units",
+  image: "/assets/images/services/icu.jpg",
   tagline: "24/7 High-Acuity Trauma, Resuscitation, and Critical Care Support",
   overview: "Our Intensive Care and Emergency Department operates continuously to stabilize critical multi-system trauma, cardiovascular crises, and acute respiratory compromise with advanced life-support technology.",
   features: [

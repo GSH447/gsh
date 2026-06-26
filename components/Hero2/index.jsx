@@ -89,13 +89,13 @@ function HeroStatistics() {
   return (
     <div
       ref={ref}
-      className="border-2 absolute bottom-6 right-4 lg:bottom-10 lg:right-[3.1rem] flex flex-row items-center bg-black/50 lg:p-6 p-4 rounded-md backdrop-blur-sm border border-white/10 z-30 w-fit"
+      className="border-2 absolute bottom-6 right-4 lg:bottom-10 lg:right-[3.1rem] flex flex-row items-center bg-black/50 lg:p-6 p-1 rounded-md backdrop-blur-sm border border-white/10 z-30 w-fit"
     >
       {statsData.map((stat, index) => (
         <React.Fragment key={index}>
           <div className="px-1 flex-1 text-center lg:py-0 lg:border-none border-b border-white/20 last:border-b-0">
             <p
-              className="text-white lg:text-5xl text-3xl font-extrabold leading-tight"
+              className="text-white lg:text-5xl text-2xl font-extrabold leading-tight"
               style={{ fontFamily: "AvenirBold" }}
             >
               {inView ? (

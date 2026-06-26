@@ -4,6 +4,7 @@ import ServicePageLayout from "../../../../../components/ServicePageLayout/index
 const pageData = {
   title: "Neurology Specialist Care",
   category: "Internal Medicine",
+  image: "/assets/images/services/neurology.jpg",
   tagline: "Comprehensive Diagnostics and Treatment for Neurological Conditions",
   overview: "Our Neurology department evaluates and addresses standard and complex central and peripheral nervous system anomalies, utilizing personalized neuro-restorative and clinical therapeutic regimens.",
   features: [
