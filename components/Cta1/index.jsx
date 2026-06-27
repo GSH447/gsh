@@ -65,7 +65,7 @@ export default function Cta1() {
         {/* LEFT COLUMN - ABOUT US */}
         <div className="text-black space-y-6">
 
-          <p className="uppercase tracking-widest text-sm text-[#2A157c] font-semibold">
+          <p className="uppercase tracking-widest text-sm text-[#2A157c] font-semibold ">
             ABOUT GRACESPRING HOSPITALS
           </p>
 
@@ -82,7 +82,7 @@ export default function Cta1() {
 
           </div>
 
-          <p className="-mt-5 uppercase tracking-widest text-sm text-[#2A157c] font-semibold">
+          <p className="-mt-5 uppercase tracking-widest text-sm text-white font-semibold  bg-[#5CB338] px-2 p-1">
            <i>24/7 GLOBAL STANDARD OF PRIVATE HEALTHCARE</i>
           </p>
 

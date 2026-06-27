@@ -25,11 +25,22 @@ const slides = [
       "Our identity is reflected through our three wings—each inspired by timeless virtues that define our approach to healing and service: Pistis (Faith), Elpis (Hope), and Agape (Love).",
     buttonText: "Read More",
     buttonUrl: "/who-we-are/about-us",
-    bgImage: "/assets/images/hero/gsh.jpg",
-    zoom: false,
+    bgImage: "/assets/images/hero/gsh-2.png",
+    zoom: true,
     overlayStrength: "strong", 
-    objectPosition: "center 100%", // 100% pushes the image completely flush to the bottom edge
+    objectPosition: "center center", // 100% pushes the image completely flush to the bottom edge
   },
+  // {
+  //   title: "Excellence in Care, Our Shared Path",
+  //   description:
+  //     "Our identity is reflected through our three wings—each inspired by timeless virtues that define our approach to healing and service: Pistis (Faith), Elpis (Hope), and Agape (Love).",
+  //   buttonText: "Read More",
+  //   buttonUrl: "/who-we-are/about-us",
+  //   bgImage: "/assets/images/hero/gsh-2.png",
+  //   zoom: false,
+  //   overlayStrength: "strong", 
+  //   objectPosition: "center 100%", // 100% pushes the image completely flush to the bottom edge
+  // },
   // {
   //   title: "Excellence in Care, Our Shared Path",
   //   description:
@@ -42,19 +53,20 @@ const slides = [
   //   objectFit: "contain",       // ✅ Show full building — no crop
   //   objectPosition: "contain 70%", // ✅ Push building toward bottom of frame
   // },
+  // {
+  //   title: "Multispecialty Healthcare Facility",
+  //   description:
+  //     "Health is wealth, and access to proper, affordable, and timely healthcare is a fundamental aspiration of every society.",
+  //   buttonText: "Contact Us",
+  //   buttonUrl: "/patient-support/contact-us",
+  //   bgImage: "/assets/images/hero/doctor.jpg",
+  //   zoom: true,
+  //   overlayStrength: "strong",
+  //   objectPosition: "center center",
+  // },
   {
     title: "Multispecialty Healthcare Facility",
-    description:
-      "Health is wealth, and access to proper, affordable, and timely healthcare is a fundamental aspiration of every society.",
-    buttonText: "Contact Us",
-    buttonUrl: "/patient-support/contact-us",
-    bgImage: "/assets/images/hero/doctor.jpg",
-    zoom: true,
-    overlayStrength: "strong",
-    objectPosition: "center center",
-  },
-  {
-    title: "Professionalism, Compassion, and Clinical Excellence.",
+    // title: "Professionalism, Compassion, and Clinical Excellence.",
     description:
       "Our commitment to quality, safety, and dignity of care is guided by our enduring promise.",
     buttonText: "Find a Doctor",
