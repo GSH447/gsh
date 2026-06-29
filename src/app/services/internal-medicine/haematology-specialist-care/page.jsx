@@ -4,6 +4,7 @@ import ServicePageLayout from "../../../../../components/ServicePageLayout/index
 const pageData = {
   title: "Haematology Specialist Care",
   category: "Internal Medicine",
+  image: "/assets/images/services/InternalMedicine/haematology.jpg",
   tagline: "Specialized Management for Malignant and Non-Malignant Blood Conditions",
   overview: "Our Haematology Service offers expert diagnosis and therapeutics for anomalies across white cells, red cells, platelets, and coagulation factor systems.",
   features: [

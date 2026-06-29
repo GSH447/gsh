@@ -4,7 +4,7 @@ import ServicePageLayout from "../../../../../components/ServicePageLayout/index
 const pageData = {
   title: "Diagnostic Services",
   category: "Specialty Units",
-  image: "/assets/images/services/integrated-diagnostic-services.jpg",
+  image: "/assets/images/services/SpecialtyUnits/diagnostic.png",
   tagline: "High-Precision Laboratory Pathology and Advanced Medical Imaging",
   overview: "Our fully automated diagnostic labs and imaging systems deliver swift, dependable reports, enabling our clinical departments to implement accurate, evidence-based treatments.",
   features: [

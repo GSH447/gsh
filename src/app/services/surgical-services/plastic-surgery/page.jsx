@@ -4,6 +4,7 @@ import ServicePageLayout from "../../../../../components/ServicePageLayout/index
 const pageData = {
   title: "Plastic Surgery",
   category: "Surgical Services",
+  image: "/assets/images/services/surgeries/plastic.jpg",
   tagline: "Expert Reconstructive and Aesthetic Operative Interventions",
   overview: "Our Plastic and Reconstructive Surgery team provides highly specialized treatment designed to reconstruct defects caused by burns, trauma, tumors, or congenital abnormalities, alongside elective aesthetic enhancement options.",
   features: [

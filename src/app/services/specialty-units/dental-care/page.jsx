@@ -4,6 +4,7 @@ import ServicePageLayout from "../../../../../components/ServicePageLayout/index
 const pageData = {
   title: "Dental Care",
   category: "Specialty Units",
+  image: "/assets/images/services/SpecialtyUnits/dental11.svg",
   tagline: "Comprehensive Oral Health, Restorative, and Maxillofacial Solutions",
   overview: "Our Dental Clinic delivers preventive, cosmetic, and surgical oral interventions, operating modern equipment for restorations, endodontics, and structural jaw fixes.",
   features: [

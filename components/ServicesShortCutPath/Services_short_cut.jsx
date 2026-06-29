@@ -22,7 +22,7 @@ const Services_short_cut = ({ services_short_cut = [] }) => {
   <div className="w-full flex flex-col items-center gap-8">
     
     {/* 1. Grid Container */}
-    <div className="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+    <div className="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10 ">
       <AnimatePresence>
         {displayedItems.map((item, index) => {
           return (
@@ -41,12 +41,12 @@ const Services_short_cut = ({ services_short_cut = [] }) => {
                   y: 2,
                   boxShadow: "0px 2px 0px rgba(0, 0, 0, 0.2)"
                 }}
-                className="lg:border-2 lg:border-primary rounded-xl h-48 flex flex-col items-center justify-between cursor-pointer transition-colors duration-200 erd-cta p-4 bg-white group"
+                className="lg:border-2 lg:border-primary rounded-xl h-48 flex flex-col items-center justify-between cursor-pointer transition-colors duration-200 erd-cta mb-10 bg-white group "
               >
                 {/* Top: Icon Interactive Frame */}
-                <div className="px-1 py-1 transition-colors duration-300 w-fit mx-auto mt-1">
+                <div className=" px-1 py-1 transition-colors duration-300 w-fit mx-auto mt-1">
                   <motion.div
-                    className="h-[55px] w-[55px] overflow-hidden flex items-center justify-center relative"
+                    className="overflow-hidden flex items-center justify-center relative"
                     style={{ 
                       boxShadow: "0px 4px 0px rgba(0, 0, 0, 0.1)",
                     }}
@@ -71,12 +71,12 @@ const Services_short_cut = ({ services_short_cut = [] }) => {
                         duration: 0.4,
                         ease: [0.25, 0.46, 0.45, 0.94],
                       }}
-                      className="w-full h-full flex items-center justify-center"
+                      className=" w-full h-full flex items-center justify-center"
                     >
                       <Image
                         src={item.image}
-                        width={150}
-                        height={150}
+                        width={1000}
+                        height={1000}
                         alt={item.alt || item.title || "service icon"}
                         className="w-full h-full object-cover object-top"
                       />

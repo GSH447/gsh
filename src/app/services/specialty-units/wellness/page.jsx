@@ -4,6 +4,7 @@ import ServicePageLayout from "../../../../../components/ServicePageLayout/index
 const pageData = {
   title: "Wellness & Health Screenings",
   category: "Specialty Units",
+  image: "/assets/images/services/SpecialtyUnits/Wellness11.svg",
   tagline: "Proactive Health Assessments and Institutional Lifestyle Diagnostics",
   overview: "Our Wellness Unit focuses on preventive health medicine, providing structured executive physical checkups and corporate screening options designed to detect potential medical vulnerabilities before they progress.",
   features: [

@@ -4,6 +4,7 @@ import ServicePageLayout from "../../../../../components/ServicePageLayout/index
 const pageData = {
   title: "Online Consultations",
   category: "Specialty Units",
+  image: "/assets/images/services/SpecialtyUnits/onlineConsultation11.svg",
   tagline: "Seamless Telehealth Access to Gracespring Medical Specialists",
   overview: "Our Telehealth framework bridges geographical gaps by providing private, video-enabled online clinical consultations, giving you access to medical specialists for follow-ups and second opinions right from home or the office.",
   features: [

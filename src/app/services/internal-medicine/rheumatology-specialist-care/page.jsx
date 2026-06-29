@@ -4,6 +4,7 @@ import ServicePageLayout from "../../../../../components/ServicePageLayout/index
 const pageData = {
   title: "Rheumatology Specialist Care",
   category: "Internal Medicine",
+  image: "/assets/images/services/InternalMedicine/Rheumatology.png",
   tagline: "Expert Control of Autoimmune and Musculoskeletal Diseases",
   overview: "Our Rheumatology clinic offers advanced diagnostic paths and long-term immunomodulatory therapies for systemic autoimmune conditions, complex connective tissue diseases, and destructive joint inflammations.",
   features: [

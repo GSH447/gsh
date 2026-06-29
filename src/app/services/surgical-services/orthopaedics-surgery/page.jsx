@@ -4,6 +4,7 @@ import ServicePageLayout from "../../../../../components/ServicePageLayout/index
 const pageData = {
   title: "Orthopaedics Surgery",
   category: "Surgical Services",
+    image: "/assets/images/services/surgeries/orthopedic1.svg",
   tagline: "Restoring Mobility through Joint, Bone, and Sports Medicine Excellence",
   overview: "Our Orthopaedic Surgery team focuses on correcting musculoskeletal deformities, treating acute bone fractures, managing degenerative joint problems, and providing sophisticated joint replacement procedures.",
   features: [

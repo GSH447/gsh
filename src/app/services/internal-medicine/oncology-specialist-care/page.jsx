@@ -4,6 +4,7 @@ import ServicePageLayout from "../../../../../components/ServicePageLayout/index
 const pageData = {
   title: "Oncology Specialist Care",
   category: "Internal Medicine",
+  image: "/assets/images/services/InternalMedicine/Oncology.png",
   tagline: "Evidence-Based, Multi-Disciplinary Cancer Care and Support",
   overview: "Our Oncology Unit provides comprehensive clinical cancer care, delivering customized chemotherapy regimens, targeted immunotherapy pathways, and targeted supportive systems within a secure, calm ecosystem.",
   features: [

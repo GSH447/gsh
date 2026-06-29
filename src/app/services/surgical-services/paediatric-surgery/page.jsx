@@ -4,6 +4,7 @@ import ServicePageLayout from "../../../../../components/ServicePageLayout/index
 const pageData = {
   title: "Paediatric Surgery",
   category: "Surgical Services",
+  image: "/assets/images/services/surgeries/paediatric-surgery.png",
   tagline: "Compassionate, Precision Surgical Care for Infants and Children",
   overview: "Our Paediatric Surgery unit offers dedicated surgical management for neonates, infants, children, and adolescents, specializing in congenital anomaly corrections and common childhood surgical diseases.",
   features: [

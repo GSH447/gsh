@@ -4,7 +4,7 @@ import ServicePageLayout from "../../../../../components/ServicePageLayout/index
 const pageData = {
   title: "Nephrology Specialist Care",
   category: "Internal Medicine",
-  image: "/assets/images/services/nephrology.jpg",
+  image: "/assets/images/services/InternalMedicine/nephrology.jpg",
   tagline: "Comprehensive Kidney Care and Hypertension Management",
   overview: "Our Nephrology division provides specialized management for patients with acute kidney injuries, chronic kidney diseases, glomerulonephritis, and severe hypertensive nephropathies, backed by our modern dialysis ecosystem.",
   features: [

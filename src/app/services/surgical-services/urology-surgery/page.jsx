@@ -4,6 +4,7 @@ import ServicePageLayout from "../../../../../components/ServicePageLayout/index
 const pageData = {
   title: "Urology Surgery",
   category: "Surgical Services",
+  image: "/assets/images/services/surgeries/gsh-urology.png",
   tagline: "Advanced Endourological and Reconstructive Care",
   overview: "Our Urology Surgery team specializes in minimally invasive endourology, laser therapies, and complex reconstructions for conditions affecting the kidneys, urinary bladder, prostate gland, and reproductive system.",
   features: [

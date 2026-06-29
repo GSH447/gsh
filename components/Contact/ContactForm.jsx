@@ -28,24 +28,119 @@ export default function ContactForm() {
   });
 
   /* ---------------- FETCH COUNTRIES ---------------- */
-  useEffect(() => {
-    fetch("https://restcountries.com/v3.1/all?fields=idd,name,flags")
-      .then((res) => res.json())
-      .then((data) => {
-        const countryData = data
-          .filter((c) => c.idd?.root && c.flags?.png)
-          .map((c) => ({
-            code: c.idd.root + (c.idd.suffixes?.[0] || ""),
-            flag: c.flags.png,
-            name: c.name.common,
-          }));
+useEffect(() => {
+  const fetchCountries = async () => {
+    try {
+      // v5 endpoint: note the base URL change to api.restcountries.com
+      const response = await fetch("https://api.restcountries.com/countries/v5", {
+        headers: {
+          'Authorization': 'Bearer rc_live_demo' // Use your own API key for production
+        }
+      });
+      
+      const data = await response.json();
+      
+      // Handle response structure (v5 returns objects, often requiring data access)
+      // If the API returns a paginated list, it might be in data.items or data
+      const countriesList = Array.isArray(data) ? data : (data.items || []);
 
-        setCountries(countryData);
-        const nigeria = countryData.find((c) => c.code === "+234");
-        if (nigeria) setSelectedCountry(nigeria);
-      })
-      .catch((err) => console.error("Country fetch error:", err.message));
-  }, []);
+      const countryData = countriesList
+        .filter((c) => c.idd?.root) // Validate IDD structure
+        .map((c) => ({
+          // v5 data structure: access names and idd appropriately
+          code: c.idd?.root + (c.idd?.suffixes?.[0] || ""),
+          flag: c.flags?.png || "",
+          name: c.name?.common || "Unknown",
+        }))
+        .sort((a, b) => a.name.localeCompare(b.name));
+
+      setCountries(countryData);
+      
+      const nigeria = countryData.find((c) => c.code === "+234");
+      if (nigeria) setSelectedCountry(nigeria);
+
+    } catch (err) {
+      console.error("Country fetch error:", err);
+    }
+  };
+
+  fetchCountries();
+}, []);
+
+  // useEffect(() => {
+  //   // 1. Fetching full fields to ensure the object structure is standard
+  //   fetch("https://restcountries.com/v3.1/all?fields=idd,name,flags")
+  //     .then((res) => res.json())
+  //     .then((data) => {
+  //       // 2. Defensive check: Is data an array?
+  //       if (!Array.isArray(data)) {
+  //         console.error("API returned an object, expected an array:", data);
+  //         return;
+  //       }
+
+  //       const countryData = data
+  //         .filter((c) => c.idd?.root && c.flags?.png)
+  //         .map((c) => ({
+  //           code: c.idd.root + (c.idd.suffixes?.[0] || ""),
+  //           flag: c.flags.png,
+  //           name: c.name.common,
+  //         }))
+  //         .sort((a, b) => a.name.localeCompare(b.name));
+
+  //       setCountries(countryData);
+
+  //       const nigeria = countryData.find((c) => c.code === "+234");
+  //       if (nigeria) setSelectedCountry(nigeria);
+  //     })
+  //     .catch((err) => console.error("Country fetch error:", err));
+  // }, []);
+
+  // useEffect(() => {
+  //   fetch("https://api.restcountries.com/countries/v5/all?response_fields=name.common,idd")
+  //     .then((res) => res.json())
+  //     .then((data) => {
+  //       const countryData = data
+  //         .filter((c) => c.idd?.root && c.flags?.png)
+  //         .map((c) => {
+  //           // Join root and first suffix safely
+  //           const dialCode = c.idd.root + (c.idd.suffixes?.[0] || "");
+  //           return {
+  //             code: dialCode,
+  //             flag: c.flags.png,
+  //             name: c.name.common,
+  //           };
+  //         })
+  //         .sort((a, b) => a.name.localeCompare(b.name)); // Sort alphabetically
+
+  //       setCountries(countryData);
+
+  //       // Find Nigeria properly
+  //       const nigeria = countryData.find((c) => c.code === "+234");
+  //       if (nigeria) {
+  //         setSelectedCountry(nigeria);
+  //       }
+  //     })
+  //     .catch((err) => console.error("Country fetch error:", err));
+  // }, []);
+
+  // useEffect(() => {
+  //   fetch("https://restcountries.com/v3.1/all?fields=idd,name,flags")
+  //     .then((res) => res.json())
+  //     .then((data) => {
+  //       const countryData = data
+  //         .filter((c) => c.idd?.root && c.flags?.png)
+  //         .map((c) => ({
+  //           code: c.idd.root + (c.idd.suffixes?.[0] || ""),
+  //           flag: c.flags.png,
+  //           name: c.name.common,
+  //         }));
+
+  //       setCountries(countryData);
+  //       const nigeria = countryData.find((c) => c.code === "+234");
+  //       if (nigeria) setSelectedCountry(nigeria);
+  //     })
+  //     .catch((err) => console.error("Country fetch error:", err.message));
+  // }, []);
 
   const handleCountryChange = (country) => {
     setSelectedCountry(country);
@@ -53,23 +148,55 @@ export default function ContactForm() {
   };
 
   /* ---------------- VALIDATION ---------------- */
-  const validateForm = () => {
-    const e = {};
-    if (!formData.firstName.trim()) e.firstName = "First name is required";
-    if (!formData.lastName.trim()) e.lastName = "Last name is required";
-    if (!/^\S+@\S+\.\S+$/.test(formData.email)) e.email = "Invalid email address";
-    if (!formData.phone || formData.phone.length < 7) e.phone = "Valid phone number required";
-    if (!formData.message.trim()) e.message = "Message content cannot be blank";
 
-    setErrors(e);
-    return Object.keys(e).length === 0;
+  const validateForm = () => {
+      const e = {};
+      if (!formData.firstName.trim()) e.firstName = "First name is required";
+      if (!formData.lastName.trim()) e.lastName = "Last name is required";
+      if (!/^\S+@\S+\.\S+$/.test(formData.email)) e.email = "Invalid email address";
+      // Ensure phone is numeric only
+      if (!/^\d{7,15}$/.test(formData.phone)) e.phone = "Valid phone number (7-15 digits) is required";
+      if (!formData.message.trim()) e.message = "Message content cannot be blank";
+      if (!isChecked) e.privacy = "You must agree to the privacy policy";
+
+      setErrors(e);
+      return Object.keys(e).length === 0;
   };
+
+
+  // const validateForm = () => {
+  //   const e = {};
+  //   if (!formData.firstName.trim()) e.firstName = "First name is required";
+  //   if (!formData.lastName.trim()) e.lastName = "Last name is required";
+  //   if (!/^\S+@\S+\.\S+$/.test(formData.email)) e.email = "Invalid email address";
+  //   if (!formData.phone || formData.phone.length < 7) e.phone = "Valid phone number required";
+  //   if (!formData.message.trim()) e.message = "Message content cannot be blank";
+
+  //   setErrors(e);
+  //   return Object.keys(e).length === 0;
+  // };
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData((prev) => ({ ...prev, [name]: value }));
+
+    // If the input is the 'phone' field, remove any character that is not a digit
+    if (name === "phone") {
+      const numericValue = value.replace(/\D/g, "");
+      setFormData((prev) => ({ ...prev, [name]: numericValue }));
+    } else {
+      // For all other fields, behave normally
+      setFormData((prev) => ({ ...prev, [name]: value }));
+    }
+
+    // Clear errors when the user starts typing
     if (errors[name]) setErrors((prev) => ({ ...prev, [name]: "" }));
   };
+
+  // const handleChange = (e) => {
+  //   const { name, value } = e.target;
+  //   setFormData((prev) => ({ ...prev, [name]: value }));
+  //   if (errors[name]) setErrors((prev) => ({ ...prev, [name]: "" }));
+  // };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -79,8 +206,14 @@ export default function ContactForm() {
     if (!validateForm()) return;
 
     setLoading(true);
+  
+  // Create a combined phone number: +2348082550192
+  const fullPhoneNumber = `${selectedCountry.code}${formData.phone}`.replace('++', '+');
+
+    setLoading(true);
     const payload = {
       ...formData,
+      phone: fullPhoneNumber,
       countryCode: selectedCountry.code,
     };
 
@@ -202,6 +335,7 @@ export default function ContactForm() {
             <input
               type="tel"
               name="phone"
+              maxLength={12}
               placeholder="8082550192"
               value={formData.phone}
               className="flex-1 p-2 text-sm text-gray-800 focus:outline-none bg-transparent"
@@ -240,6 +374,7 @@ export default function ContactForm() {
             . We will use the information you provide to safely process and manage your healthcare request.
           </label>
         </div>
+        {errors.privacy && <p className="text-xs text-red-500 mt-1">{errors.privacy}</p>}
 
         {errorMessage && <div className="p-3 bg-red-50 text-red-600 text-sm rounded-lg font-medium">{errorMessage}</div>}
         {successMessage && <div className="p-3 bg-green-50 text-green-600 text-sm rounded-lg font-medium">{successMessage}</div>}

@@ -4,6 +4,7 @@ import ServicePageLayout from "../../../../../components/ServicePageLayout/index
 const pageData = {
   title: "Ophthalmology Care",
   category: "Specialty Units",
+  image: "/assets/images/services/SpecialtyUnits/opathmology11.svg",
   tagline: "Advanced Eye Care, Refraction Studies, and Microsurgical Interventions",
   overview: "Our Ophthalmology Service provides deep diagnostic vision mapping alongside microsurgical corrections for conditions like cataracts and glaucoma, preserving overall visual acuity.",
   features: [

@@ -4,6 +4,7 @@ import ServicePageLayout from "../../../../../components/ServicePageLayout/index
 const pageData = {
   title: "General Surgery",
   category: "Surgical Services",
+  image: "/assets/images/services/surgeries/gsh-gs.png",
   tagline: "Pioneering Laparoscopic & Minimally Invasive Solutions",
   overview: "Our General Surgery framework handles high-volume abdominal procedures with an emphasis on advanced minimal access (laparoscopic) interventions.",
   features: [

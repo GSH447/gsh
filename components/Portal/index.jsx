@@ -1,321 +1,197 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import {
-  // ShieldCheck,
-  // HeartPulse,
-  // FileText,
-  // FlaskConical,
-  // CalendarDays,
-  Phone,
-} from 'lucide-react';
+import { Mail, Lock, ChevronDown, Loader2 } from 'lucide-react';
 import { useState } from 'react';
-
-const letterVariants = {
-  hidden: {
-    opacity: 0,
-    y: 30,
-    filter: 'blur(8px)',
-  },
-
-  visible: (i) => ({
-    opacity: 1,
-    y: 0,
-    filter: 'blur(0px)',
-
-    transition: {
-      delay: i * 0.03,
-      duration: 0.45,
-    },
-  }),
-};
-
-const AnimatedText = ({ text, className = '' }) => {
-  return (
-    <motion.div
-      initial="hidden"
-      whileInView="visible"
-      viewport={{
-        once: false,
-        amount: 0.3,
-      }}
-      className={`flex flex-wrap ${className}`}
-    >
-      {text.split('').map((char, index) => (
-        <motion.span
-          key={index}
-          custom={index}
-          variants={letterVariants}
-          className="inline-block"
-        >
-          {char === ' ' ? '\u00A0' : char}
-        </motion.span>
-      ))}
-    </motion.div>
-  );
-};
+import { useRouter } from 'next/navigation';
+import { API_BASE_URL_HIS } from '../../lib/api';
 
 export default function PatientPortal() {
-  const [mrn, setMrn] = useState('');
-  const [phone, setPhone] = useState('');
+  const router = useRouter();
+  
+  // Form State
+  const [hospital, setHospital] = useState('Gracespring Hospitals Limited');
+  const [uhid, setUhid] = useState('');
+  const [password, setPassword] = useState('');
+  
+  // UI State
+  const [isLoading, setIsLoading] = useState(false);
+  const [errorMessage, setErrorMessage] = useState('');
 
-  const handleMrnChange = (e) => {
-    const value = e.target.value.replace(/\D/g, '').slice(0, 6);
-    setMrn(value);
+  const handleReset = () => {
+    setUhid('');
+    setPassword('');
+    setHospital('Gracespring Hospitals Limited');
+    setErrorMessage('');
   };
 
-  const handlePhoneChange = (e) => {
-    const value = e.target.value.replace(/\D/g, '').slice(0, 12);
-    setPhone(value);
+  const handleLogin = async (e) => {
+    e.preventDefault();
+    setErrorMessage('');
+
+    if (!uhid || !password) {
+      setErrorMessage('Please enter both your MRN and password.');
+      return;
+    }
+
+    setIsLoading(true);
+
+    try {
+      // TODO: Replace '/auth/patient/login' with your actual HIS endpoint
+      const response = await fetch(`${API_BASE_URL_HIS}/auth/patient/login`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json',
+        },
+        body: JSON.stringify({
+          uhid,
+          password,
+          hospital,
+        }),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.message || 'Invalid MRN or password. Please try again.');
+      }
+
+      // Handle successful login (e.g., store token in localStorage or cookies)
+      localStorage.setItem('patient_token', data.token);
+      
+      // Redirect to the patient dashboard
+      router.push('/patient-dashboard'); 
+      
+    } catch (error) {
+      setErrorMessage(error.message || 'An error occurred connecting to the server.');
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   return (
-    <section className="relative min-h-screen overflow-hidden bg-white">
+    <section 
+      className="my-10 relative min-h-screen flex items-center justify-center bg-gray-100 bg-cover bg-center"
+      style={{ backgroundImage: "url('/assets/images/services/WomenChildHealth/women-and-child-healthfertility-treatment.png')" }} 
+    >
+      <div className="absolute inset-0 bg-black/40" />
 
-      {/* Background Glow */}
-      <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-[#6F92E7]/20 blur-3xl rounded-full" />
-
-      <div className="relative z-10 container mx-auto px-4 lg:px-10 py-16 lg:py-24">
-
-        {/* <div className="grid lg:grid-cols-2 gap-12 items-center"> */}
-
-        <div className="mt-5 grid lg:grid-cols-1 gap-12 items-center">
-          {/* LEFT SIDE */}
-          {/* <div className="space-y-8">
-
-            <div className="space-y-6">
-
-              <motion.div
-                initial={{ opacity: 0, y: 40 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: false }}
-                transition={{ duration: 0.6 }}
-                className="inline-flex items-center gap-2 bg-[#EEF4FF] text-[#2A157C] px-4 py-2 rounded-full text-sm font-semibold"
-              >
-                <ShieldCheck size={18} />
-                Secure Patient Access
-              </motion.div>
-
-              <div className="space-y-3">
-
-                <AnimatedText
-                  text="Patient Portal"
-                  className="text-4xl lg:text-6xl font-black text-[#1E1E1E]"
-                />
-
-                <motion.p
-                  initial={{ opacity: 0 }}
-                  whileInView={{ opacity: 1 }}
-                  viewport={{ once: false }}
-                  transition={{ delay: 0.4 }}
-                  className="text-gray-600 text-lg max-w-xl leading-relaxed"
-                >
-                  Access your medical records, laboratory reports,
-                  appointments, prescriptions, and healthcare services securely
-                  from anywhere.
-                </motion.p>
-
-              </div>
-            </div> */}
-
-            {/* FEATURES */}
-            {/* <div className="grid sm:grid-cols-2 gap-4">
-
-              {[
-                {
-                  icon: <FileText size={22} />,
-                  title: 'Medical Records',
-                },
-
-                {
-                  icon: <FlaskConical size={22} />,
-                  title: 'Lab Results',
-                },
-
-                {
-                  icon: <CalendarDays size={22} />,
-                  title: 'Appointments',
-                },
-
-                {
-                  icon: <HeartPulse size={22} />,
-                  title: 'Care Tracking',
-                },
-              ].map((item, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: false }}
-                  transition={{ delay: index * 0.15 }}
-                  whileHover={{
-                    y: -5,
-                  }}
-                  className="bg-white border border-gray-100 shadow-xl rounded-3xl p-5 flex items-center gap-4"
-                >
-                  <div className="bg-[#EEF4FF] text-[#2A157C] p-3 rounded-2xl">
-                    {item.icon}
-                  </div>
-
-                  <h3 className="font-bold text-gray-800">
-                    {item.title}
-                  </h3>
-                </motion.div>
-              ))}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+        className="relative z-10 bg-white shadow-2xl w-full max-w-[420px] p-8 md:p-10 mx-4"
+      >
+        {/* LOGO AREA */}
+        <div className="text-center mb-6">
+          <div className="flex justify-center items-center gap-2 mb-4">
+            <div className="w-8 h-8 bg-purple-100 rounded-full flex items-center justify-center">
+              <span className="text-purple-600 font-bold text-xl">GSH</span>
             </div>
-          </div> */}
-
-          {/* RIGHT SIDE LOGIN */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: false }}
-            transition={{ duration: 0.5 }}
-            className="bg-white border border-gray-100 shadow-sm rounded-[2rem] p-8 lg:p-10 mx-auto"
-          >
-
-            <div className="space-y-2 mb-8">
-
-              {/* <h2 className="text-3xl font-black text-[#1E1E1E]">
-                Login
-              </h2> */}
-
-              <AnimatedText
-                text="Patient Portal"
-                className="text-4xl lg:text-6xl font-black text-[#1E1E1E]"
-              />
-
-              <p className="text-gray-500">
-                Enter your Medical Record Number (MRN)
-                and registered telephone number.
-              </p>
-
-            </div>
-
-            <form className="space-y-6">
-
-              {/* MRN */}
-              <div className="space-y-2">
-
-                <label className="font-semibold text-sm text-gray-700">
-                  Medical Record Number (MRN)
-                </label>
-
-
-                <input
-                  type="text"
-                  value={mrn}
-                  onChange={handleMrnChange}
-                  placeholder="Enter MRN"
-                  className="w-full border border-gray-200 rounded-2xl px-5 py-4 outline-none focus:ring-2 focus:ring-[#6F92E7]"
-                />
-
-                {/* <input
-                  type="text"
-                  inputMode="numeric"
-                  maxLength={6}
-                  placeholder="Enter MRN"
-                  className="w-full border border-gray-200 rounded-2xl px-5 py-4 outline-none focus:ring-2 focus:ring-[#6F92E7]"
-                /> */}
-
-                {/* <input
-                  type="number"
-                  maxLength={7}
-                  placeholder="Enter MRN"
-                  className="w-full border border-gray-200 rounded-2xl px-5 py-4 outline-none focus:ring-2 focus:ring-[#6F92E7]"
-                /> */}
-
-              </div>
-
-              {/* PHONE */}
-              <div className="space-y-2">
-
-                <label className="font-semibold text-sm text-gray-700">
-                  Telephone Number
-                </label>
-
-                <div className="relative">
-
-                  <Phone
-                    className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400"
-                    size={18}
-                  />
-
-
-                <input
-                  type="password"
-                  value={phone}
-                  onChange={handlePhoneChange}
-                  placeholder="Enter Telephone Number"
-                  className="w-full border border-gray-200 rounded-2xl pl-12 pr-5 py-4 outline-none focus:ring-2 focus:ring-[#6F92E7]"
-                />
-
-
-                  {/* <input
-                    type="password"
-                    inputMode="numeric"
-                    maxLength={12}
-                    placeholder="Enter Telephone Number"
-                    className="w-full border border-gray-200 rounded-2xl pl-12 pr-5 py-4 outline-none focus:ring-2 focus:ring-[#6F92E7]"
-                  /> */}
-
-                  {/* <input
-                    type="password"
-                    placeholder="Enter Telephone Number"
-                    className="w-full border border-gray-200 rounded-2xl pl-12 pr-5 py-4 outline-none focus:ring-2 focus:ring-[#6F92E7]"
-                  /> */}
-
-                </div>
-
-              </div>
-
-              {/* BUTTON */}
-
-              <motion.button
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
-                type="button"
-                onClick={() =>
-                  alert(
-                    'The Patient Portal is currently under development and will be available soon.'
-                  )
-                }
-                className="w-full bg-[#2A157C] hover:bg-[#3b239d] text-white font-bold py-4 rounded-2xl transition-all shadow-xl"
-              >
-                Login
-              </motion.button>
-
-
-              {/* <motion.button
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
-                type="submit"
-                className="w-full bg-[#2A157C] hover:bg-[#3b239d] text-white font-bold py-4 rounded-2xl transition-all shadow-xl"
-              >
-                Access Portal
-              </motion.button> */}
-
-            </form>
-
-            {/* HELP */}
-            <div className="mt-8 text-center text-sm text-gray-500 leading-relaxed">
-              Need assistance accessing your account?
-              <br />
-              Email: <a href="mailto:care@gracespringhospitals.com" className="text-[#6F92E7] hover:underline">
-                care@gracespringhospitals.com
-              </a>
-              
-              <br />
-              Call: <a href="tel:+2347056482776" className="text-[#6F92E7] hover:underline">
-                +234 705-648-2776
-              </a>
-            </div>
-
-          </motion.div>
-
+            <h1 className="text-[#1E3A8A] text-xl font-bold tracking-wide">
+              Gracespring Hospitals
+            </h1>
+          </div>
+          <p className="text-gray-600 text-sm font-medium">
+            <span className="font-bold">Patient</span> Portal
+          </p>
         </div>
 
-      </div>
+        {/* Error Display */}
+        {errorMessage && (
+          <div className="mb-4 p-3 bg-red-50 border-l-4 border-red-500 text-red-700 text-sm">
+            {errorMessage}
+          </div>
+        )}
+
+        <form onSubmit={handleLogin} className="space-y-4">
+          
+          {/* HOSPITAL DROPDOWN */}
+          <div className="relative">
+            <select 
+              value={hospital}
+              onChange={(e) => setHospital(e.target.value)}
+              className="w-full border border-gray-300 text-gray-600 text-sm p-3 appearance-none outline-none focus:border-[#4A90E2]"
+            >
+              <option value="Gracespring Hospitals Limited">Gracespring Hospitals Limited</option>
+            </select>
+            <ChevronDown className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400" size={16} />
+          </div>
+
+          {/* UHID / MRN */}
+          <div className="relative">
+            <input
+              type="text"
+              value={uhid}
+              onChange={(e) => setUhid(e.target.value)}
+              placeholder="Enter your MRN:<Registration No.>"
+              className="w-full border border-gray-300 text-sm p-3 pr-10 outline-none focus:border-[#4A90E2] placeholder:text-gray-400"
+              disabled={isLoading}
+            />
+            <Mail
+              className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400"
+              size={18}
+            />
+          </div>
+
+          {/* PASSWORD / MOBILE */}
+          <div className="relative">
+            <input
+              type="password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              placeholder="Enter your registered Mobile No/Password"
+              className="w-full border border-gray-300 text-sm p-3 pr-10 outline-none focus:border-[#4A90E2] placeholder:text-gray-400"
+              disabled={isLoading}
+            />
+            <Lock
+              className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-500 font-bold"
+              size={18}
+            />
+          </div>
+
+          {/* LOGIN / RESET BUTTONS */}
+          <div className="flex gap-4 pt-2">
+            <button
+              type="submit"
+              disabled={isLoading}
+              className="flex-1 flex justify-center items-center bg-[#4A90E2] hover:bg-[#357ABD] text-white text-sm font-medium py-2.5 transition-colors disabled:opacity-70 disabled:cursor-not-allowed"
+            >
+              {isLoading ? <Loader2 className="animate-spin" size={18} /> : 'Login'}
+            </button>
+            <button
+              type="button"
+              onClick={handleReset}
+              disabled={isLoading}
+              className="flex-1 bg-[#E74C3C] hover:bg-[#C0392B] text-white text-sm font-medium py-2.5 transition-colors disabled:opacity-70"
+            >
+              Reset
+            </button>
+          </div>
+
+          {/* FORGOT PASSWORD */}
+          <div className="flex justify-center pt-2">
+            <button
+              type="button"
+              className="bg-[#F39C12] hover:bg-[#D68910] text-white text-sm font-medium py-2 px-6 transition-colors"
+            >
+              Forgot Password
+            </button>
+          </div>
+
+          {/* HOW TO USE */}
+          <div className="flex justify-center pt-2">
+            <button
+              type="button"
+              className="bg-[#1F4E79] hover:bg-[#153654] text-white text-sm font-medium py-2 px-6 transition-colors"
+            >
+              How to use patient portal
+            </button>
+          </div>
+
+        </form>
+      </motion.div>
     </section>
   );
 }

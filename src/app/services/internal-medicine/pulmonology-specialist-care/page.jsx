@@ -4,6 +4,7 @@ import ServicePageLayout from "../../../../../components/ServicePageLayout/index
 const pageData = {
   title: "Pulmonology Specialist Care",
   category: "Internal Medicine",
+  image: "/assets/images/services/InternalMedicine/Pulmonology.png",
   tagline: "Expert Management of Respiratory and Chronic Lung Diseases",
   overview: "Our Pulmonology department evaluates and manages obstructive, restrictive, and infectious lung diseases, utilizing modern pulmonary function assessments to support respiratory health.",
   features: [

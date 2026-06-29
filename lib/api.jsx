@@ -1,12 +1,9 @@
-// export const API_BASE_URL = 'https://gracespringhospitals.com/api';
 
-// export const API_BASE_URL = 'http://foundation.gracespringhospitals.com:8081/api/';
 
-// export const API_BASE_URL = 'https://foundation.gracespringhospitals.com:8081/api/';
+// export const API_BASE_URL = 'https://gsh.gracespringhospitals.com/';
 
-// export const API_BASE_URL = 'http://foundation.gracespringhospitals.com/api/';
+export const API_BASE_URL = 'http://localhost/gsh/public';
 
-export const API_BASE_URL = 'https://api-his.gracespringhospitals.com/';
-
-// export const API_BASE_URL = 'http://localhost/gshf/gshf-mvc/public';
+export const API_BASE_URL_HIS = 'https://test-10.gracespringhospitals.com';
+// export const API_BASE_URL_HIS = 'https://api-his.gracespringhospitals.com';
 

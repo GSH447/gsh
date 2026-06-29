@@ -91,7 +91,7 @@ export default function ServicePageLayout({ data }) {
             alt={data.title || "Gracespring Hospitals Service"}
             fill
             priority
-            className="object-cover object-center opacity-2"
+            className=" object-center opacity-2"
           />
           {/* Medical grid overlay */}
           <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.05)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.05)_1px,transparent_1px)] bg-[size:5rem_5rem] opacity-60" />

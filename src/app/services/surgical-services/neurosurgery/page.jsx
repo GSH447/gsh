@@ -4,6 +4,7 @@ import ServicePageLayout from "../../../../../components/ServicePageLayout/index
 const pageData = {
   title: "Neurosurgery",
   category: "Surgical Services",
+  image: "/assets/images/services/surgeries/neurosurgery11.svg",
   tagline: "Advanced Cranial, Spinal, and Peripheral Nerve Interventions",
   overview: "Our Neurosurgery department deals with the prevention, diagnosis, and surgical management of disorders affecting the central nervous system, including complex brain tumor removals, spinal fusions, and neuro-trauma stabilization.",
   features: [

@@ -4,6 +4,7 @@ import ServicePageLayout from "../../../../../components/ServicePageLayout/index
 const pageData = {
   title: "Dialysis Unit",
   category: "Specialty Units",
+  image: "/assets/images/services/SpecialtyUnits/dialysis1.svg",
   tagline: "Safe, Ultra-Pure Renal Replacement and Hemodialysis Therapies",
   overview: "Our state-of-the-art Dialysis Unit provides regular outpatient and emergency inpatient hemodialysis sessions using advanced water purification plants to support patients with acute or end-stage renal diseases.",
   features: [

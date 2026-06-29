@@ -4,7 +4,7 @@ import ServicePageLayout from "../../../../../components/ServicePageLayout/index
 const pageData = {
   title: "Cardiology Specialist Care",
   category: "Internal Medicine",
-  image: "/assets/images/services/cardiology.jpg",
+  image: "/assets/images/services/InternalMedicine/cardiology.jpg",
   tagline: "Comprehensive Cardiovascular Health and Preventive Cardiology",
   overview: "Our Cardiology Unit provides diagnostic screening, treatment, and ongoing management for acute and chronic heart conditions, focusing on hypertension control, coronary artery diseases, and heart failure management.",
   features: [

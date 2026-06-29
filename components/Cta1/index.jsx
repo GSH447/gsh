@@ -50,7 +50,7 @@ const AnimatedText = ({
 
 export default function Cta1() {
   return (
-    <div className="relative w-full min-h-screen overflow-hidden">
+    <div className="relative w-full overflow-hidden">
 
       {/* Top Border */}
       <div className="flex">

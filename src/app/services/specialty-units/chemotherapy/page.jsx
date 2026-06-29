@@ -4,6 +4,7 @@ import ServicePageLayout from "../../../../../components/ServicePageLayout/index
 const pageData = {
   title: "Chemotherapy Unit",
   category: "Specialty Units",
+  image: "/assets/images/services/SpecialtyUnits/chemotherapy1.svg",
   tagline: "Dedicated Ambulatory and Inpatient Cytotoxic Infusion Care",
   overview: "Our Chemotherapy Unit features custom day-care suites structured for safe oncological drug administration, strict bio-safety compliance, and comprehensive post-infusion toxicity management.",
   features: [

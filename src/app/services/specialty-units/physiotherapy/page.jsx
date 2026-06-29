@@ -4,6 +4,7 @@ import ServicePageLayout from "../../../../../components/ServicePageLayout/index
 const pageData = {
   title: "Physiotherapy & Rehabilitation",
   category: "Specialty Units",
+  image: "/assets/images/services/SpecialtyUnits/physiotherapy11.svg",
   tagline: "Advanced Physical Rehabilitation for Peak Neuromuscular Recovery",
   overview: "Our Physiotherapy Unit supports patients recovering from major strokes, orthopaedic operations, athletic injuries, or chronic arthritic conditions through target-driven movement recovery therapies.",
   features: [
