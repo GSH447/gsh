@@ -177,10 +177,10 @@ export const FooterLinks = {
   ],
 
   social: [
-    { name: "Youtube", url: "#", iconPath: "/assets/icons/youtube.svg" },
+    { name: "Youtube", url: "https://www.youtube.com/@GracespringHospitals", iconPath: "/assets/icons/youtube.svg" },
     { name: "Facebook", url: "#", iconPath: "/assets/icons/facebook.svg" },
-    { name: "Twitter", url: "#", iconPath: "/assets/icons/twitter.svg" },
-    { name: "Instagram", url: "#", iconPath: "/assets/icons/instagram.svg" },
+    { name: "Twitter", url: "https://x.com/GSH_Hospitals", iconPath: "/assets/icons/twitter.svg" },
+    { name: "Instagram", url: "https://www.instagram.com/gracespringhospitals/", iconPath: "/assets/icons/instagram.svg" },
     { name: "Linkedin", url: "#", iconPath: "/assets/icons/linkedin.svg" },
   ],
 };

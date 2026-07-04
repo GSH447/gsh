@@ -771,7 +771,7 @@ export const team = {
     { 
       id: 3,
       image: "/assets/images/team/Hafeez_Akinade.jpeg",
-      title: "Hafeez Akinade Azeez (SPHRi, MBA, HRPL, ACIPM, MCSE)",
+      title: "Hafeez Akinade Azeez (SPHRi, MBA, HRPL, MCIPM, MCSE)",
       description: "Chief Operating Officer & Head of Human Resources",
       url: "#",
       alt: "Hafeez Akinade Azeez - Chief Operating Officer & Head of Human Resources",

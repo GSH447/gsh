@@ -17,7 +17,8 @@ export default function CorporateHero() {
           priority
           className="object-cover object-center opacity-40 scaling-effect"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#111029] via-[#1e1b4b]/80 to-transparent" />
+        {/* <div className="absolute inset-0 bg-gradient-to-r from-[#111029] via-[#1e1b4b]/80 to-transparent" /> */}
+        <div className="absolute inset-0" />
       </div>
 
       <div className=" container mx-auto px-6 lg:px-0 relative z-10 w-full text-left">
