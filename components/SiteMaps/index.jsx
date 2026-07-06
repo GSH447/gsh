@@ -12,7 +12,7 @@ export const links = [
         subMenu: [{ label: "Find out more about who we are", href: "/who-we-are/about-us" }],
       },
       {
-        header: "Our people",
+        header: "Meet the team",
         href: "/who-we-are/meet-the-team",
         subMenu: [{ label: "Meet our Patrons and Leadership", href: "/who-we-are/meet-the-team" }],
       }
@@ -141,7 +141,7 @@ export const FooterLinks = {
 
   company: [
     { name: "About us", url: "/who-we-are/about-us" },
-    { name: "Our People", url: "/who-we-are/meet-the-team" },
+    { name: "Meet the Team", url: "/who-we-are/meet-the-team" },
     // { name: "Careers", url: "/who-we-are/join-our-team" },
     { name: "Privacy Policy", url: "/privacy-policy" },
     { name: "Terms & Conditions", url: "/terms-of-use" },
