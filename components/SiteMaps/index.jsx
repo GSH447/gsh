@@ -13,8 +13,8 @@ export const links = [
       },
       {
         header: "Our people",
-        href: "/who-we-are/our-people",
-        subMenu: [{ label: "Meet our Patrons and Leadership", href: "/who-we-are/our-people" }],
+        href: "/who-we-are/meet-the-team",
+        subMenu: [{ label: "Meet our Patrons and Leadership", href: "/who-we-are/meet-the-team" }],
       }
     ],
   },
@@ -141,7 +141,7 @@ export const FooterLinks = {
 
   company: [
     { name: "About us", url: "/who-we-are/about-us" },
-    { name: "Our People", url: "/who-we-are/our-people" },
+    { name: "Our People", url: "/who-we-are/meet-the-team" },
     // { name: "Careers", url: "/who-we-are/join-our-team" },
     { name: "Privacy Policy", url: "/privacy-policy" },
     { name: "Terms & Conditions", url: "/terms-of-use" },
