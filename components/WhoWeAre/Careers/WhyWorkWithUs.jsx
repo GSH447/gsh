@@ -82,10 +82,10 @@ const WhyWorkWithUs = () => {
 
               
              <Link
-                href="/who-we-are/our-people"
+                href="/who-we-are/meet-the-team"
                 className="inline-block bg-transparent  px-5 lg:px-7 py-4 lg:py-3 rounded-full text-md text-primary font-extrabold transition-colors duration-300 hover:bg-primary hover:text-white border-2 border-primary"
               >
-                Our people
+                Meet the team
               </Link>
               
             </div>
