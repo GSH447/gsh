@@ -737,7 +737,7 @@ export const team = {
     { 
       id: 2,
       image: "/assets/images/team/jola+olugbemi.svg",
-      title: "Dr. Mojolaoluwa Olugbemi",
+      title: "Dr. Jola Olugbemi",
       description: "Consultant Colorectal & General Surgeon​/Director, Strategic Prog. & Governance​",
       url: "#",
       alt: "Dr Jola Olugbemi - ChM (Gen Surg), FRCS (Eng), FWACS, FMCS, Pg Cert (Med Edu) - Consultant Colorectal and General Surgeon",
