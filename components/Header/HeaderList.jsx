@@ -195,7 +195,7 @@ export default function Navbar() {
             whileTap={{ scale: 0.98 }}
             className="bg-white hover:bg-gray-100 text-[#5CB338] font-extrabold text-xs 2xl:text-sm py-2 px-4 2xl:px-5 rounded-full shadow-md transition-colors whitespace-nowrap"
           >
-            <Link href="https://foundation.gracespringhospitals.com/">Gracespring Health Foundation</Link>
+            <Link href="https://gracespringhealthfoundation.com/">Gracespring Health Foundation</Link>
           </motion.button>
         </div>
       </div>
