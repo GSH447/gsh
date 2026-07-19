@@ -179,7 +179,7 @@ export default function Navbar() {
             whileTap={{ scale: 0.98 }}
             className="bg-[#5CB338] hover:bg-[#4a912d] text-white font-bold text-xs 2xl:text-sm py-2 px-4 2xl:px-5 rounded-full shadow-md transition-colors whitespace-nowrap"
           >
-            <Link href="/book-an-appointment">Book an Appointment</Link>
+            <Link href="/patient-support/contact-us">Contact Us</Link>
           </motion.button>
 
           <motion.button
@@ -187,7 +187,7 @@ export default function Navbar() {
             whileTap={{ scale: 0.98 }}
             className="bg-[#6F92E7] hover:bg-[#5a7bc9] text-white font-bold text-xs 2xl:text-sm py-2 px-4 2xl:px-5 rounded-full shadow-md transition-colors whitespace-nowrap"
           >
-            <Link href="/patient-portal">Patient Portal</Link>
+            <Link href="https://portal.gracespringhospitals.com/">Patient Portal</Link>
           </motion.button>
 
           <motion.button
