@@ -137,14 +137,14 @@ export default function MobileNav() {
           {/* ACTION LINKS */}
           <div className="pt-6 flex flex-col gap-3 pb-8">
             <Link
-              href="/book-an-appointment"
+              href="/contact-us"
               className="w-full bg-[#5CB338] text-white text-center font-bold py-3 sm:py-4 rounded-xl shadow-sm text-sm sm:text-base"
               onClick={() => setMenuOpen(false)}
             >
-              Book an Appointment
+              Contact Us
             </Link>
             <Link
-              href="/patient-portal" 
+              href="https://portal.gracespringhospitals.com/" 
               className="w-full bg-[#6F92E7] text-white text-center font-bold py-3 sm:py-4 rounded-xl shadow-sm text-sm sm:text-base"
               onClick={() => setMenuOpen(false)}
             >
