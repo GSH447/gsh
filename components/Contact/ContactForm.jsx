@@ -223,7 +223,7 @@ useEffect(() => {
         setSuccessMessage(`Thank you! Your message has been sent successfully.`);
         setFormData({ firstName: "", lastName: "", email: "", phone: "", message: "" });
       } else {
-        setErrorMessage(response.data?.message || "Submission failed, please mail contact@gracespringhospitals.com");
+        setErrorMessage(response.data?.message || "Email care@gracespringhospitals.com for enquiries/emergency");
       }
     } catch (err) {
       if (err.response?.data) {

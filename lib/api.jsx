@@ -5,5 +5,3 @@
 
 export const API_BASE_URL = 'https://20-26-8-222.gracespringhospitals.com';
 
-// export const API_BASE_URL_HIS = 'https://20-26-8-222.gracespringhospitals.com';
-
