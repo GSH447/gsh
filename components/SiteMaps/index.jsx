@@ -168,12 +168,12 @@ export const FooterLinks = {
       name: "+234 705-648-2776",
       url: "tel:+2347056482776",
       iconPath: "/assets/icons/phone.svg",
-    },
-    {
-      name: "www.gracespringhospitals.com",
-      url: "https://www.gracespringhospitals.com",
-      iconPath: "/assets/icons/global.svg",
-    },
+    }
+    // {
+    //   name: "www.gracespringhospitals.com",
+    //   url: "https://www.gracespringhospitals.com",
+    //   iconPath: "/assets/icons/global.svg",
+    // },
   ],
 
   social: [
