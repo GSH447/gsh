@@ -121,21 +121,21 @@ export const services_short_cut = [
   // --- SURGICAL SERVICES ---
   { 
     id: 1, 
-    image: "/assets/images/services/surgeries/gsh-ctvs.png",
+    image: "/assets/images/services/surgeries/CardiothoracicandVascularSurgery.jpg",
     title: "Cardiothoracic and Vascular Surgery",
     url: "/services/surgical-services/cardiothoracic-and-vascular-surgery",
     alt: "cardiothoracic-and-vascular-surgery"
   },
   { 
     id: 2, 
-    image: "/assets/images/services/surgeries/gsh-urology.png",
+    image: "/assets/images/services/surgeries/urology.jpg",
     title: "Urology Surgery",
     url: "/services/surgical-services/urology-surgery",
     alt: "urology-surgery"
   },
   { 
     id: 3, 
-    image: "/assets/images/services/surgeries/gsh-generalsurgeries.png",
+    image: "/assets/images/services/surgeries/general-surgery.jpg",
     title: "General Surgery",
     url: "/services/surgical-services/general-surgery",
     alt: "general-surgery"
@@ -172,7 +172,7 @@ export const services_short_cut = [
   // --- INTERNAL MEDICINE ---
   { 
     id: 4, 
-    image: "/assets/images/services/InternalMedicine/cardiology-gsh.png",
+    image: "/assets/images/services/InternalMedicine/cardiology1.jpg",
     title: "Cardiology Specialist Care",
     url: "/services/internal-medicine/cardiology-specialist-care",
     alt: "cardiology-specialist-care"
@@ -228,7 +228,7 @@ export const services_short_cut = [
   },
   { 
     id: 18, 
-    image: "/assets/images/services/InternalMedicine/Haematology1.png",
+    image: "/assets/images/services/InternalMedicine/haematology1.jpg",
     title: "Haematology Specialist Care",
     url: "/services/internal-medicine/haematology-specialist-care",
     alt: "haematology-specialist-care"
