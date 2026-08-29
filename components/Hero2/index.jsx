@@ -92,7 +92,7 @@ const overlayMap = {
 const statsData = [
   { value: 20, suffix: "+", label: "Specialties" },
   { value: 40, suffix: "+", label: "Caregivers" },
-  { value: 3,  suffix: "+", label: "Surgeries"  },
+  { value: 6,  suffix: "+", label: "Surgeries"  },
 ];
 
 function HeroStatistics() {

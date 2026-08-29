@@ -181,7 +181,7 @@ export const FooterLinks = {
     { name: "Facebook", url: "https://web.facebook.com/profile.php?id=61591628544782", iconPath: "/assets/icons/facebook.svg" },
     { name: "Twitter", url: "https://x.com/GSH_Hospitals", iconPath: "/assets/icons/twitter.svg" },
     { name: "Instagram", url: "https://www.instagram.com/gracespringhospitals/", iconPath: "/assets/icons/instagram.svg" },
-    { name: "Linkedin", url: "#", iconPath: "/assets/icons/linkedin.svg" },
+    // { name: "Linkedin", url: "#", iconPath: "/assets/icons/linkedin.svg" },
     { name: "Google", url: "https://g.page/r/CUat1Bt1dy73EBM/review", iconPath: "/assets/icons/google.svg" },
   ],
 };
