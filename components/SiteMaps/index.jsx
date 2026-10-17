@@ -91,8 +91,8 @@ export const links = [
       },
       {
         header: "News/ Press Release",
-        href: "/news-and-media",
-        subMenu: [{ label: "Latest News and Press Releases", href: "/news-and-media" }],
+        href: "/blog",
+        subMenu: [{ label: "Latest News and Press Releases", href: "/blog" }],
       },
     ],
   },

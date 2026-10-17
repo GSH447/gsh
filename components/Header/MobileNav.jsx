@@ -137,7 +137,7 @@ export default function MobileNav() {
           {/* ACTION LINKS */}
           <div className="pt-6 flex flex-col gap-3 pb-8">
             <Link
-              href="/contact-us"
+              href="/patient-support/contact-us"
               className="w-full bg-[#5CB338] text-white text-center font-bold py-3 sm:py-4 rounded-xl shadow-sm text-sm sm:text-base"
               onClick={() => setMenuOpen(false)}
             >
