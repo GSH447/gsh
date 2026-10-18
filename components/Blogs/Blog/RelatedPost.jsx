@@ -56,7 +56,7 @@ const RelatedPost = () => {
   }, []);
 
   return (
-    <div className="rounded-xl border border-gray-100 bg-white p-8 shadow-sm mt-8">
+    <div className="border border-gray-100 bg-white shadow-sm mt-8  border-2 border-[red]">
       <h3 className="mb-6 text-2xl font-bold text-gray-900">
         Related Medical Insights
       </h3>
@@ -68,15 +68,15 @@ const RelatedPost = () => {
           No new posts available right now.
         </p>
       ) : (
-        <div className="space-y-6">
+        <div className="space-y-6 ">
           {posts.map((post) => (
             <div className="flex gap-4 items-center" key={`related-${post.id}`}>
-              <div className="relative h-20 w-24 flex-shrink-0">
+              <div className="relative h-20 w-24 lg:h-[20vh] lg:w-[10rem] flex-shrink-0">
                 <Image
                   src={post.image}
                   alt="Thumbnail"
                   fill
-                  className="object-cover rounded-md"
+                  className="object-cover"
                 />
               </div>
 

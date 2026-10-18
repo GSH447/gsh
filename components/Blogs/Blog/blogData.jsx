@@ -34,7 +34,7 @@ const BlogData = [
       `Medication Dispensation: Providing essential supplements and basic medications free of charge.`
     ],
     tags: ["#MedicalOutreach", "#PreventiveCare", "#GracespringHospitals"],
-    publishedAt: "May 16, 2026",
+    publishedAt: "June 16, 2026",
   },
 
   {
@@ -70,7 +70,7 @@ const BlogData = [
       `Family Involvement: Educating and supporting the patient's family to assist in long-term home care.`
     ],
     tags: ["#PatientStory", "#Recovery", "#HealthcareHeroes"],
-    publishedAt: "May 12, 2026",
+    publishedAt: "August 12, 2026",
   },
 
   {

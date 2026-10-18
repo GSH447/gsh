@@ -5,7 +5,8 @@
 /* globals.css */
 
 html, body {
-  overflow-x: hidden;
+  overflow-x: clip; /* Changed from hidden to clip to allow sticky to work */
+  /* overflow-x: hidden; */
   scroll-behavior: smooth;
   font-family: Arial, Helvetica, sans-serif;
   width: 100%; 

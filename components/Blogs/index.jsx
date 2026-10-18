@@ -157,7 +157,7 @@ export default async function BlogStories({ featuredOnly = false }) {
         <div className="text-center mt-12">
           <Link 
             href="/blog" 
-            className="inline-flex items-center gap-2 bg-[#122b5e] text-white px-8 py-3 rounded-full hover:bg-blue-900 transition font-medium text-sm shadow-md"
+            className="inline-flex items-center gap-2 bg-primary text-white px-8 py-3 rounded-full hover:bg-[#5CB338] transition font-medium text-sm shadow-md"
           >
             View All Publications <ArrowRight size={16} />
           </Link>
