@@ -56,7 +56,7 @@ const RelatedPost = () => {
   }, []);
 
   return (
-    <div className="border border-gray-100 bg-white shadow-sm mt-8  border-2 border-[red]">
+    <div className="border border-gray-100 bg-white shadow-sm mt-8">
       <h3 className="mb-6 text-2xl font-bold text-gray-900">
         Related Medical Insights
       </h3>

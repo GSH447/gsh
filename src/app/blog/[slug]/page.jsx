@@ -115,7 +115,7 @@ export default async function SingleBlogPage({ params }) {
   const contentImages = staticPost.contentImages || [];
 
   return (
-    <section className="py-16 bg-gray-50 min-h-screen border-2 border-[green]">
+    <section className="py-16 bg-gray-50 min-h-screen">
       <div className="mx-auto flex flex-col lg:flex-row gap-10 items-start w-full ">
         
         {/* LEFT COLUMN: Main Blog Content */}
