@@ -37,41 +37,134 @@ const BlogData = [
     publishedAt: "June 16, 2026",
   },
 
+
+
+
   {
     id: 2,
     isFeatured: true,
     mainImage: "/assets/images/blog/Journey of Recovery.jpg",
-    slug: "Journey-of-Recovery",
-    title: "A Journey of Recovery & Hope",
+    slug: "gold-star-stories-open-heart-recovery",
+    title: "A Journey of Recovery & Hope: The Gold Star Stories",
     metadata: `
-      Healing is rarely a straight line. For many of our patients at Gracespring Hospitals, the journey to recovery requires not just clinical excellence, but deep compassion, resilience, and unwavering support from our multidisciplinary medical team.
+      Every patient sponsored through the Gold Star Initiative is a Gold Star. At Gracespring Hospitals, in collaboration with the [Gracespring Health Foundation](https://gracespringhealthfoundation.com/gold-star-stories), our first series of corrective open-heart operations has transformed lives.
     `,
-    subTitleA: "Overcoming the Odds",
+
+    // SECTION A
+    subTitleA: "The First Series: Restoring Hearts, Free of Charge",
     bodyA: `
-      When Mr. Adebayo arrived at our emergency wing following a severe accident, the prognosis was uncertain. His treatment plan required immediate surgical intervention followed by months of intensive physiotherapy. Our orthopedic surgeons and rehabilitation specialists worked tirelessly to chart a path forward.
+      Corrective cardiac surgery is often financially out of reach for those who need it most. Through the Gold Star Initiative—generously sponsored by Marine Platforms Limited and Global Health Charity and Training Foundation Inc.—our surgical and clinical teams carried out life-saving open-heart procedures at zero cost. The inaugural series successfully treated 8-year-old Azeezat Adedokun (VSD closure), 45-year-old Adegun Alaba (ASD closure), and 8-year-old Elizabeth Oshikomaya (AVSD repair).
     `,
-    contentImages: [
-      "/assets/images/blog/Journey of Recovery.jpg",
-      "/assets/images/blog/medical-outreach-3.jpg" 
-    ],
-    subTitleB: "Compassionate Care in Action",
-    bodyB: `
-      Recovery isn't just physical; it's emotional. Our nursing staff and clinical psychologists played a crucial role in maintaining his morale during the most difficult phases of rehabilitation. By celebrating small milestones—from his first unaided step to his eventual discharge—we ensured he never walked alone.
-    `,
-    subTitleC: "A Brighter Future",
-    bodyC: `
-      Today, Mr. Adebayo has returned to his family and his career, a testament to what is possible when advanced medical technology meets human compassion. His story inspires our entire staff to continue delivering world-class care every single day.
-    `,
-    bulletedTitleA: "The Pillars of Our Recovery Programs:",
+    imageA: "/assets/images/blog/team with a patient.jpg",
+    imageCaptionA: "The clinical and surgical teams during ward rounds on the morning of surgery.",
+
+    bulletedTitleA: "Key Highlights of the Gold Star Cardiac Series:",
     bulletedBodyA: [
-      `Multidisciplinary Approach: Surgeons, therapists, and counselors collaborating on unified care plans.`,
-      `State-of-the-Art Rehabilitation: Utilizing modern therapeutic equipment to accelerate healing.`,
-      `Mental Health Support: Addressing the psychological trauma that often accompanies severe physical injuries.`,
-      `Family Involvement: Educating and supporting the patient's family to assist in long-term home care.`
+      `Complex Congenital Heart Defect Repairs: Successful VSD, ASD, and AVSD open-heart closures.`,
+      `100% Fully Sponsored Care: Funded entirely by Marine Platforms Limited and Global Health Charity and Training Foundation Inc.`,
+      `Verified Case Impact: Read all patient updates on the [Official Gold Star Portal](https://gracespringhealthfoundation.com/gold-star-stories).`
     ],
-    tags: ["#PatientStory", "#Recovery", "#HealthcareHeroes"],
+
+    // SECTION B
+    subTitleB: "From Intensive Care to Sitting Up in 48 Hours",
+    bodyB: `
+      Recovery from an open-heart operation demands precise clinical vigilance. From the initial hours waking up in intensive care to sitting up independently within two days, each patient reached critical recovery milestones under constant bedside monitoring by our intensive care nurses and specialists.
+    `,
+    imageB: "/assets/images/blog/sitting-up.jpg",
+    imageCaptionB: "A Gold Star patient sitting up and recovering two days post-operation.",
+
+    // SECTION C
+    subTitleC: "Discharge Day, Gratitude, and the Next Patient",
+    bodyC: `
+      Discharge day brings overwhelming relief as families reunite to head home. In the words of 45-year-old Adegun Alaba: "My appreciation goes to the entire Gracespring Hospital for heart surgery, and it was done free of charge. I'm very grateful to the Foundation, doctors, and nurses." Every story is published strictly under voluntary written consent, helping raise awareness for the next patient currently waiting for care.
+    `,
+    imageC: "/assets/images/blog/Journey of Recovery.jpg",
+    imageCaptionC: "Patients, families, and clinicians together before heading home.",
+
+    references: [
+      {
+        title: "Gracespring Health Foundation - Gold Star Stories",
+        url: "https://gracespringhealthfoundation.com/gold-star-stories"
+      }
+    ],
+    tags: ["#GoldStarInitiative", "#OpenHeartSurgery", "#PatientStories", "#GracespringHospitals"],
     publishedAt: "August 12, 2026",
   },
+
+  
+  // {
+  //   id: 2,
+  //   isFeatured: true,
+  //   mainImage: "/assets/images/blog/Journey of Recovery.jpg",
+  //   slug: "gold-star-stories-open-heart-recovery",
+  //   title: "A Journey of Recovery & Hope: The Gold Star Stories",
+  //   metadata: `
+  //     Every patient sponsored through the Gold Star Initiative is a Gold Star. At Gracespring Hospitals, in collaboration with the [Gracespring Health Foundation](https://gracespringhealthfoundation.com/gold-star-stories), our first series of corrective open-heart operations has transformed lives.
+  //   `,
+  //   subTitleA: "The First Series: Restoring Hearts, Free of Charge",
+  //   bodyA: `
+  //     Corrective cardiac surgery is often financially out of reach for those who need it most. Through the Gold Star Initiative—generously sponsored by Marine Platforms Limited and Global Health Charity and Training Foundation Inc.—our surgical and clinical teams carried out life-saving open-heart procedures at zero cost. Read the full initiative details on the [Gracespring Health Foundation](https://gracespringhealthfoundation.com/gold-star-stories) portal.
+  //   `,
+  //   contentImages: [
+  //     "/assets/images/blog/Journey of Recovery.jpg",
+  //     "/assets/images/blog/medical-outreach-3.jpg" 
+  //   ],
+  //   subTitleB: "From Intensive Care to Discharge Day",
+  //   bodyB: `
+  //     Recovery from an open-heart operation demands precise clinical vigilance. From the morning ward rounds waking up in intensive care to sitting up independently within two days, each patient reached decisive milestones with our multidisciplinary teams.
+  //   `,
+  //   subTitleC: "Dignity, Gratitude, and the Next Patient",
+  //   bodyC: `
+  //     Heartfelt messages from Adegun Alaba, Azeezat Adedokun, and Elizabeth Oshikomaya highlight the impact of targeted health sponsorship. With more screened patients currently waiting for support, every gift expands access to life-saving cardiac surgeries.
+  //   `,
+  //   bulletedTitleA: "Key Highlights of the Gold Star Cardiac Series:",
+  //   bulletedBodyA: [
+  //     `Complex Congenital Heart Defect Repairs: Successful VSD, ASD, and AVSD open-heart closures.`,
+  //     `100% Fully Sponsored Care: Funded entirely by Marine Platforms Limited and Global Health Charity and Training Foundation Inc.`,
+  //     `Rapid Rehabilitation Milestones: Intensive post-op management enabling patients to sit up by day two and achieve full discharge.`,
+  //     `Verified Case Impact: Read all patient updates on the [Official Gold Star Portal](https://gracespringhealthfoundation.com/gold-star-stories).`
+  //   ],
+  //   tags: ["#GoldStarInitiative", "#OpenHeartSurgery", "#PatientStories", "#GracespringHospitals"],
+  //   publishedAt: "August 12, 2026",
+  // },
+
+
+
+  // {
+  //   id: 2,
+  //   isFeatured: true,
+  //   mainImage: "/assets/images/blog/Journey of Recovery.jpg",
+  //   slug: "Journey-of-Recovery",
+  //   title: "A Journey of Recovery & Hope",
+  //   metadata: `
+  //     Healing is rarely a straight line. For many of our patients at Gracespring Hospitals, the journey to recovery requires not just clinical excellence, but deep compassion, resilience, and unwavering support from our multidisciplinary medical team.
+  //   `,
+  //   subTitleA: "Overcoming the Odds",
+  //   bodyA: `
+  //     When Mr. Adebayo arrived at our emergency wing following a severe accident, the prognosis was uncertain. His treatment plan required immediate surgical intervention followed by months of intensive physiotherapy. Our orthopedic surgeons and rehabilitation specialists worked tirelessly to chart a path forward.
+  //   `,
+  //   contentImages: [
+  //     "/assets/images/blog/Journey of Recovery.jpg",
+  //     "/assets/images/blog/medical-outreach-3.jpg" 
+  //   ],
+  //   subTitleB: "Compassionate Care in Action",
+  //   bodyB: `
+  //     Recovery isn't just physical; it's emotional. Our nursing staff and clinical psychologists played a crucial role in maintaining his morale during the most difficult phases of rehabilitation. By celebrating small milestones—from his first unaided step to his eventual discharge—we ensured he never walked alone.
+  //   `,
+  //   subTitleC: "A Brighter Future",
+  //   bodyC: `
+  //     Today, Mr. Adebayo has returned to his family and his career, a testament to what is possible when advanced medical technology meets human compassion. His story inspires our entire staff to continue delivering world-class care every single day.
+  //   `,
+  //   bulletedTitleA: "The Pillars of Our Recovery Programs:",
+  //   bulletedBodyA: [
+  //     `Multidisciplinary Approach: Surgeons, therapists, and counselors collaborating on unified care plans.`,
+  //     `State-of-the-Art Rehabilitation: Utilizing modern therapeutic equipment to accelerate healing.`,
+  //     `Mental Health Support: Addressing the psychological trauma that often accompanies severe physical injuries.`,
+  //     `Family Involvement: Educating and supporting the patient's family to assist in long-term home care.`
+  //   ],
+  //   tags: ["#PatientStory", "#Recovery", "#HealthcareHeroes"],
+  //   publishedAt: "August 12, 2026",
+  // },
 
   {
     id: 3,
