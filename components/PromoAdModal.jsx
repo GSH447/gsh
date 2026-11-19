@@ -150,146 +150,147 @@ export default function PromoAdModal({
           <X className="w-4 h-4 sm:w-6 sm:h-6" />
         </button>
 
-        <img src="/assets/orthopaedic/Flyer001.png"/>
+        <div className="p-3.5 sm:p-8 lg:p-10 grid grid-cols-1 lg:grid-cols-12 gap-3.5 sm:gap-7 lg:gap-8 items-center">
+          {/* Left Column */}
+          <div className="lg:col-span-7 flex flex-col items-start gap-2 sm:gap-5 pr-8 sm:pr-10 lg:pr-0">
+            {badgeText && (
+              <span className="inline-block bg-[#fdc41f] text-[#1a1450] rounded-full px-2.5 py-0.5 sm:px-4 sm:py-1.5 text-[10px] sm:text-sm font-black tracking-wide uppercase">
+                {badgeText}
+              </span>
+            )}
+
+            <Link
+              href={primaryCtaHref}
+              onClick={closeModal}
+              className="flex flex-col leading-none group"
+            >
+              <span className="text-2xl sm:text-6xl lg:text-[68px] font-black text-[#fdc41f] tracking-tight group-hover:brightness-105 transition">
+                {headlineTop}
+              </span>
+              <span className="text-xl sm:text-5xl lg:text-[52px] font-black text-white leading-[1.05] tracking-tight">
+                {headlineMiddle}
+              </span>
+              <span className="text-lg sm:text-4xl lg:text-[44px] font-black text-[#fdc41f] leading-[1.1] tracking-tight">
+                {headlineBottom}
+              </span>
+            </Link>
+
+            {tagline && (
+              <p className="text-xs sm:text-2xl font-semibold text-white/95">
+                {tagline}
+              </p>
+            )}
+
+            {/* Gold Date & Venue Card */}
+            <div className="w-full sm:w-auto max-w-full bg-[#fdc41f] text-[#1a1450] rounded-[12px] sm:rounded-[18px] px-3 py-2 sm:px-5 sm:py-4 flex flex-col gap-0.5 sm:gap-1 shadow-md">
+              <div className="flex flex-wrap items-baseline gap-x-2.5 sm:gap-x-4 gap-y-0.5">
+                <span className="text-lg sm:text-4xl lg:text-[44px] font-black leading-none tracking-wider">
+                  {dateText}
+                </span>
+                <span className="text-xs sm:text-xl font-black uppercase tracking-wide">
+                  {monthYearText}
+                </span>
+              </div>
+              <p className="text-[11px] sm:text-base font-extrabold leading-snug">
+                {venueText}
+              </p>
+            </div>
+
+            {/* Primary & Secondary Action Buttons */}
+            <div className="flex flex-wrap items-center gap-2 sm:gap-3 pt-0.5 sm:pt-1">
+              <Link
+                href={primaryCtaHref}
+                onClick={closeModal}
+                className="inline-flex items-center justify-center min-h-[36px] sm:min-h-[52px] px-3.5 sm:px-7 rounded-[10px] sm:rounded-[12px] bg-[#fdc41f] text-[#1a1450] text-xs sm:text-lg font-black hover:brightness-95 transition"
+              >
+                {primaryCtaLabel}
+              </Link>
+
+              <a
+                href={secondaryCtaHref}
+                onClick={closeModal}
+                className="inline-flex items-center justify-center min-h-[36px] sm:min-h-[52px] px-3.5 sm:px-6 rounded-[10px] sm:rounded-[12px] border-2 border-white text-white text-xs sm:text-lg font-extrabold hover:bg-white/10 transition"
+              >
+                {secondaryCtaLabel}
+              </a>
+            </div>
+
+            {/* Quick Links Row */}
+            <div className="flex flex-wrap items-center gap-x-4 sm:gap-x-6 gap-y-1 text-[11px] sm:text-base font-bold">
+              <a
+                href={directionsHref}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[#fdc41f] hover:underline inline-flex items-center py-0.5"
+              >
+                Get directions →
+              </a>
+              <Link
+                href={treatHref}
+                onClick={closeModal}
+                className="text-white hover:underline inline-flex items-center py-0.5"
+              >
+                See what we treat ↓
+              </Link>
+            </div>
+          </div>
+
+          {/* Right Column: Consultant Card (Compact horizontal strip on mobile, full card on sm+) */}
+          {consultant && (
+            <div className="lg:col-span-5 flex justify-center lg:justify-end">
+              <div className="w-full sm:max-w-[360px] bg-white text-[#1a1450] rounded-[14px] sm:rounded-[22px] p-2.5 sm:p-4 flex flex-row sm:flex-col items-center sm:items-stretch gap-2.5 sm:gap-3 shadow-xl">
+                <div className="relative w-16 h-16 sm:w-full sm:h-auto sm:aspect-[4/3] shrink-0 rounded-[10px] sm:rounded-[14px] overflow-hidden bg-gray-100">
+                  <img
+                    src={consultant.imageSrc}
+                    alt={consultant.imageAlt}
+                    className="w-full h-full object-cover object-top block"
+                  />
+                </div>
+
+                <div className="flex-1 min-w-0 flex flex-col gap-0.5 sm:px-1">
+                  <span className="text-[9px] sm:text-[11px] font-extrabold tracking-wider text-[#261f90] uppercase truncate">
+                    {consultant.label}
+                  </span>
+                  <h3 className="text-sm sm:text-2xl font-black text-[#1a1450] leading-tight truncate sm:whitespace-normal">
+                    {consultant.name}
+                  </h3>
+                  <p className="text-[10px] sm:text-sm font-extrabold text-[#261f90]">
+                    {consultant.credentials}
+                  </p>
+                  <p className="text-[10px] sm:text-sm font-semibold text-[#1a1450] leading-snug sm:mt-0.5 line-clamp-1 sm:line-clamp-none">
+                    {consultant.role}
+                  </p>
+                  <p className="hidden sm:block text-xs font-medium text-[#4a4680] leading-relaxed mt-1">
+                    {consultant.specialties}
+                  </p>
+                </div>
+
+                {consultant.partnerLogoSrc && (
+                  <div className="hidden sm:flex border-t border-[#e4e2f3] pt-2.5 px-1 items-center justify-between gap-2">
+                    <span className="text-[11px] font-extrabold tracking-wider text-[#261f90] uppercase">
+                      {consultant.partnerLabel}
+                    </span>
+                    <img
+                      src={consultant.partnerLogoSrc}
+                      alt={consultant.partnerLogoAlt}
+                      className="h-7 w-auto object-contain block"
+                    />
+                  </div>
+                )}
+              </div>
+            </div>
+          )}
+        </div>
+
+
+
+         {/* <img src="/assets/orthopaedic/Flyer001.png"/> */}
       </div>
     </div>
   );
 }
 
 
-
-
-        // <div className="p-3.5 sm:p-8 lg:p-10 grid grid-cols-1 lg:grid-cols-12 gap-3.5 sm:gap-7 lg:gap-8 items-center">
-        //   {/* Left Column */}
-        //   <div className="lg:col-span-7 flex flex-col items-start gap-2 sm:gap-5 pr-8 sm:pr-10 lg:pr-0">
-        //     {badgeText && (
-        //       <span className="inline-block bg-[#fdc41f] text-[#1a1450] rounded-full px-2.5 py-0.5 sm:px-4 sm:py-1.5 text-[10px] sm:text-sm font-black tracking-wide uppercase">
-        //         {badgeText}
-        //       </span>
-        //     )}
-
-        //     <Link
-        //       href={primaryCtaHref}
-        //       onClick={closeModal}
-        //       className="flex flex-col leading-none group"
-        //     >
-        //       <span className="text-2xl sm:text-6xl lg:text-[68px] font-black text-[#fdc41f] tracking-tight group-hover:brightness-105 transition">
-        //         {headlineTop}
-        //       </span>
-        //       <span className="text-xl sm:text-5xl lg:text-[52px] font-black text-white leading-[1.05] tracking-tight">
-        //         {headlineMiddle}
-        //       </span>
-        //       <span className="text-lg sm:text-4xl lg:text-[44px] font-black text-[#fdc41f] leading-[1.1] tracking-tight">
-        //         {headlineBottom}
-        //       </span>
-        //     </Link>
-
-        //     {tagline && (
-        //       <p className="text-xs sm:text-2xl font-semibold text-white/95">
-        //         {tagline}
-        //       </p>
-        //     )}
-
-        //     {/* Gold Date & Venue Card */}
-        //     <div className="w-full sm:w-auto max-w-full bg-[#fdc41f] text-[#1a1450] rounded-[12px] sm:rounded-[18px] px-3 py-2 sm:px-5 sm:py-4 flex flex-col gap-0.5 sm:gap-1 shadow-md">
-        //       <div className="flex flex-wrap items-baseline gap-x-2.5 sm:gap-x-4 gap-y-0.5">
-        //         <span className="text-lg sm:text-4xl lg:text-[44px] font-black leading-none tracking-wider">
-        //           {dateText}
-        //         </span>
-        //         <span className="text-xs sm:text-xl font-black uppercase tracking-wide">
-        //           {monthYearText}
-        //         </span>
-        //       </div>
-        //       <p className="text-[11px] sm:text-base font-extrabold leading-snug">
-        //         {venueText}
-        //       </p>
-        //     </div>
-
-        //     {/* Primary & Secondary Action Buttons */}
-        //     <div className="flex flex-wrap items-center gap-2 sm:gap-3 pt-0.5 sm:pt-1">
-        //       <Link
-        //         href={primaryCtaHref}
-        //         onClick={closeModal}
-        //         className="inline-flex items-center justify-center min-h-[36px] sm:min-h-[52px] px-3.5 sm:px-7 rounded-[10px] sm:rounded-[12px] bg-[#fdc41f] text-[#1a1450] text-xs sm:text-lg font-black hover:brightness-95 transition"
-        //       >
-        //         {primaryCtaLabel}
-        //       </Link>
-
-        //       <a
-        //         href={secondaryCtaHref}
-        //         onClick={closeModal}
-        //         className="inline-flex items-center justify-center min-h-[36px] sm:min-h-[52px] px-3.5 sm:px-6 rounded-[10px] sm:rounded-[12px] border-2 border-white text-white text-xs sm:text-lg font-extrabold hover:bg-white/10 transition"
-        //       >
-        //         {secondaryCtaLabel}
-        //       </a>
-        //     </div>
-
-        //     {/* Quick Links Row */}
-        //     <div className="flex flex-wrap items-center gap-x-4 sm:gap-x-6 gap-y-1 text-[11px] sm:text-base font-bold">
-        //       <a
-        //         href={directionsHref}
-        //         target="_blank"
-        //         rel="noopener noreferrer"
-        //         className="text-[#fdc41f] hover:underline inline-flex items-center py-0.5"
-        //       >
-        //         Get directions →
-        //       </a>
-        //       <Link
-        //         href={treatHref}
-        //         onClick={closeModal}
-        //         className="text-white hover:underline inline-flex items-center py-0.5"
-        //       >
-        //         See what we treat ↓
-        //       </Link>
-        //     </div>
-        //   </div>
-
-        //   {/* Right Column: Consultant Card (Compact horizontal strip on mobile, full card on sm+) */}
-        //   {consultant && (
-        //     <div className="lg:col-span-5 flex justify-center lg:justify-end">
-        //       <div className="w-full sm:max-w-[360px] bg-white text-[#1a1450] rounded-[14px] sm:rounded-[22px] p-2.5 sm:p-4 flex flex-row sm:flex-col items-center sm:items-stretch gap-2.5 sm:gap-3 shadow-xl">
-        //         <div className="relative w-16 h-16 sm:w-full sm:h-auto sm:aspect-[4/3] shrink-0 rounded-[10px] sm:rounded-[14px] overflow-hidden bg-gray-100">
-        //           <img
-        //             src={consultant.imageSrc}
-        //             alt={consultant.imageAlt}
-        //             className="w-full h-full object-cover object-top block"
-        //           />
-        //         </div>
-
-        //         <div className="flex-1 min-w-0 flex flex-col gap-0.5 sm:px-1">
-        //           <span className="text-[9px] sm:text-[11px] font-extrabold tracking-wider text-[#261f90] uppercase truncate">
-        //             {consultant.label}
-        //           </span>
-        //           <h3 className="text-sm sm:text-2xl font-black text-[#1a1450] leading-tight truncate sm:whitespace-normal">
-        //             {consultant.name}
-        //           </h3>
-        //           <p className="text-[10px] sm:text-sm font-extrabold text-[#261f90]">
-        //             {consultant.credentials}
-        //           </p>
-        //           <p className="text-[10px] sm:text-sm font-semibold text-[#1a1450] leading-snug sm:mt-0.5 line-clamp-1 sm:line-clamp-none">
-        //             {consultant.role}
-        //           </p>
-        //           <p className="hidden sm:block text-xs font-medium text-[#4a4680] leading-relaxed mt-1">
-        //             {consultant.specialties}
-        //           </p>
-        //         </div>
-
-        //         {consultant.partnerLogoSrc && (
-        //           <div className="hidden sm:flex border-t border-[#e4e2f3] pt-2.5 px-1 items-center justify-between gap-2">
-        //             <span className="text-[11px] font-extrabold tracking-wider text-[#261f90] uppercase">
-        //               {consultant.partnerLabel}
-        //             </span>
-        //             <img
-        //               src={consultant.partnerLogoSrc}
-        //               alt={consultant.partnerLogoAlt}
-        //               className="h-7 w-auto object-contain block"
-        //             />
-        //           </div>
-        //         )}
-        //       </div>
-        //     </div>
-        //   )}
-        // </div>
 
 // "use client";
 
