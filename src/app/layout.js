@@ -6,6 +6,7 @@ import ScrollToTop from "../../components/ScrollToTop";
 import AccessibilityComp from "../../components/Accessibility/Accessibility";
 import CookieConsent from "../../components/Cookies/CookieConsent";
 import { useVisitorTracker } from "../../hooks/useVisitorTracker";
+import PromoAdModal from "../../components/PromoAdModal";
 import { usePathname } from "next/navigation";
 
 export default function RootLayout({ children }) {
@@ -20,6 +21,7 @@ export default function RootLayout({ children }) {
         style={{ overflowX: "clip", fontFamily: "Avenir, AvenirBold", backgroundColor: "white", color: "black" }}
       >
         {!isPatientDashboard && <Header />}
+        {!isPatientDashboard && <PromoAdModal />}
         {children}
         {!isPatientDashboard && <Footer />}
         <CookieConsent />

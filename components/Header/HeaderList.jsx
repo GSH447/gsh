@@ -11,6 +11,7 @@ import { links } from "../SiteMaps";
 import { ChevronDown } from "lucide-react";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import FestiveBanner from "./FestiveBanner";
 
 export default function Navbar() {
   const pathname = usePathname();
@@ -37,7 +38,35 @@ export default function Navbar() {
   }
 
   return (
+
+    <>
+    <FestiveBanner/>
+
+
     <header
+      className={cn(
+        "z-50 w-full transition-all duration-300 flex items-center justify-between py-2 min-h-16 h-auto px-4 sm:px-6 xl:px-12 2xl:px-16",
+        pathname === "/"
+          ? isScrolled
+            ? "fixed top-0 left-0 bg-[#2A157c] shadow-md"
+            : "absolute left-0 bg-transparent"
+          : "sticky top-0 bg-[#2A157c] shadow-md"
+      )}
+    >
+
+      
+    {/* <header
+      className={cn(
+        "sticky top-0 z-50 w-full transition-all duration-300 flex items-center justify-between py-2 min-h-16 h-auto px-4 sm:px-6 xl:px-12 2xl:px-16",
+        pathname === "/"
+          ? isScrolled
+            ? "bg-[#2A157c] shadow-md -mb-24"
+            : "bg-transparent -mb-24"
+          : "bg-[#2A157c] shadow-md"
+      )}
+    > */}
+
+    {/* <header
       className={cn(
         "fixed top-0 z-50 w-full transition-all duration-300 flex items-center justify-between py-2 min-h-16 h-auto",
         pathname === "/"
@@ -46,7 +75,7 @@ export default function Navbar() {
             : "bg-transparent px-4 sm:px-6 xl:px-12 2xl:px-16"
           : "bg-[#2A157c] shadow-md px-4 sm:px-6 xl:px-12 2xl:px-16"
       )}
-    >
+    > */}
       {/* BRANDING / LOGO CONTAINER */}
       <div className="flex-shrink-0 z-50">
         <Link href="/">
@@ -205,5 +234,7 @@ export default function Navbar() {
         <MobileNav />
       </div>
     </header>
+
+    </>
   );
 }
