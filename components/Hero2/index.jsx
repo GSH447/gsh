@@ -25,7 +25,7 @@ const slides = [
       "Our identity is reflected through our three wings—each inspired by timeless virtues that define our approach to healing and service: Pistis (Faith), Elpis (Hope), and Agape (Love).",
     buttonText: "Read More",
     buttonUrl: "/who-we-are/about-us",
-    bgImage: "/assets/images/hero/gsh-2.png",
+    bgImage: "/assets/images/hero/gsh.jpg",
     zoom: true,
     overlayStrength: "strong", 
     objectPosition: "center center", // 100% pushes the image completely flush to the bottom edge
@@ -71,7 +71,7 @@ const slides = [
       "Our commitment to quality, safety, and dignity of care is guided by our enduring promise.",
     buttonText: "Find a Doctor",
     buttonUrl: "/services/surgery",
-    bgImage: "/assets/images/hero/room.jpg",
+    bgImage: "/assets/images/hero/men-health.jpeg",
     zoom: true,
     overlayStrength: "strong",
     objectPosition: "center center",
