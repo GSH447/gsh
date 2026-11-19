@@ -109,7 +109,7 @@ export default function Navbar() {
               <Link
                 href={link.href || "#"}
                 className={cn(
-                  "flex items-center gap-x-1 transition-all px-3 py-2 rounded-md text-sm 2xl:text-base font-medium whitespace-nowrap text-white/90 hover:text-white hover:bg-white/10",
+                  "flex items-center gap-x-1 transition-all px-3 py-2 rounded-md text-lg 2xl:text-base font-extrabold whitespace-nowrap text-white/90 hover:text-white hover:bg-white/10 ",
                   pathname === link.href && "font-bold text-white bg-white/5",
                   hovering === index && "bg-white/10"
                 )}
@@ -208,7 +208,7 @@ export default function Navbar() {
             whileTap={{ scale: 0.98 }}
             className="bg-[#5CB338] hover:bg-[#4a912d] text-white font-bold text-xs 2xl:text-sm py-2 px-4 2xl:px-5 rounded-full shadow-md transition-colors whitespace-nowrap"
           >
-            <Link href="/patient-support/contact-us">Contact Us</Link>
+            <Link href="/patient-support/contact-us" class="text-lg">Contact us</Link>
           </motion.button>
 
           <motion.button
@@ -216,7 +216,7 @@ export default function Navbar() {
             whileTap={{ scale: 0.98 }}
             className="bg-[#6F92E7] hover:bg-[#5a7bc9] text-white font-bold text-xs 2xl:text-sm py-2 px-4 2xl:px-5 rounded-full shadow-md transition-colors whitespace-nowrap"
           >
-            <Link href="https://portal.gracespringhospitals.com/">Patient Portal</Link>
+            <Link href="https://portal.gracespringhospitals.com/" class="text-lg">Patient Portal</Link>
           </motion.button>
 
           <motion.button
@@ -224,7 +224,7 @@ export default function Navbar() {
             whileTap={{ scale: 0.98 }}
             className="bg-white hover:bg-gray-100 text-[#5CB338] font-extrabold text-xs 2xl:text-sm py-2 px-4 2xl:px-5 rounded-full shadow-md transition-colors whitespace-nowrap"
           >
-            <Link href="https://gracespringhealthfoundation.com/" target="_blank">Gracespring Health Foundation</Link>
+            <Link href="https://gracespringhealthfoundation.com/" target="_blank" class="text-lg">Gracespring Health Foundation</Link>
           </motion.button>
         </div>
       </div>
